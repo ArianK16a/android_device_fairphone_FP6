@@ -4,6 +4,11 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+         manually by the user. Off by default, since the expected haptic feedback may not be
+         available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
+
     <!-- NOTE: The telephony module is no longer reading the configuration below for available
          APN types.  The set of APN types and relevant settings are specified within the telephony
          module and are non-configurable.  Whether or not data connectivity over a cellular network
