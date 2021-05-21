@@ -297,6 +297,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     FrameworksResTarget_Vendor \
     SecureElementResTarget_Vendor \
+    SettingsProviderResCommon \
     WifiResTarget \
 
 PRODUCT_PACKAGES += \
