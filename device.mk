@@ -85,6 +85,9 @@ PRODUCT_PACKAGES += \
     libqcomvoiceprocessing \
     libvolumelistener
 
+PRODUCT_PACKAGES += \
+    firmware_aw_cali.bin_symlink
+
 CONFIG_SKU_OUT_DIR := $(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_volcano
 
 PRODUCT_COPY_FILES += \
