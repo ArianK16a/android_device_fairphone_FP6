@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <device name="Android">
     <item name="none">0</item>
-    <item name="screen.on">108</item>
-    <item name="screen.full">430</item>
+    <item name="screen.on.display0">108</item>
+    <item name="screen.full.display0">430</item>
     <array name="cpu.clusters.cores">
         <value>6</value>
         <value>2</value>
