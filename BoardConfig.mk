@@ -77,7 +77,6 @@ TARGET_KERNEL_CONFIG := \
     vendor/fps_GKI.config
 
 BOARD_KERNEL_CMDLINE := \
-    video=vfb:640x400,bpp=32,memsize=3072000 \
     nosoftlockup
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
