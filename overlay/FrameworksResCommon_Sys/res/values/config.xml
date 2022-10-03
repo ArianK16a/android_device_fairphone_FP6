@@ -33,10 +33,6 @@
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
 
-    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
-         in hardware. -->
-    <bool name="config_setColorTransformAccelerated">true</bool>
-
     <!-- Default strength, in percentage, of bright color reduction when activated. -->
     <integer name="config_reduceBrightColorsStrengthDefault">40</integer>
 
