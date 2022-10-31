@@ -266,6 +266,9 @@ PRODUCT_PACKAGES += \
     SecureElementResTarget_Vendor \
     WifiResTarget \
 
+PRODUCT_PACKAGES += \
+    ApertureResFP6
+
 # Partitions
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
