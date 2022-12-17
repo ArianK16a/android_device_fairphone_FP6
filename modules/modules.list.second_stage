@@ -1,3 +1,4 @@
+adsp_loader_dlkm.ko
 adsp_sleepmon.ko
 altmode-glink.ko
 bam_dma.ko
@@ -51,6 +52,7 @@ gh_rm_booster.ko
 gh_tlmm_vm_mem_access.ko
 glink_pkt.ko
 glink_probe.ko
+gpr_dlkm.ko
 gpu_dump_skip_cdev.ko
 gpucc-cliffs.ko
 gpucc-volcano.ko
@@ -104,6 +106,8 @@ pm8941-pwrkey.ko
 pmic-glink-debug.ko
 pmic_glink.ko
 pwm-qti-lpg.ko
+q6_notifier_dlkm.ko
+q6_pdr_dlkm.ko
 qcom-cpufreq-hw-debug.ko
 qcom-hv-haptics.ko
 qcom-pon.ko
@@ -161,6 +165,8 @@ smp2p.ko
 smp2p_sleepstate.ko
 snd-soc-hdmi-codec.ko
 snd-usb-audio-qmi.ko
+snd_event_dlkm.ko
+spf_core_dlkm.ko
 spi-msm-geni.ko
 spmi-pmic-arb-debug.ko
 sps_drv.ko
