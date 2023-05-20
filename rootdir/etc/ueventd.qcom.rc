@@ -615,3 +615,6 @@ subsystem mem_buf_vm
 
 # SPI UWB device
 /dev/spiuwb    0660    uwb    uwb
+
+# Battery
+/sys/class/qcom-battery                                 charge_disable                  0660    system  system
