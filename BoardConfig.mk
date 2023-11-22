@@ -50,5 +50,7 @@ TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 TARGET_COPY_OUT_VENDOR := vendor
 TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
+-include vendor/lineage/config/BoardConfigReservedSize.mk
+
 # Inherit the proprietary files BoardConfig
 include vendor/fairphone/FP6/BoardConfigVendor.mk
