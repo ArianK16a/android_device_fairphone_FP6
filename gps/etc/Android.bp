@@ -1,23 +1,49 @@
-
 prebuilt_etc {
-
-    name: "gps.conf",
+    name: "apdr.conf",
     vendor: true,
-    src: "gps.conf",
+    src: "apdr.conf",
 }
 
 prebuilt_etc {
-
     name: "batching.conf",
     vendor: true,
     src: "batching.conf",
 }
 
 prebuilt_etc {
-
     name: "gnss_antenna_info.conf",
     vendor: true,
     src: "gnss_antenna_info.conf",
+}
+
+prebuilt_etc {
+    name: "gps.conf",
+    vendor: true,
+    src: "gps.conf",
+}
+
+prebuilt_etc {
+    name: "izat.conf",
+    vendor: true,
+    src: "izat.conf",
+}
+
+prebuilt_etc {
+    name: "lowi.conf",
+    vendor: true,
+    src: "lowi.conf",
+}
+
+prebuilt_etc {
+    name: "sap.conf",
+    vendor: true,
+    src: "sap.conf",
+}
+
+prebuilt_etc {
+    name: "xtwifi.conf",
+    vendor: true,
+    src: "xtwifi.conf",
 }
 
 prebuilt_etc {
