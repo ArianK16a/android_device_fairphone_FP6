@@ -18,9 +18,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.m
 PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 PRODUCT_VENDOR_PROPERTIES += ro.virtual_ab.compression.threads=true
 
-# Enable support for APEX updates
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
-
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
