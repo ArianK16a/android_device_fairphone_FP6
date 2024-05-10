@@ -31,6 +31,9 @@
         <item>/vendor/lib64/libllvm-glnext.so</item>
     </string-array>
 
+    <!-- Default: 60 MB. Bytes that the PinnerService will pin for Home app -->
+    <integer name="config_pinnerHomePinBytes">6291456</integer>
+
     <!-- Indicates whether device has a power button fingerprint sensor. -->
     <bool name="config_is_powerbutton_fps">true</bool>
 
