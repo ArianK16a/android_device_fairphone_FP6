@@ -26,43 +26,11 @@
  * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  *
  */
-
 /*
-Changes from Qualcomm Innovation Center are provided under the following license:
-
-Copyright (c) 2022-2024 Qualcomm Innovation Center, Inc. All rights reserved.
-
-Redistribution and use in source and binary forms, with or without
-modification, are permitted (subject to the limitations in the
-disclaimer below) provided that the following conditions are met:
-
-    * Redistributions of source code must retain the above copyright
-      notice, this list of conditions and the following disclaimer.
-
-    * Redistributions in binary form must reproduce the above
-      copyright notice, this list of conditions and the following
-      disclaimer in the documentation and/or other materials provided
-      with the distribution.
-
-    * Neither the name of Qualcomm Innovation Center, Inc. nor the names of its
-      contributors may be used to endorse or promote products derived
-      from this software without specific prior written permission.
-
-NO EXPRESS OR IMPLIED LICENSES TO ANY PARTY'S PATENT RIGHTS ARE
-GRANTED BY THIS LICENSE. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT
-HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
-WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED.
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR
-ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
-GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
-IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
-OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
-IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
-
+ * Changes from Qualcomm Technologies, Inc. are provided under the following license:
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause-Clear
+ */
 #define LOG_NDEBUG 0
 #define LOG_TAG "LocSvc_GnssAdapter"
 
@@ -266,7 +234,6 @@ GnssAdapter::GnssAdapter() :
     initCDFWServiceCommand();
     initEngHubProxyCommand();
     initLocGlinkCommand();
-    testLaunchQppeBringUp();
     mXtraObserver.init();
     // at last step, let us inform adapater base that we are done
     // with initialization, e.g.: ready to process handleEngineUpEvent
@@ -3160,6 +3127,7 @@ GnssAdapter::handleEngineUpEvent()
             mAdapter.broadcastCapabilities(mAdapter.getCapabilities());
             // must be called only after capabilities are known
             mAdapter.setConfig();
+            mAdapter.notifyPreciseLocation();
             mAdapter.setTribandState();
             mAdapter.gnssSvConfigUpdate();
             mAdapter.updateSystemPowerState(mAdapter.getSystemPowerState());
@@ -3372,26 +3340,6 @@ GnssAdapter::eraseTrackingSession(LocationAPI* client, uint32_t sessionId)
         reportPowerStateIfChanged();
         getSystemStatus()->eventSetTracking(isInSession(), true);
     }
-}
-
-void GnssAdapter::testLaunchQppeBringUp() {
-    std::thread testLaunchThead([&](){
-        int retryAttempts = 60;
-        mQppeResp = false;
-        getSystemStatus()->eventPreciseLocation(true);
-        getSystemStatus()->eventSetTracking(true, true);
-        while (retryAttempts >= 0 && !mQppeResp) {
-            LOC_LOGd("testLaunchQppeBringUp, retry %d", (60 - retryAttempts));
-            sleep(1);
-            retryAttempts--;
-        }
-        if (!(mPpFeatureStatusMask & DLP_FEATURE_STATUS_LIBRARY_PRESENT)) {
-            LOC_LOGd("timeout, no response from Qppe process.");
-            getSystemStatus()->eventPreciseLocation(false);
-        }
-        getSystemStatus()->eventSetTracking(isInSession(), false);
-    });
-    testLaunchThead.detach();
 }
 
 bool GnssAdapter::setLocPositionMode(const LocPosMode& mode) {
@@ -6010,44 +5958,23 @@ void GnssAdapter::handleQesdkQwesStatusFromEHub(
         inline virtual void proc() const {
             LOC_LOGD("MsgReportQwesStatusFromEHub: before mPpFeatureStatusMask: 0x%x",
                      mAdapter.mPpFeatureStatusMask);
-            auto ppeInFeatureMap = mFeatureMap.find(LOCATION_QWES_FEATURE_TYPE_PPE);
             auto dlpQesdkInFeatureMap = mFeatureMap.find(LOCATION_QWES_FEATURE_TYPE_DLP_QESDK);
-            auto qfeInFeatureMap = mFeatureMap.find(LOCATION_QWES_FEATURE_TYPE_QDR3);
             auto cdParserInFeatureMap = mFeatureMap.find(LOCATION_FEATURE_TYPE_CORR_DATA_PARSER);
 
             //QESDK feature status call back handling logic:
-            //1, If LOCATION_QWES_FEATURE_TYPE_PPE is presented in feature map,
-            //   It means Qwes status callback is triggered by Engine Servive try
-            //   to register to Engine Hub, set DLP_FEATURE_STATUS_QPPE_LIBRARY_PRESENT
-            //   bit, and set DLP_FEATURE_ENABLED_BY_DEFAULT bit according to
-            //   PPE feature status;
-            //2, If LOCATION_QWES_FEATURE_TYPE_QDR3 is presented in feature map,
-            //   It means Qwes status callback is triggered by Engine Servive try
-            //   to register to Engine Hub, set DLP_FEATURE_STATUS_QFE_LIBRARY_PRESENT
-            //   bit, and set DLP_FEATURE_ENABLED_BY_DEFAULT bit according to
-            //   PPE feature status;
-            //3, If LOCATION_QWES_FEATURE_TYPE_DLP_QESDK is presented in feature map,
+            //1, DLP_FEATURE_ENABLED_BY_DEFAULT bit is set in reportQwesCapabilities
+            //   according to PPE and QFE feature status during GNSS HAL process
+            //   boot up;
+            //   DLP_FEATURE_STATUS_QPPE_LIBRARY_PRESENT bit is set in initEngHubProxy
+            //   when QPPE process is enabled in izat.conf.
+            //   DLP_FEATURE_STATUS_QFE_LIBRARY_PRESENT bit is set in initEngHubProxy
+            //   when QEF process is enabled in izat.conf.
+            //2, If LOCATION_QWES_FEATURE_TYPE_DLP_QESDK is presented in feature map,
             //   It means Qwes status callback is triggered when Engine hub recieves
             //   configPreciseLocation command from GnssAdapter, and already checked
             //   QESDK feature status via QWES call checkInstalledLicense, set
             //   DLP_FEATURE_ENABLED_BY_QESDK bit according to QESDK feature status.
-            if (ppeInFeatureMap != mFeatureMap.end() || qfeInFeatureMap != mFeatureMap.end()) {
-                if (ppeInFeatureMap != mFeatureMap.end()) {
-                    mAdapter.mPpFeatureStatusMask |= DLP_FEATURE_STATUS_QPPE_LIBRARY_PRESENT;
-                }
-                if (qfeInFeatureMap != mFeatureMap.end()) {
-                    mAdapter.mPpFeatureStatusMask |= DLP_FEATURE_STATUS_QFE_LIBRARY_PRESENT;
-                }
-                if ((ppeInFeatureMap != mFeatureMap.end() && ppeInFeatureMap->second) ||
-                        (qfeInFeatureMap != mFeatureMap.end() && qfeInFeatureMap->second)) {
-                    mAdapter.mPpFeatureStatusMask |= DLP_FEATURE_ENABLED_BY_DEFAULT;
-                    mAdapter.notifyPreciseLocation();
-                } else {
-                    mAdapter.mPpFeatureStatusMask &= (~DLP_FEATURE_ENABLED_BY_DEFAULT);
-                    mAdapter.notifyPreciseLocation();
-                }
-                mAdapter.mQppeResp = true;
-            } else if (dlpQesdkInFeatureMap != mFeatureMap.end()) {
+            if (dlpQesdkInFeatureMap != mFeatureMap.end()) {
                 if (dlpQesdkInFeatureMap->second) {
                     mAdapter.mPpFeatureStatusMask |= DLP_FEATURE_ENABLED_BY_QESDK;
                     //Send enable precise location data item to loclauncher to inform
@@ -6101,6 +6028,19 @@ bool GnssAdapter::reportQwesCapabilities(
             }
             LOC_LOGI("ReportQwesFeatureStatus after caps %" PRIx64 " ",
                      mAdapter.getCapabilities());
+            //Set Dlp feature bit
+            auto ppeInFeatureMap = mFeatureMap.find(LOCATION_QWES_FEATURE_TYPE_PPE);
+            auto qfeInFeatureMap = mFeatureMap.find(LOCATION_QWES_FEATURE_TYPE_QDR3);
+            if (ppeInFeatureMap != mFeatureMap.end() || qfeInFeatureMap != mFeatureMap.end()) {
+                if ((ppeInFeatureMap != mFeatureMap.end() && ppeInFeatureMap->second) ||
+                        (qfeInFeatureMap != mFeatureMap.end() && qfeInFeatureMap->second)) {
+                    mAdapter.mPpFeatureStatusMask |= DLP_FEATURE_ENABLED_BY_DEFAULT;
+                    mAdapter.notifyPreciseLocation();
+                } else {
+                    mAdapter.mPpFeatureStatusMask &= (~DLP_FEATURE_ENABLED_BY_DEFAULT);
+                    mAdapter.notifyPreciseLocation();
+                }
+            }
             mAdapter.broadcastCapabilities(mAdapter.getCapabilities());
         }
     };
@@ -8437,15 +8377,21 @@ GnssAdapter::initEngHubProxy() {
                 (processInfoList[i].proc_status == ENABLED)) {
                 pluginDaemonEnabled = true;
                 if (processInfoList[i].args[1]!= nullptr) {
-                    // check if this is DRE-INT engine
+                    // Set DLP_FEATURE_STATUS_QFE_LIBRARY_PRESENT and
+                    // DLP_FEATURE_STATUS_QPPE_LIBRARY_PRESENT bit in
+                    // mPpFeatureStatusMask according to whether QFE and
+                    // QPPE process is enabled.
                     if (strncmp(processInfoList[i].args[1], "DRE-INT", sizeof("DRE-INT")) == 0) {
                         mEngServiceInfo.dreIntEnabled = true;
+                        mPpFeatureStatusMask |= DLP_FEATURE_STATUS_QFE_LIBRARY_PRESENT;
                     } else if (strncmp(processInfoList[i].args[1], "PPE", sizeof("PPE")) == 0) {
                         mEngServiceInfo.ppeEnabled = true;
+                        mPpFeatureStatusMask |= DLP_FEATURE_STATUS_QPPE_LIBRARY_PRESENT;
                     } else if (strncmp(processInfoList[i].args[1], "PPE-INT", sizeof("PPE-INT"))
                                == 0) {
                         mEngServiceInfo.ppeIntEnabled = true;
                         mEngServiceInfo.ppeEnabled = true;
+                        mPpFeatureStatusMask |= DLP_FEATURE_STATUS_QPPE_LIBRARY_PRESENT;
                     }
                 }
             }
