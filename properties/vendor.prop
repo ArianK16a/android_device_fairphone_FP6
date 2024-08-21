@@ -156,12 +156,16 @@ persist.dbg.volte_avail_ovr=1
 persist.dbg.vt_avail_ovr=1
 persist.dbg.wfc_avail_ovr=1
 persist.radio.multisim.config=dsds
+persist.vendor.data.mode=concurrent
 persist.vendor.radio.apm_sim_not_pwdn=1
 persist.vendor.radio.custom_ecc=1
 persist.vendor.radio.enableadvancedscan=true
 persist.vendor.radio.procedure_bytes=SKIP
 persist.vendor.radio.sib16_support=1
 ro.telephony.default_network=26,26
+ro.telephony.sim_slots.count=2
+telephony.active_modems.max_count=2
+telephony.lteOnCdmaDevice=1
 
 # RCS
 persist.vendor.rcs.singlereg.feature=1
