@@ -19,6 +19,7 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/fairphone/FP6',
+    'hardware/qcom-caf/sm8650',
 ]
 
 
