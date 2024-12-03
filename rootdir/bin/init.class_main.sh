@@ -88,7 +88,8 @@ case "$baseband" in
                 fi
                 ;;
             "concurrent")
-                start vendor.dataqti
+                #[FEATURE]-Modify by shaopan.tang 2024-11-11 FPS-193 Disable RMNET Reference qcom doc: 80-PF777-127
+                #start vendor.dataqti
                 if [ "$low_ram" != "true" ]; then
                   start vendor.dataadpl
                 fi
