@@ -289,6 +289,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ApertureResFP6
 
+PRODUCT_PACKAGES += \
+    NcmTetheringOverlay
+
 # Partitions
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
