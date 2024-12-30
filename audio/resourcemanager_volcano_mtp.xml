@@ -977,7 +977,7 @@
             <samplerate>48000</samplerate>
             <bit_width>32</bit_width>
             <snd_device_name>speaker</snd_device_name>
-            <speaker_protection_enabled>1</speaker_protection_enabled>
+            <speaker_protection_enabled>0</speaker_protection_enabled>
             <fractional_sr>0</fractional_sr>
             <!-- To enable external EC reference the flag extec_ref_enabled must be added as 1 -->
             <ext_ec_ref_enabled>0</ext_ec_ref_enabled>
