@@ -1,5 +1,6 @@
 # Audio
 audio.offload.min.duration.secs=30
+audio.timecheck.timeout_duration_ms=8000
 media.stagefright.audio.deep=false
 
 # Bluetooth
