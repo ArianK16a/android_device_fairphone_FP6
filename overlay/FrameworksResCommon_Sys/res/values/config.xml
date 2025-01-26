@@ -331,31 +331,6 @@
          Doze dreams will run whenever the power manager is in a dozing state. -->
     <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
 
-    <!--  Maximum number of supported switchable users (excluding Guests & Demo users).
-          Does not include profiles. See {@link UserManager#getMaxSwitchableUsers()} for details.
-
-          Setting to 1 disables multiple switchable users (e.g. secondary users).
-
-          To limit the number of any particular user type (whether switchable or not), set the
-          appropriate maximum in {@link com.android.internal.R.xml#config_user_types}.
-
-         Note: If > 1, it is expected that UserManager.USER_TYPE_FULL_SECONDARY users are supported
-         on the device (at least for testing purposes, even if in practice the UI really only allows
-         other switchable types, such as restricted profiles or guests, to be created).
-         -->
-    <integer name="config_multiuserMaximumUsers">4</integer>
-
-    <!-- Whether UI for multi user should be shown.
-         Note: If true, it is expected that secondary users are supported on the device (at least
-         for testing purposes, even if in practice the UI really only allows other switchable
-         types, such as restricted profiles or guests, to be created).
-         @deprecated  Use config_multiuserMaximumUsers instead.
-         This config will likely be removed in the future; config_multiuserMaximumUsers, which now
-         only applies to full users, not profiles, should be updated accordingly as needed.
-         TODO(b/435521983): Remove this since it's now made redundant by config_multiuserMaximumUsers
-         -->
-    <bool name="config_enableMultiUserUI">true</bool>
-
     <!-- Safe USB headset gain. This value is used to ensure that the SPL on the USB
     headset output is compliant to EN 60950 requirements for portable music players. -->
     <integer name="config_safe_media_volume_usb_mB">-1700</integer>
