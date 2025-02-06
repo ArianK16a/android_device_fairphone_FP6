@@ -866,6 +866,10 @@ vendor/lib64/rfs/dsp/libfastcvdsp_skel.so
 vendor/lib64/rfs/dsp/libscveT2T_skel.so
 vendor/lib64/rfs/dsp/libvrt_aide_dsp_skel.so
 
+# Euicc
+system/app/FPEuiccOverlay/FPEuiccOverlay.apk
+system/priv-app/EuiccGoogle/EuiccGoogle.apk;PRESIGNED
+
 # Fingerprint
 vendor/bin/hw/android.hardware.biometrics.fingerprint-service
 vendor/etc/init/fingerprint-default.rc:vendor/etc/init/fingerprint-FP6.rc
