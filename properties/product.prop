@@ -18,6 +18,9 @@ bluetooth.profile.pan.nap.enabled=true
 bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 
+# e-SIM
+masterclear.allow_retain_esim_profiles_after_fdr=true
+
 # Remote Provisioning
 remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
