@@ -255,6 +255,10 @@ TARGET_SCREEN_DENSITY := xxxhdpi
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Thermal
+PRODUCT_PACKAGES += \
+    android.hardware.thermal-service.qti
+
 # Ueventd
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/ueventd.qcom.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc \
