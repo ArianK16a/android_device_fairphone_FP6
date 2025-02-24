@@ -9,3 +9,10 @@ service loc_launcher /vendor/bin/loc_launcher
     group gps
     disabled
 
+service gnss_service /vendor/bin/hw/android.hardware.gnss-aidl-service-qti
+    override
+    class hal
+    user gps
+    group system gps radio vendor_qti_diag vendor_ssgtzd wakelock
+    capabilities WAKE_ALARM BLOCK_SUSPEND
+    disabled
