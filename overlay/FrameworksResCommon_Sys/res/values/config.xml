@@ -390,9 +390,6 @@
         <item>eutran5gc,16</item>
     </string-array>
 
-    <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
-
     <!-- Flag specifying whether VoLTE is available on device -->
     <bool name="config_device_volte_available">true</bool>
 
