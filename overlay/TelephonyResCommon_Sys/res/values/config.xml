@@ -4,21 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <!-- Flag indicating if the phone is a world phone -->
-    <!-- DEPRECATED: Use CarrierConfigManager#KEY_WORLD_PHONE_BOOL -->
-    <bool name="world_phone">true</bool>
-
-    <!-- Flag indicating if dtmf tone type is enabled -->
-    <!-- DEPRECATED: Use CarrierConfigManager#KEY_DTMF_TYPE_ENABLED_BOOL -->
-    <bool name="dtmf_type_enabled">true</bool>
-
-    <!-- If this is true, the SIM card (through Customer Service Profile EF file) will be
-         able to prevent manual operator selection. If false, this SIM setting will be
-         ignored and manual operator selection will always be available. See
-         CPHS4_2.WW6, CPHS B.4.7.1 for more information -->
-    <!-- DEPRECATED: Use CarrierConfigManager#KEY_CSP_ENABLED_BOOL -->
-    <bool name="csp_enabled">true</bool>
-
     <!-- Flag indicating whether the device supports RTT (real-time text) -->
     <bool name="config_support_rtt">true</bool>
 
