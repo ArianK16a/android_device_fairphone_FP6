@@ -448,6 +448,7 @@ subsystem mem_buf_vm
 
 # This is temporary while using SD card for initial bring-up
 /dev/block/platform/soc/8804000.sdhci/by-name/frp       0600   system     system
+/dev/block/platform/soc/8844000.sdhci/by-name/frp       0600   system     system
 
 # Kmsg device
 /dev/kmsg                                               0620   root       system
