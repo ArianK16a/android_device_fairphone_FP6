@@ -25,8 +25,9 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 #
-# Changes from Qualcomm Innovation Center are provided under the following license:
-# Copyright (c) 2022-2023, 2025 Qualcomm Innovation Center, Inc. All rights reserved.
+# Changes from Qualcomm Technologies, Inc. are provided under the following license:
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted (subject to the limitations in the
@@ -615,6 +616,9 @@ subsystem mem_buf_vm
 
 # SPI UWB device
 /dev/spiuwb    0660    uwb    uwb
+
+#power_state device node
+/dev/power_state           0660   system      system
 
 # Battery
 /sys/class/qcom-battery                                 charge_disable                  0660    system  system
