@@ -67,7 +67,7 @@ import /vendor/etc/ueventd.qcom.userdebug.rc
 # Firmware directory Path
 # Below macro will be read by uevent and path will
 # be added to search path for firmware loading
-firmware_directories /vendor/firmware_mnt/image/ /vendor/soccp_firmware/image/
+firmware_directories /vendor/firmware_mnt/image/ /vendor/soccp_firmware/image/ /vendor/dcp_firmware/image/
 
 subsystem dma_heap
     devname uevent_devpath
