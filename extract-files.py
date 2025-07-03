@@ -97,6 +97,15 @@ blob_fixups: blob_fixups_user_type = {
             'android.media.audio.common.types-V2-cpp.so',
             'android.media.audio.common.types-V4-cpp.so',
         ),
+    (
+        'vendor/bin/qcc-vendor',
+        'vendor/bin/qms',
+        'vendor/bin/xtra-daemon',
+        'vendor/lib64/libcne.so',
+        'vendor/lib64/libqcc_sdk.so',
+        'vendor/lib64/libqms_client.so',
+    ): blob_fixup()
+        .add_needed('libbinder_shim.so'),
     'vendor/etc/init/tctd.rc': blob_fixup()
         .regex_replace('.+seclabel.+\n', ''),
     'vendor/etc/seccomp_policy/wfdhdcphalservice.policy': blob_fixup()
@@ -246,6 +255,7 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/libqcodec2_core.so': blob_fixup()
         .add_needed('libcodec2_shim.so'),
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
+        .add_needed('libbinder_shim.so')
         .add_needed('libhidlbase_shim.so'),
 
 }  # fmt: skip
