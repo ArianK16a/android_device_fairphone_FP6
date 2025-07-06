@@ -1,11 +1,5 @@
 # All unpinned blobs below are extracted from FP6.QREL.15.122.0.20250718182448_VS1E-factory.zip
 
-# Current blobs with ELF checks disabled:
-# libmcs depends on libar-acdb, libagm, libats, liblx-osal which are gnu makefile targets
-# libqc2audio_hwaudiocodec depends on libpalclient, which is a gnu makefile target
-# libqtigefar depends on libar-pal, which is a gnu makefile target
-# libvui_intf depends on liblx-osal, which is a gnu makefile target
-
 # Init ### TODO sort or import to tree
 vendor/bin/init.qcom.coex.sh
 vendor/bin/init.qcom.efs.sync.sh
@@ -94,13 +88,13 @@ vendor/lib64/libcapiv2uvvendor.so
 vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
 vendor/lib64/liblistensoundmodel2vendor.so
-vendor/lib64/libmcs.so;DISABLE_CHECKELF
+vendor/lib64/libmcs.so
 vendor/lib64/libpal_net_if.so
-vendor/lib64/libqtigefar.so;DISABLE_CHECKELF
+vendor/lib64/libqtigefar.so
 vendor/lib64/libtensorflowlite_c.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
-vendor/lib64/libvui_intf.so;DISABLE_CHECKELF
+vendor/lib64/libvui_intf.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libquasar.so
 vendor/lib64/soundfx/libshoebox.so
@@ -1078,7 +1072,7 @@ vendor/lib64/libqc2audio_base.so
 vendor/lib64/libqc2audio_basecodec.so
 vendor/lib64/libqc2audio_core.so
 vendor/lib64/libqc2audio_hooks.so
-vendor/lib64/libqc2audio_hwaudiocodec.so;DISABLE_CHECKELF
+vendor/lib64/libqc2audio_hwaudiocodec.so
 vendor/lib64/libqc2audio_platform.so
 vendor/lib64/libqc2audio_swaudiocodec.so
 vendor/lib64/libqc2audio_utils.so
