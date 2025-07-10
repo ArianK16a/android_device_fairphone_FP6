@@ -16,8 +16,40 @@ TARGET_CPU_VARIANT := kryo300
 TARGET_BOARD_PLATFORM := volcano
 TARGET_BOOTLOADER_BOARD_NAME := fps
 
+# Boot image
+BOARD_RAMDISK_USE_LZ4 := true
+BOARD_BOOT_HEADER_VERSION := 4
+BOARD_MKBOOTIMG_ARGS := --header_version $(BOARD_BOOT_HEADER_VERSION)
+
 # Bootloader
 TARGET_NO_BOOTLOADER := true
+
+# Device Tree
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+TARGET_NEEDS_DTBOIMAGE := true
+
+# Kernel
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_USES_GENERIC_KERNEL_IMAGE := true
+BOARD_USES_QCOM_MERGE_DTBS_SCRIPT := true
+
+BOARD_KERNEL_BASE        := 0x00000000
+BOARD_KERNEL_PAGESIZE    := 4096
+
+TARGET_KERNEL_SOURCE := kernel/fairphone/sm7635
+TARGET_KERNEL_CONFIG := \
+    gki_defconfig \
+    vendor/fps_GKI.config
+
+BOARD_KERNEL_CMDLINE := \
+    video=vfb:640x400,bpp=32,memsize=3072000
+BOARD_BOOTCONFIG := \
+    androidboot.hardware=qcom \
+    androidboot.memcg=1 \
+    androidboot.usbcontroller=a600000.dwc3 \
+	androidboot.load_modules_parallel=true \
+	androidboot.vendor.qspa=true \
+	androidboot.console=0
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
