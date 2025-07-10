@@ -1,0 +1,14 @@
+[
+  {
+    "repository": "android_kernel_fairphone_sm7635",
+    "target_path": "kernel_fairphone_sm7635"
+  },
+  {
+    "repository": "android_kernel_fairphone_sm7635-devicetrees",
+    "target_path": "kernel_fairphone_sm7635-devicetrees"
+  },
+  {
+    "repository": "android_kernel_fairphone_sm7635-modules",
+    "target_path": "kernel_fairphone_sm7635-modules"
+  }
+]
