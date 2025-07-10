@@ -16,5 +16,8 @@ TARGET_CPU_VARIANT := kryo
 TARGET_BOARD_PLATFORM := volcano
 TARGET_BOOTLOADER_BOARD_NAME := FP6
 
+# Bootloader
+TARGET_NO_BOOTLOADER := true
+
 # Inherit the proprietary files BoardConfig
 include vendor/fairphone/FP6/BoardConfigVendor.mk
