@@ -48,6 +48,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_SHIPPING_API_LEVEL := 35
 BOARD_SHIPPING_API_LEVEL := 34
 
+# Boot control
+PRODUCT_PACKAGES += \
+    android.hardware.boot-service.qti \
+    android.hardware.boot-service.qti.recovery
+
+$(call soong_config_set, ufsbsg, ufsframework, bsg)
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
