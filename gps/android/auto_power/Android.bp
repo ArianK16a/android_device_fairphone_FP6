@@ -1,0 +1,35 @@
+
+
+cc_library_shared {
+
+    name: "libgnssauto_power",
+    vendor: true,
+    local_include_dirs: ["."],
+
+    srcs: ["GnssAutoPowerHandler.cpp"],
+
+    header_libs: [
+        "libgps.utils_headers",
+        "libloc_core_headers",
+        "libloc_pla_headers",
+        "vhal_v2_0_common_headers",
+        "liblocation_api_headers",
+    ],
+
+    shared_libs: [
+        "liblog",
+        "libhidlbase",
+        "libcutils",
+        "libutils",
+        "libgps.utils",
+        "liblocation_api",
+        "android.hardware.gnss@1.0",
+        "android.hardware.health@1.0",
+        "android.hardware.health@2.0",
+        "android.hardware.power@1.2",
+        "android.hardware.automotive.vehicle@2.0",
+        "libbase",
+    ],
+
+    cflags: GNSS_CFLAGS,
+}

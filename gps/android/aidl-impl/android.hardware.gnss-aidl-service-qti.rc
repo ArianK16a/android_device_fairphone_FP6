@@ -1,0 +1,6 @@
+service gnss_service /vendor/bin/hw/android.hardware.gnss-aidl-service-qti
+    interface aidl android.hardware.gnss.IGnss/default
+    interface aidl vendor.qti.gnss.ILocAidlGnss/default
+    class hal
+    user gps
+    group system gps radio vendor_qti_diag vendor_ssgtzd
