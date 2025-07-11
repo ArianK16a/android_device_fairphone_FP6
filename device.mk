@@ -24,6 +24,10 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 # Enable virtualization service
 $(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
 
+# API
+PRODUCT_SHIPPING_API_LEVEL := 35
+BOARD_SHIPPING_API_LEVEL := 34
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
