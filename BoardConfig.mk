@@ -160,6 +160,9 @@ TARGET_USERIMAGES_USE_F2FS := true
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
+# Sepolicy
+include device/qcom/sepolicy_vndr/SEPolicy.mk
+
 # Verified Boot
 STOCK_SECURITY_PATCH_TIMESTAMP := $(shell date -d 'TZ="GMT" 2025-05-05' +%s)
 BOARD_AVB_ENABLE := true
@@ -190,23 +193,12 @@ BOARD_AVB_INIT_BOOT_ROLLBACK_INDEX_LOCATION := 4
 # VINTF
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
-DEVICE_MANIFEST_SKUS := taro diwali cape ukee
-$(foreach sku, $(call to-upper, $(DEVICE_MANIFEST_SKUS)), \
-    $(eval DEVICE_MANIFEST_$(sku)_FILES := \
-        $(COMMON_PATH)/vintf/manifest.xml \
-        $(COMMON_PATH)/vintf/manifest_xiaomi.xml \
-        $(if $(TARGET_NFC_SUPPORTED_SKUS),$(COMMON_PATH)/vintf/manifest_no_nfc.xml,) \
-    ))
-
-ifneq ($(TARGET_NFC_SUPPORTED_SKUS),)
-ODM_MANIFEST_SKUS += $(TARGET_NFC_SUPPORTED_SKUS)
-$(foreach nfc_sku, $(call to-upper, $(TARGET_NFC_SUPPORTED_SKUS)), \
-    $(eval ODM_MANIFEST_$(nfc_sku)_FILES += $(COMMON_PATH)/vintf/manifest_nfc.xml))
-endif
+DEVICE_MANIFEST_SKUS := volcano
+DEVICE_MANIFEST_VOLCANO_FILES := \
+    $(DEVICE_PATH)/vintf/manifest.xml \
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
-    hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 
 DEVICE_FRAMEWORK_MANIFEST_FILE += $(DEVICE_PATH)/vintf/framework_manifest.xml
