@@ -63,6 +63,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
+# Screen density
+TARGET_SCREEN_DENSITY := xxxhdpi
+
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
