@@ -55,6 +55,21 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set, ufsbsg, ufsframework, bsg)
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResCommon_Sys \
+    SettingsResCommon_Sys \
+    SystemUIResCommon_Sys \
+    TelecommResCommon_Sys \
+    TelephonyResCommon_Sys \
+    UwbResCommon_Sys \
+    WifiResCommon_Sys
+
+PRODUCT_PACKAGES += \
+    FrameworksResTarget_Vendor \
+    SecureElementResTarget_Vendor \
+    WifiResTarget \
+
 # Partitions
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
