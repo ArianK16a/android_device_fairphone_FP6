@@ -80,5 +80,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.wifi.rtt.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.rtt.xml \
     frameworks/native/data/etc/android.hardware.wifi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.wifi.xml
 
+# WiFi firmware symlinks
+PRODUCT_PACKAGES += \
+    firmware_qca6750_WCNSS_qcom_cfg.ini_symlink \
+    firmware_qca6750_wlan_mac.bin_symlink \
+    firmware_WCNSS_qcom_cfg.ini_symlink \
+    firmware_wlanmdsp.otaupdate_symlink
+
 # Inherit from the proprietary files makefile
 $(call inherit-product, vendor/fairphone/FP6/FP6-vendor.mk)
