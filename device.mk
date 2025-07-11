@@ -53,6 +53,21 @@ PRODUCT_PACKAGES += \
     android.hardware.boot-service.qti \
     android.hardware.boot-service.qti.recovery
 
+# Overlays
+PRODUCT_PACKAGES += \
+    FrameworksResCommon_Sys \
+    SettingsResCommon_Sys \
+    SystemUIResCommon_Sys \
+    TelecommResCommon_Sys \
+    TelephonyResCommon_Sys \
+    UwbResCommon_Sys \
+    WifiResCommon_Sys
+
+PRODUCT_PACKAGES += \
+    FrameworksResTarget_Vendor \
+    SecureElementResTarget_Vendor \
+    WifiResTarget \
+
 # Partitions
 PRODUCT_PACKAGES += \
     vendor_bt_firmware_mountpoint \
