@@ -55,6 +55,15 @@ PRODUCT_PACKAGES += \
 
 $(call soong_config_set, ufsbsg, ufsframework, bsg)
 
+# Fstab
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/charger_fw_fstab.qti:$(TARGET_COPY_OUT_VENDOR)/etc/charger_fw_fstab.qti
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_RECOVERY)/root/first_stage_ramdisk/fstab.qcom \
+    $(LOCAL_PATH)/rootdir/etc/fstab.qcom:$(TARGET_COPY_OUT_VENDOR_RAMDISK)/first_stage_ramdisk/fstab.qcom
+
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResCommon_Sys \
@@ -85,11 +94,19 @@ TARGET_SCREEN_DENSITY := xxxhdpi
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
 
+# Ueventd
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/ueventd-odm.rc:$(TARGET_COPY_OUT_ODM)/etc/ueventd.rc
+
 # Update engine
 PRODUCT_PACKAGES += \
     update_engine \
     update_engine_sideload \
     update_verifier
+
+# Vendor init
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.target.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.target.rc
 
 # WiFi
 PRODUCT_PACKAGES += \
