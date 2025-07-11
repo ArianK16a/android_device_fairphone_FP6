@@ -157,6 +157,9 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
+# QCOM
+BOARD_USES_QCOM_HARDWARE := true
+
 # Verified Boot
 STOCK_SECURITY_PATCH_TIMESTAMP := $(shell date -d 'TZ="GMT" 2025-05-05' +%s)
 BOARD_AVB_ENABLE := true
