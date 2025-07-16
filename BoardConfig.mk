@@ -121,8 +121,6 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/graphics-kernel \
     qcom/opensource/wlan/platform \
     qcom/opensource/wlan/qcacld-3.0/.qca6750 \
-    qcom/opensource/wlan/qcacld-3.0/.peach_v2 \
-    qcom/opensource/wlan/qcacld-3.0/.wcn6450 \
     qcom/opensource/bt-kernel \
     qcom/opensource/spu-kernel \
     qcom/opensource/mm-sys-kernel/ubwcp \

@@ -177,8 +177,6 @@ mac80211.ko
 qrtr-smd.ko
 qrtr-mhi.ko
 qca_cld3_qca6750.ko
-qca_cld3_peach_v2.ko
-qca_cld3_wcn6450.ko
 cnss2.ko
 icnss2.ko
 cnss_plat_ipc_qmi_svc.ko
