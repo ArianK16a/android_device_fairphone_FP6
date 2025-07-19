@@ -301,6 +301,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/volcano/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
+$(call soong_config_set,qtipower,tap_to_wake_node,/sys/bus/spi/devices/spi0.0/gesture_wakeup)
+
 # QSPA
 PRODUCT_PACKAGES += \
     vendor.qti.qspa-service \
