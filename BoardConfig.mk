@@ -173,9 +173,6 @@ TARGET_COPY_OUT_VENDOR_DLKM := vendor_dlkm
 
 -include vendor/lineage/config/BoardConfigReservedSize.mk
 
-# Screen tap-to-wake
-TARGET_TAP_TO_WAKE_NODE := /sys/bus/spi/devices/spi0.0/gesture_wakeup
-
 # Properties
 TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
 TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
