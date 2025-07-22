@@ -86,6 +86,8 @@ BOARD_BOOTCONFIG := \
     androidboot.vendor.qspa=true \
     androidboot.console=0
 
+KERNEL_LTO := none
+
 # Kernel modules
 BOARD_SYSTEM_KERNEL_MODULES_BLOCKLIST_FILE := $(TARGET_KERNEL_SOURCE)/modules.systemdlkm_blocklist.msm.pineapple
 BOARD_VENDOR_KERNEL_MODULES_BLOCKLIST_FILE := $(TARGET_KERNEL_SOURCE)/modules.vendor_blocklist.msm.pineapple
