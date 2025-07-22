@@ -87,6 +87,8 @@ BOARD_BOOTCONFIG := \
     androidboot.console=0 \
     androidboot.selinux=permissive
 
+KERNEL_LTO := none
+
 # Kernel modules
 BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(DEVICE_PATH)/modules/modules.load.system_dlkm))
 SYSTEM_KERNEL_MODULES := $(BOARD_SYSTEM_KERNEL_MODULES_LOAD)
@@ -129,7 +131,9 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/bt-kernel \
     qcom/opensource/spu-kernel \
     qcom/opensource/mm-sys-kernel/ubwcp \
-    nxp/opensource/driver
+    qcom/opensource/touch-drivers \
+    nxp/opensource/driver \
+    samsung_slsi/nfc/driver
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
