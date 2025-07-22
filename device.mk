@@ -158,7 +158,6 @@ PRODUCT_COPY_FILES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@2.1-impl-qti \
     android.hardware.gnss-aidl-impl-qti \
     android.hardware.gnss-aidl-service-qti
 
@@ -178,9 +177,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     gnss@2.0-base.policy \
-    gnss@2.0-xtra-daemon.policy \
+    gnss@2.0-edgnss-daemon.policy \
     gnss@2.0-qsap-location.policy \
-    gnss@2.0-edgnss-daemon.policy
+    gnss@2.0-xtra-daemon.policy
 
 $(call soong_config_set, qtilocation, feature_locauto, false)
 $(call soong_config_set, qtilocation, feature_nhz, false)
