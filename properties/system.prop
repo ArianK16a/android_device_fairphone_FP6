@@ -1,0 +1,37 @@
+# Audio
+ro.audio.monitorRotation=true
+
+# Camera
+persist.vendor.camera.fprom=1
+persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.fps.camera,com.fps.mtf,com.fps.verifytool,com.android.mmi
+
+# CNE
+persist.vendor.cne.feature=1
+
+# eSIM
+masterclear.allow_retain_esim_profiles_after_fdr=1
+persist.vendor.esim_os_update_agent=1
+persist.vendor.esim_os_update_name=DeployProd_12A_CSCXNJECISM4_C02212A_V611_ROM.itlc
+
+# HWUI
+debug.hwui.skia_atrace_enabled=false
+
+# Media
+media.stagefright.thumbnail.prefer_hw_codecs=true
+ro.media.recorder-max-base-layer-fps=60
+media.settings.xml=/vendor/etc/media_profiles_vendor.xml
+
+# QTI
+ro.vendor.qti.va_aosp.support=1
+
+# Radio
+persist.vendor.data.mode=concurrent
+ril.subscription.types=NV,RUIM
+ro.telephony.default_network=26,26
+telephony.lteOnCdmaDevice=1
+
+# System properties
+ro.product.property_source_order=odm,vendor,product,system_ext,system
+
+# WiFi display
+persist.debug.wfd.enable=1
