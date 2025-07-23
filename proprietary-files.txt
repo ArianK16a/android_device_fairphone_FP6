@@ -415,7 +415,6 @@ vendor/lib64/com.tct.cameraalgo.singlebokehcap.so
 vendor/lib64/com.tct.cameraalgo.singlebokehprv.so
 vendor/lib64/com.tct.cameraalgo.tcldualbokeh.so
 vendor/lib64/com.tct.cameraalgo.watermark.so
-
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/libcamxcommonutils.so
 vendor/lib64/libcamxexternalformatutils.so
@@ -441,6 +440,9 @@ vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
+vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml
+vendor/etc/vintf/vendor.qti.camera.postproc-impl.xml
+vendor/etc/vintf/vendor.qti.camera.provider.xml
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
@@ -1365,6 +1367,9 @@ vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
+
+# Touchscreen
+vendor/firmware/EPH86XX_fw.bin
 
 # VM mem
 vendor/lib64/libvmmem.so
