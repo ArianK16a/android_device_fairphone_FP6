@@ -1088,6 +1088,10 @@ vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libvideotxr.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 
+# Media init
+vendor/bin/init.qti.media.sh
+vendor/etc/init/init.qti.media.rc
+
 # Native public libraries
 vendor/etc/public.libraries.txt
 
