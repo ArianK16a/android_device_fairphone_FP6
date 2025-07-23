@@ -78,22 +78,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
             <instance>default</instance>
         </interface>
     </hal>
-    <!-- NFC HAL service -->
-    <hal format="aidl">
-        <name>android.hardware.nfc</name>
-        <version>1</version>
-        <fqname>INfc/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>vendor.nxp.nxpnfc_aidl</name>
-        <version>1</version>
-        <fqname>INxpNfc/default</fqname>
-    </hal>
-    <hal format="aidl">
-        <name>android.hardware.secure_element</name>
-        <version>1</version>
-        <fqname>ISecureElement/eSE1</fqname>
-    </hal>
     <!-- dpm QMI hal service -->
     <hal format="hidl">
         <name>com.qualcomm.qti.dpm.api</name>
