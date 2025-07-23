@@ -284,6 +284,7 @@ snd-soc-hdmi-codec.ko
 qrtr-smd.ko
 qrtr-mhi.ko
 smcinvoke_dlkm.ko
+hdcp_qseecom_dlkm.ko
 msm_drm.ko
 msm_ext_display.ko
 sync_fence.ko
