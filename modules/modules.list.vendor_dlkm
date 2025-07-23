@@ -134,7 +134,6 @@ qcedev-mod_dlkm.ko
 qcrypto-msm_dlkm.ko
 qce50_dlkm.ko
 qrng_dlkm.ko
-hdcp_qseecom_dlkm.ko
 smmu_proxy_dlkm.ko
 tz_log_dlkm.ko
 ubwcp.ko
@@ -287,7 +286,6 @@ qcedev-mod_dlkm.ko
 qcrypto-msm_dlkm.ko
 qce50_dlkm.ko
 qrng_dlkm.ko
-hdcp_qseecom_dlkm.ko
 smmu_proxy_dlkm.ko
 tz_log_dlkm.ko
 goodix_ts.ko
