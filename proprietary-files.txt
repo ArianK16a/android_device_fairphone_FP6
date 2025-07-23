@@ -77,6 +77,9 @@ vendor/lib64/libtensorflowlite_c.so
 vendor/lib64/libvui_intf.so;DISABLE_CHECKELF
 vendor/lib64/soundfx/libasphere.so
 
+# Audio firmware
+vendor/firmware/aw882xx_acf.bin
+
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
@@ -203,6 +206,9 @@ vendor/etc/camera/svq_cache
 vendor/etc/camera/tclbokeh_golden.bin
 vendor/etc/camera/tuningversion_fps.txt
 vendor/etc/init/vendor.qti.camera.provider-service_64.rc
+vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
 vendor/lib64/camera/bitmlconfig.bin
 vendor/lib64/camera/camxfl115indices.bin
 vendor/lib64/camera/camxfl300v1indices.bin
@@ -440,9 +446,6 @@ vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
-vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml
-vendor/etc/vintf/vendor.qti.camera.postproc-impl.xml
-vendor/etc/vintf/vendor.qti.camera.provider.xml
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00
@@ -1370,6 +1373,14 @@ vendor/lib64/libtime_genoff.so
 
 # Touchscreen
 vendor/firmware/EPH86XX_fw.bin
+
+# Vibrator
+vendor/firmware/haptic_ram.bin
+vendor/firmware/haptic_rtp.bin
+vendor/firmware/haptic_rtp_auto_sin.bin
+vendor/firmware/haptic_rtp_lighthouse.bin
+vendor/firmware/haptic_rtp_osc_24K_5s.bin
+vendor/firmware/haptic_rtp_silk.bin
 
 # VM mem
 vendor/lib64/libvmmem.so
