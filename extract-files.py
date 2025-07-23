@@ -177,11 +177,11 @@ blob_fixups: blob_fixups_user_type = {
         'android.hardware.graphics.allocator-V1-ndk.so',
         'android.hardware.graphics.allocator-V2-ndk.so',
     ),
-    'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
-        .add_needed('libhidlbase_shim.so'),
     'vendor/lib64/libqcodec2_core.so': blob_fixup().add_needed(
         'libcodec2_shim.so'
     ),
+    'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
+        .add_needed('libhidlbase_shim.so'),
 
 }  # fmt: skip
 
