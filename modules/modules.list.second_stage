@@ -53,6 +53,7 @@ glink_probe.ko
 gpu_dump_skip_cdev.ko
 gpucc-cliffs.ko
 gpucc-volcano.ko
+hdcp_qseecom_dlkm.ko
 health_monitor.ko
 heap_mem_ext_v01.ko
 hung_task_enh.ko
