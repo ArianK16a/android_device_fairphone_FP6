@@ -269,6 +269,11 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.qti \
+    android.hardware.usb.gadget-service.qti
+
 # Vendor init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.qcom.factory.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/hw/init.qcom.factory.rc \
