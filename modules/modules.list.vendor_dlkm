@@ -21,7 +21,6 @@ frpc-adsprpc.ko
 goodix_ts.ko
 gpr_dlkm.ko
 gsim.ko
-hdcp_qseecom_dlkm.ko
 hdmi_dlkm.ko
 icnss2.ko
 ipam.ko
