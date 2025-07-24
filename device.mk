@@ -210,6 +210,12 @@ PRODUCT_PACKAGES += \
     hwservicemanager \
     android.hidl.allocator@1.0-service
 
+# IPACM
+PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
+    IPACM_Filter_cfg.xml
+
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResCommon_Sys \
