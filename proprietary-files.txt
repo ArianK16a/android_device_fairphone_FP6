@@ -516,7 +516,7 @@ vendor/lib64/libmdsprpc.so
 vendor/lib64/libsdsprpc.so
 
 # CNE
-vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink
+vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_vendor_symlink,libvndfwk_detect_jni.qti_vendor
 vendor/bin/cnd
 vendor/bin/qms
 vendor/etc/cne/mwqem.conf
