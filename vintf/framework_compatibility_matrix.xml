@@ -1,0 +1,14 @@
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<compatibility-matrix version="1.0" type="framework">
+    <hal format="aidl" optional="true">
+        <name>vendor.tcl.camera.algoservice</name>
+        <version>2</version>
+        <interface>
+            <name>ITctCameraAlgoService</name>
+            <instance>default</instance>
+         </interface>
+    </hal>
+</compatibility-matrix>
