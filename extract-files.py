@@ -37,11 +37,14 @@ lib_fixups: lib_fixups_user_type = {
     (
         'com.qualcomm.qti.dpm.api@1.0',
         'vendor.qti.diaghal@1.0',
+        'vendor.qti.hardware.dpmaidlservice-V1-ndk',
         'vendor.qti.hardware.dpmservice@1.0',
         'vendor.qti.hardware.dpmservice@1.1',
         'vendor.qti.hardware.qccsyshal@1.0',
         'vendor.qti.hardware.qccsyshal@1.1',
+        'vendor.qti.hardware.qccsyshal@1.2',
         'vendor.qti.hardware.wifidisplaysession@1.0',
+        'vendor.qti.ImsRtpService-V1-ndk',
         'vendor.qti.imsrtpservice@3.0',
         'vendor.qti.qccvndhal_aidl-V1-ndk',
     ): lib_fixup_vendor_suffix,
@@ -62,6 +65,17 @@ blob_fixups: blob_fixups_user_type = {
             'android.media.audio.common.types-V2-cpp.so',
             'android.media.audio.common.types-V4-cpp.so',
         ),
+    (
+        'vendor/bin/hw/android.hardware.security.keymint-service-spu-qti',
+        'vendor/lib64/libspukeymint.so',
+    ): blob_fixup().replace_needed(
+        'android.hardware.security.sharedsecret-V2-ndk.so',
+        'android.hardware.security.sharedsecret-V1-ndk.so',
+    ),
+    'vendor/lib64/libspukeymintprovision.so': blob_fixup().replace_needed(
+        'android.hardware.security.keymint-V2-ndk.so',
+        'android.hardware.security.keymint-V3-ndk.so',
+    ),
     (
         'vendor/lib64/camera/com.qti.eeprom.gt24p128c2csli_imx766.so',
         'vendor/lib64/camera/com.qti.eeprom.gt24p64b_imx688.so',
@@ -173,6 +187,21 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so',
         'vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so',
         'vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so',
+        'vendor/lib64/hw/camera.qcom.milos.so',
+        'vendor/lib64/hw/com.qti.chi.offline.so',
+        'vendor/lib64/libchifeature2.so',
+        'vendor/lib64/libcamerapostproc.so',
+        'vendor/lib64/libisphwsetting.so',
+        'vendor/lib64/libipebpsstriping480.so',
+        'vendor/lib64/libipebpsstriping170.so',
+        'vendor/lib64/libipebpsstriping.so',
+        'vendor/lib64/libhme.so',
+        'vendor/lib64/libmctfengine_stub.so',
+        'vendor/lib64/libopestriping.so',
+        'vendor/lib64/libjpege.so',
+        'vendor/lib64/libmfec.so',
+        'vendor/lib64/libubifocus.so',
+        'vendor/lib64/libtfestriping.so',
     ): blob_fixup().replace_needed(
         'android.hardware.graphics.allocator-V1-ndk.so',
         'android.hardware.graphics.allocator-V2-ndk.so',
@@ -180,6 +209,7 @@ blob_fixups: blob_fixups_user_type = {
     (
         'vendor/lib64/libmfnr_raw_api.so',
         'vendor/lib64/libTclAISuperfine.so',
+        'vendor/lib64/libTclImage_ImageEngine.so',
     ): blob_fixup()
         .clear_symbol_version('AHardwareBuffer_allocate')
         .clear_symbol_version('AHardwareBuffer_describe')
