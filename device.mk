@@ -136,12 +136,24 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.full.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.full.xml \
     frameworks/native/data/etc/android.hardware.camera.raw.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.raw.xml
 
+# CAS
+PRODUCT_PACKAGES += \
+    com.android.hardware.cas
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.demura-service
+    vendor.qti.hardware.display.composer-service.rc \
+    vendor.qti.hardware.display.composer-service.xml \
+    vendor.qti.hardware.display.composer3-V1-ndk.vendor \
+    vendor.qti.hardware.display.config-V2-ndk.vendor \
+    vendor.qti.hardware.display.demura-service \
+    vendor.qti.hardware.display.demura-V1-ndk.vendor \
+    libgpu_tonemapper \
+    android.hardware.graphics.composer3-V2-ndk.vendor \
+    vendor.qti.hardware.display.config-V11-ndk.vendor
 
 PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
@@ -225,6 +237,10 @@ PRODUCT_PACKAGES += \
     IPACM_cfg.xml \
     IPACM_Filter_cfg.xml
 
+# Memtrack
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.memtrack-service
+
 # Network
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnel_migration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnel_migration.xml \
@@ -267,6 +283,10 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/volcano/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
+
+# QSPA
+PRODUCT_PACKAGES += \
+    vendor.qti.qspa-service
 
 # Recovery
 PRODUCT_PACKAGES += \
