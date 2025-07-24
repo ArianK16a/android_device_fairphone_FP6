@@ -266,6 +266,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.qcom.rc
 
+# Sensors
+PRODUCT_PACKAGES += \
+    android.hardware.sensors-service.multihal
+
 # Screen density
 TARGET_SCREEN_DENSITY := xxxhdpi
 
