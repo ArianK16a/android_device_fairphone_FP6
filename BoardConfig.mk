@@ -77,7 +77,8 @@ TARGET_KERNEL_CONFIG := \
     vendor/fps_GKI.config
 
 BOARD_KERNEL_CMDLINE := \
-    nosoftlockup
+    nosoftlockup \
+    sysctl.kernel.firmware_config.force_sysfs_fallback=1
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
