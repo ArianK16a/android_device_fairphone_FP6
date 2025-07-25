@@ -1695,21 +1695,6 @@ vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/sensors.vl53l1.so
 
 # Unknown
-vendor/etc/acoustic.txt
-vendor/etc/clstc_config_library.xml
-vendor/etc/data/nicm_config.xml
-vendor/etc/data/tlpd_oem_config.xml
-vendor/etc/default-permissions/vendor.qti.data.txpwradmin.xml
-vendor/etc/mem_logger_config.xml
-vendor/etc/permissions/privapp-permissions-qti-vendor.xml
-vendor/etc/qguard.json
-vendor/etc/qvirtmgr-vndr.json
-vendor/etc/sec_s3nrn4v_hwreg.bin
-vendor/etc/sec_s3nrn4v_swreg.bin
-vendor/etc/smomo_setting.xml
-vendor/etc/wifi/vendor_cmd.xml
-vendor/etc/xtwifi.conf
-vendor/firmware/wigig.ini
 vendor/lib64/ftm_fm_lib.so
 vendor/lib64/hw/vendor.qti.hardware.servicetrackeraidl-impl.so
 vendor/lib64/hw/vendor.qti.hardware.soter-impl.so
