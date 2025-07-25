@@ -1674,28 +1674,41 @@ vendor/etc/vintf/manifest/nfc-service-sec.xml
 vendor/lib64/nfc_nci_sec.so
 vendor/firmware/sec_s3nrn4v_firmware.bin
 
+# Secureprocessor
+vendor/bin/hw/vendor.qti.hardware.secureprocessor
+vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
+vendor/etc/init/vendor.qti.hardware.secureprocessor.rc
+vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.secureprocessor.xml
+vendor/lib64/vendor.qti.hardware.secureprocessor.common-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.common-helper.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.config-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.device-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
+
 # Sensors
 vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/sensors.vl53l1.so
 
 # Unknown
-vendor/bin/hw/android.hardware.identity-service-qti
-vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
-vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
-vendor/bin/hw/android.hardware.weaver-service-spu-qti
-vendor/bin/hw/cameraalgoservice
-vendor/bin/hw/capabilityconfigstoretest
-vendor/bin/hw/pasrknob
-vendor/bin/hw/vendor.qti.hardware.factory-service
-vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
-vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
-vendor/bin/hw/vendor.qti.hardware.lights.service
-vendor/bin/hw/vendor.qti.hardware.limits@1.2-service
-vendor/bin/hw/vendor.qti.hardware.secureprocessor
-vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
-vendor/bin/hw/vendor.qti.hardware.servicetrackeraidl-service
-vendor/bin/hw/vendor.qti.hardware.soter-service
-vendor/bin/hw/vendor.qti.hardware.trustedui-aidl-service-qti
+#vendor/bin/hw/android.hardware.identity-service-qti
+#vendor/bin/hw/android.hardware.keymaster@4.0-service-qti
+#vendor/bin/hw/android.hardware.security.keymint-service-spu-qti
+#vendor/bin/hw/android.hardware.weaver-service-spu-qti
+#vendor/bin/hw/cameraalgoservice
+#vendor/bin/hw/capabilityconfigstoretest
+#vendor/bin/hw/pasrknob
+#vendor/bin/hw/vendor.qti.hardware.factory-service
+#vendor/bin/hw/vendor.qti.hardware.factory@1.0-service
+#vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
+#vendor/bin/hw/vendor.qti.hardware.lights.service
+#vendor/bin/hw/vendor.qti.hardware.limits@1.2-service
+#vendor/bin/hw/vendor.qti.hardware.servicetrackeraidl-service
+#vendor/bin/hw/vendor.qti.hardware.soter-service
+#vendor/bin/hw/vendor.qti.hardware.trustedui-aidl-service-qti
 vendor/bin/hw/vendor.qti.memory.pasrmanager-service
 vendor/bin/hw/vendor.qti.psiclient@1.0-service
 vendor/etc/acoustic.txt
@@ -1734,8 +1747,6 @@ vendor/etc/init/vendor.qti.hardware.factory@1.0-service.rc
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.lights.service.rc
 vendor/etc/init/vendor.qti.hardware.limits-service.rc
-vendor/etc/init/vendor.qti.hardware.secureprocessor.rc
-vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
 vendor/etc/init/vendor.qti.hardware.servicetrackeraidl-service.rc
 vendor/etc/init/vendor.qti.hardware.soter-service.rc
 vendor/etc/init/vendor.qti.hardware.trustedui-aidl-service-qti.rc
@@ -1803,7 +1814,6 @@ vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim_remote_client.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim_remote_server.xml
-vendor/etc/vintf/manifest/vendor.qti.hardware.secureprocessor.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.servicetrackeraidl-service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.soter-service.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.trustedui-aidl-service.xml
@@ -2022,14 +2032,6 @@ vendor/lib64/vendor.qti.hardware.limits@1.2.so
 vendor/lib64/vendor.qti.hardware.power.powermodule-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common-helper.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.config-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.device-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 vendor/lib64/vendor.qti.hardware.sigma_miracast@1.0.so
 vendor/lib64/vendor.qti.hardware.soter-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.trustedui-V1-ndk.so
