@@ -290,7 +290,6 @@ smmu_proxy_dlkm.ko
 tz_log_dlkm.ko
 goodix_ts.ko
 focaltech_fts.ko
-eswin_ts.ko
 qts.ko
 ubwcp.ko
 msm_video.ko

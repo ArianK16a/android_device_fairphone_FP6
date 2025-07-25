@@ -182,3 +182,4 @@ sync_fence.ko
 msm_hw_fence.ko
 msm-mmrm.ko
 smcinvoke_dlkm.ko
+eswin_ts.ko
