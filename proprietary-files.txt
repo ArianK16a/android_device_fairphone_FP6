@@ -738,11 +738,11 @@ vendor/lib64/vendor.qti.hardware.dpmservice@1.1.so;MODULE_SUFFIX=_vendor
 
 # DRM
 vendor/bin/hw/vendor.qti.hardware.qseecom@1.0-service
-vendor/bin/qseecom_sample_client
 vendor/bin/qseecomd
 vendor/etc/gpfspath_oem_config.xml
 vendor/etc/init/qseecomd.rc
 vendor/etc/init/vendor.qti.hardware.qseecom@1.0-service.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.qseecom@1.0-service.xml
 vendor/lib64/hw/vendor.qti.hardware.qseecom@1.0-impl.so
 vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so
@@ -750,6 +750,7 @@ vendor/lib64/libQSEEComAPI.so
 vendor/lib64/libcpion.so
 vendor/lib64/libdrmfs.so
 vendor/lib64/libdrmtime.so
+vendor/lib64/libgpt.so
 vendor/lib64/libops.so
 vendor/lib64/libqisl.so
 vendor/lib64/librpmb.so
@@ -1615,8 +1616,8 @@ vendor/lib64/libchifeature2.so
 vendor/lib64/libclstc_algorithm_adapter.so
 vendor/lib64/libclstc_gcp_adapter.so
 vendor/lib64/libclstc_tm.so
-vendor/lib64/libvideoml.so
 vendor/lib64/libisphwsetting.so
+vendor/lib64/libvideoml.so
 
 # Camera? listensoundmodel
 vendor/lib64/libcapiv2udk7vendor.so
@@ -1647,13 +1648,13 @@ vendor/bin/init.qti.kernel.early_debug-volcano.sh
 vendor/bin/init.qti.kernel.early_debug.sh
 vendor/bin/init.qti.kernel.sh
 vendor/bin/init.qti.write.sh
+vendor/bin/vendor_modprobe.sh
 vendor/etc/fstab_factory.qcom
 vendor/etc/init/hw/init.qti.kernel.rc
 vendor/etc/init/hw/init.qti.ufs.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.qlm-service.rc
 vendor/etc/init/init.qti.graphics.rc
-vendor/bin/vendor_modprobe.sh
 
 # Media
 vendor/etc/media_codecs.xml
@@ -1673,8 +1674,8 @@ vendor/etc/init/nfc-service-sec.rc
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-sec-vendor.conf
 vendor/etc/vintf/manifest/nfc-service-sec.xml
-vendor/lib64/nfc_nci_sec.so
 vendor/firmware/sec_s3nrn4v_firmware.bin
+vendor/lib64/nfc_nci_sec.so
 
 # Secureprocessor
 vendor/bin/hw/vendor.qti.hardware.secureprocessor
