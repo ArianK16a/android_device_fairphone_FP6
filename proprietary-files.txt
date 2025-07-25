@@ -1240,6 +1240,7 @@ vendor/lib64/qcrild_libqcrilnrutils.so
 vendor/lib64/qtiPeripheralMgr.so
 vendor/lib64/qtiril-utils.so
 vendor/lib64/qtiwakelock.so
+vendor/etc/vintf/manifest/mwqem-saidl.xml
 vendor/lib64/vendor.libmwqemiptablemgr.so
 vendor/lib64/vendor.qti.ImsRtpService-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.ImsRtpService-aidl-Impl.so
