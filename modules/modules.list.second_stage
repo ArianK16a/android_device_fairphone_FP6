@@ -38,6 +38,7 @@ drm_display_helper.ko
 drm_dp_aux_bus.ko
 dwc3-msm.ko
 dynpf_scmi.ko
+eswin_ts.ko
 eud.ko
 f_fs_ipc_log.ko
 focaltech_fp.ko
