@@ -61,6 +61,7 @@ vendor/lib/rfsa/adsp/libmlawbpostproc_dsp_skel.so
 vendor/lib64/hw/com.dsi.ant@1.0-impl.so
 
 # Audio
+vendor/etc/models/acd/environment.eai
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
@@ -1700,12 +1701,7 @@ vendor/etc/data/nicm_config.xml
 vendor/etc/data/tlpd_oem_config.xml
 vendor/etc/default-permissions/vendor.qti.data.txpwradmin.xml
 vendor/etc/mem_logger_config.xml
-vendor/etc/models/acd/environment.eai
-vendor/etc/permissions/android.hardware.light.xml
-vendor/etc/permissions/privapp-permissions-google-lens.xml
 vendor/etc/permissions/privapp-permissions-qti-vendor.xml
-vendor/etc/permissions/vendor.qti.dcf.xml
-vendor/etc/permissions/vendor.qti.hardware.factory.xml
 vendor/etc/qguard.json
 vendor/etc/qvirtmgr-vndr.json
 vendor/etc/sec_s3nrn4v_hwreg.bin
