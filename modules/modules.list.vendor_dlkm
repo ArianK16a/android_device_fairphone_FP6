@@ -15,7 +15,6 @@ cnss_nl.ko
 cnss_plat_ipc_qmi_svc.ko
 cnss_prealloc.ko
 cnss_utils.ko
-eswin_ts.ko
 focaltech_fts.ko
 frpc-adsprpc.ko
 goodix_ts.ko
