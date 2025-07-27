@@ -39,6 +39,9 @@ AUDIO_FEATURE_ENABLED_PROXY_DEVICE := true
 
 BOARD_SUPPORTS_OPENSOURCE_STHAL := true
 
+TARGET_PROVIDES_AUDIO_HAL ?= true
+TARGET_PROVIDES_LIBAGM ?= true
+TARGET_PROVIDES_LIBAR_PAL ?= true
 TARGET_USES_QCOM_MM_AUDIO := true
 
 # Board
@@ -225,6 +228,7 @@ DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 DEVICE_MANIFEST_SKUS := volcano
 DEVICE_MANIFEST_VOLCANO_FILES := \
     $(DEVICE_PATH)/vintf/manifest.xml \
+    hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/manifest_non_qmaa.xml
 
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     $(DEVICE_PATH)/vintf/framework_compatibility_matrix.xml \
