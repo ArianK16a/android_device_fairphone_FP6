@@ -1508,7 +1508,7 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 # Audio
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/audio/sku_volcano/audio_effects.conf
-vendor/etc/audio/sku_volcano/audio_policy_configuration.xml
+vendor/etc/audio/sku_volcano_qssi/audio_policy_configuration.xml:vendor/etc/audio/sku_volcano/audio_policy_configuration.xml
 vendor/etc/audio/sku_volcano/mixer_paths_volcano6_cdp_wsa883x_wcd939x.xml
 vendor/etc/audio/sku_volcano/mixer_paths_volcano6_mtp_wsa883x_wcd939x.xml
 vendor/etc/audio/sku_volcano/mixer_paths_volcano6i_mtp_wsa883x.xml
