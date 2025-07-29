@@ -633,6 +633,7 @@ vendor/bin/hw/vendor.qti.hardware.display.composer-service;DISABLE_DEPS
 vendor/bin/qdcmss
 vendor/etc/init/qdcmss.rc
 vendor/lib64/libbacklight-calib.so
+vendor/lib64/libcolor-default.so
 vendor/lib64/libdigital-dimming.so
 vendor/lib64/libdisplayconfig.qti.so
 vendor/lib64/libdpp_manager.so
@@ -648,7 +649,6 @@ vendor/lib64/libsdmdal.so
 vendor/lib64/libsdmutils.so
 vendor/lib64/libsnapdragoncolor-manager.so
 vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/libcolor-default.so
 
 # Display postprocessing
 vendor/bin/hw/vendor.qti.hardware.display.color-service
@@ -1148,12 +1148,12 @@ vendor/lib64/com.qualcomm.qti.uceservice@2.2.so
 vendor/lib64/com.qualcomm.qti.uceservice@2.3.so
 vendor/lib64/deviceInfoServiceModuleNr.so
 vendor/lib64/lib-imscommon.so
+vendor/lib64/lib-imsdcservice.so
 vendor/lib64/lib-imsdpl.so
 vendor/lib64/lib-imsqimf.so
 vendor/lib64/lib-imsrcsservice.so
 vendor/lib64/lib-imsservice.so
 vendor/lib64/lib-imsvtcore.so
-vendor/lib64/lib-imsdcservice.so
 vendor/lib64/lib-imsxml.so
 vendor/lib64/lib-rtpcommon.so
 vendor/lib64/lib-rtpcore.so
@@ -1508,7 +1508,6 @@ vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
 # Audio
 vendor/etc/a2dp_audio_policy_configuration.xml
 vendor/etc/audio/sku_volcano/audio_effects.conf
-vendor/etc/audio/sku_volcano_qssi/audio_policy_configuration.xml:vendor/etc/audio/sku_volcano/audio_policy_configuration.xml
 vendor/etc/audio/sku_volcano/mixer_paths_volcano6_cdp_wsa883x_wcd939x.xml
 vendor/etc/audio/sku_volcano/mixer_paths_volcano6_mtp_wsa883x_wcd939x.xml
 vendor/etc/audio/sku_volcano/mixer_paths_volcano6i_mtp_wsa883x.xml
@@ -1540,6 +1539,7 @@ vendor/etc/audio/sku_volcano/resourcemanager_volcano_mtp_wsa883x_wcd939x_wcn6450
 vendor/etc/audio/sku_volcano/resourcemanager_volcano_mtp_wsa883x_wcn6450.xml
 vendor/etc/audio/sku_volcano/resourcemanager_volcano_qrd.xml
 vendor/etc/audio/sku_volcano/resourcemanager_volcano_qrd_sku1.xml
+vendor/etc/audio/sku_volcano_qssi/audio_policy_configuration.xml:vendor/etc/audio/sku_volcano/audio_policy_configuration.xml
 vendor/etc/audio_policy_configuration.xml
 vendor/etc/usb_audio_policy_configuration.xml
 vendor/etc/usecaseKvManager_fps.xml
@@ -1673,10 +1673,10 @@ vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
 # Sensors
 vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/sensors.vl53l1.so
-vendor/lib64/sensors.qsh.so
 vendor/lib64/libsns_dynamic_loader_stub.so
 vendor/lib64/libsns_remote_proc_state_stub.so
 vendor/lib64/libsnsapi-full.so
+vendor/lib64/sensors.qsh.so
 
 # Unknown
 vendor/lib64/libeepromcutter.so
@@ -1755,11 +1755,6 @@ vendor/lib64/libqms_client.so
 vendor/lib64/libqsegnet.so
 vendor/lib64/libqsh_ble_pb.so
 vendor/lib64/libqtbase.so
-vendor/lib64/vendor.qti.qesdsys-V4-ndk.so
-vendor/lib64/vendor.qti.qesdhal@1.0.so
-vendor/lib64/vendor.qti.qesdhal@1.1.so
-vendor/lib64/vendor.qti.qesdhal@1.2.so
-vendor/lib64/vendor.qti.qesdhal@1.3.so
 vendor/lib64/libqti-qesdk-secure.so
 vendor/lib64/libqti-utils.so
 vendor/lib64/libqtiidentitycredential.so
@@ -1804,3 +1799,8 @@ vendor/lib64/libvideooptfeature.so
 vendor/lib64/libvl53l1_daemon.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
+vendor/lib64/vendor.qti.qesdhal@1.0.so
+vendor/lib64/vendor.qti.qesdhal@1.1.so
+vendor/lib64/vendor.qti.qesdhal@1.2.so
+vendor/lib64/vendor.qti.qesdhal@1.3.so
+vendor/lib64/vendor.qti.qesdsys-V4-ndk.so
