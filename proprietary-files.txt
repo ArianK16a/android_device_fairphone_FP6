@@ -1651,6 +1651,8 @@ vendor/bin/hw/android.hardware.nfc-service.sec
 vendor/etc/init/nfc-service-sec.rc
 vendor/etc/libnfc-nci.conf
 vendor/etc/libnfc-sec-vendor.conf
+vendor/etc/sec_s3nrn4v_hwreg.bin
+vendor/etc/sec_s3nrn4v_swreg.bin
 vendor/etc/vintf/manifest/nfc-service-sec.xml
 vendor/firmware/sec_s3nrn4v_firmware.bin
 vendor/lib64/nfc_nci_sec.so
