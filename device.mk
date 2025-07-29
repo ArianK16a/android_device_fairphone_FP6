@@ -95,7 +95,7 @@ PRODUCT_COPY_FILES += \
     $(CONFIG_PAL_SRC_DIR)/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
     $(CONFIG_PAL_SRC_DIR)/mixer_paths_volcano_mtp.xml:$(CONFIG_SKU_OUT_DIR)/mixer_paths_volcano_mtp.xml \
     $(CONFIG_PAL_SRC_DIR)/resourcemanager_volcano_mtp.xml:$(CONFIG_SKU_OUT_DIR)/resourcemanager_volcano_mtp.xml \
-	$(CONFIG_PAL_SRC_DIR)/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
+    $(CONFIG_PAL_SRC_DIR)/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml \
     hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/media_codecs_vendor_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_vendor_audio.xml \
     hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/codec2/service/1.0/c2audio.vendor.base-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.base-arm64.policy \
     hardware/qcom-caf/sm8650/audio/primary-hal/configs/common/codec2/service/1.0/c2audio.vendor.ext-arm64.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/c2audio.vendor.ext-arm64.policy \
@@ -144,15 +144,7 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
     vendor.qti.hardware.display.allocator-service \
     vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.composer-service.rc \
-    vendor.qti.hardware.display.composer-service.xml \
-    vendor.qti.hardware.display.composer3-V1-ndk.vendor \
-    vendor.qti.hardware.display.config-V2-ndk.vendor \
-    vendor.qti.hardware.display.demura-service \
-    vendor.qti.hardware.display.demura-V1-ndk.vendor \
-    libgpu_tonemapper \
-    android.hardware.graphics.composer3-V2-ndk.vendor \
-    vendor.qti.hardware.display.config-V11-ndk.vendor
+    vendor.qti.hardware.display.demura-service
 
 PRODUCT_PACKAGES += \
     init.qti.display_boot.rc \
