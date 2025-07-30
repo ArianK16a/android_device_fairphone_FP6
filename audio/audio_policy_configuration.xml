@@ -272,14 +272,14 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </devicePort>
-                <devicePort tagName="Wired Headset" type="AUDIO_DEVICE_OUT_WIRED_HEADSET" role="sink">
+                <!--<devicePort tagName="Wired Headset" type="AUDIO_DEVICE_OUT_WIRED_HEADSET" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
                 </devicePort>
                 <devicePort tagName="Wired Headphones" type="AUDIO_DEVICE_OUT_WIRED_HEADPHONE" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
-                </devicePort>
+                </devicePort> -->
                 <devicePort tagName="Line" type="AUDIO_DEVICE_OUT_LINE" role="sink">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="48000" channelMasks="AUDIO_CHANNEL_OUT_STEREO"/>
@@ -381,11 +381,11 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
                              samplingRates="48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO"/>
                 </devicePort>
-                <devicePort tagName="Wired Headset Mic" type="AUDIO_DEVICE_IN_WIRED_HEADSET" role="source">
+                <!--<devicePort tagName="Wired Headset Mic" type="AUDIO_DEVICE_IN_WIRED_HEADSET" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000 11025 12000 16000 22050 24000 32000 44100 48000"
                              channelMasks="AUDIO_CHANNEL_IN_MONO AUDIO_CHANNEL_IN_STEREO AUDIO_CHANNEL_IN_FRONT_BACK"/>
-                </devicePort>
+                </devicePort> -->
                 <devicePort tagName="BT SCO Headset Mic" type="AUDIO_DEVICE_IN_BLUETOOTH_SCO_HEADSET" role="source">
                     <profile name="" format="AUDIO_FORMAT_PCM_16_BIT"
                              samplingRates="8000 16000" channelMasks="AUDIO_CHANNEL_IN_MONO"/>
@@ -434,10 +434,10 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
                        sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,Telephony Rx"/>
                 <route type="mix" sink="Speaker"
                        sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,Telephony Rx"/>
-                <route type="mix" sink="Wired Headset"
+                <!-- <route type="mix" sink="Wired Headset"
                        sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,Telephony Rx"/>
                 <route type="mix" sink="Wired Headphones"
-                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,Telephony Rx"/>
+                       sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,Telephony Rx"/> -->
                 <route type="mix" sink="Line"
                        sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,Telephony Rx"/>
                 <route type="mix" sink="HDMI"
@@ -465,21 +465,21 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
                 <route type="mix" sink="voice_rx"
                        sources="Telephony Rx"/>
                 <route type="mix" sink="primary input"
-                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,BT SCO Headset Mic,FM Tuner,Telephony Rx,A2DP In,Echo Reference,BLE In,Proxy In,IP In"/>
+                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,FM Tuner,Telephony Rx,A2DP In,Echo Reference,BLE In,Proxy In,IP In"/>
                 <route type="mix" sink="compress-input"
-                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,Wired Headset Mic,USB Device In,USB Headset In,BLE In,Proxy In,IP In"/>
+                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In,BLE In,Proxy In,IP In"/>
                 <route type="mix" sink="usb_surround_sound"
                        sources="USB Device In,USB Headset In"/>
                 <route type="mix" sink="fast input"
-                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In,Wired Headset Mic,Proxy In,IP In"/>
+                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In,Proxy In,IP In"/>
                 <route type="mix" sink="quad mic"
-                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In,Wired Headset Mic"/>
+                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="voip_tx"
-                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In,Wired Headset Mic,BLE In"/>
+                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In,BLE In"/>
                 <route type="mix" sink="record_24"
-                       sources="Built-In Mic,Built-In Back Mic,Wired Headset Mic,A2DP In,BLE In"/>
+                       sources="Built-In Mic,Built-In Back Mic,A2DP In,BLE In"/>
                 <route type="mix" sink="mmap_no_irq_in"
-                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In,Wired Headset Mic"/>
+                       sources="Built-In Mic,Built-In Back Mic,BT SCO Headset Mic,USB Device In,USB Headset In"/>
                 <route type="mix" sink="BT A2DP Out"
                        sources="primary output,raw,deep_buffer,direct_pcm,compressed_offload,voip_rx,mmap_no_irq_out,haptics output,spatial output"/>
                 <route type="mix" sink="BT A2DP Headphones"
