@@ -106,6 +106,12 @@
     <ctl name="AUX_RDAC Switch" value="0" />
     <ctl name="RX_FIR Filter" value="OFF" />
     <ctl name="RX_EAR Mode" value="OFF" />
+    <ctl name="aw_dev_0_switch" value="Disable" />
+    <ctl name="aw_dev_1_switch" value="Disable" />
+    <ctl name="aw_dev_2_switch" value="Disable" />
+    <ctl name="aw_dev_0_prof" value="music" />
+    <ctl name="aw_dev_1_prof" value="music" />
+    <ctl name="aw_dev_2_prof" value="music" />
 
     <!-- TX Controls -->
     <ctl name="VA_AIF1_CAP Mixer DEC0" value="0" />
@@ -206,11 +212,11 @@
     <ctl name="HPHL Volume" value="20" />
     <ctl name="HPHR Volume" value="20" />
 
-    <ctl name="TX_DEC0 Volume" value="102" />
-    <ctl name="TX_DEC1 Volume" value="102" />
-    <ctl name="TX_DEC2 Volume" value="102" />
-    <ctl name="TX_DEC3 Volume" value="102" />
-    <ctl name="TX_DEC4 Volume" value="102" />
+    <ctl name="TX_DEC0 Volume" value="84" />
+    <ctl name="TX_DEC1 Volume" value="84" />
+    <ctl name="TX_DEC2 Volume" value="84" />
+    <ctl name="TX_DEC3 Volume" value="84" />
+    <ctl name="TX_DEC4 Volume" value="84" />
     <ctl name="TX_DEC5 Volume" value="84" />
     <ctl name="TX_DEC6 Volume" value="84" />
     <ctl name="TX_DEC7 Volume" value="84" />
@@ -278,6 +284,29 @@
 
 
     <!-- These are actual sound device specific mixer settings -->
+    <path name="amic1">
+        <ctl name="TX DEC1 MUX" value="SWR_MIC" />
+        <ctl name="TX SMIC MUX1" value="SWR_MIC0" />
+        <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
+        <ctl name="ADC1 ChMap" value="SWRM_TX1_CH1" />
+        <ctl name="TX0 MODE" value="ADC_LP" />
+        <ctl name="ADC1 MUX" value="CH1_AMIC1" />
+        <ctl name="AMIC1_MIXER Switch" value="1" />
+        <ctl name="TX_DEC1 Volume" value="84" />
+    </path>
+
+    <path name="amic3">
+        <ctl name="TX DEC2 MUX" value="SWR_MIC" />
+        <ctl name="TX SMIC MUX2" value="SWR_MIC4" />
+        <ctl name="TX_AIF1_CAP Mixer DEC2" value="1" />
+        <ctl name="ADC2 ChMap" value="SWRM_TX2_CH1" />
+        <ctl name="TX1 MODE" value="ADC_LP" />
+        <ctl name="ADC2_BCS Disable" value="1" />
+        <ctl name="ADC2 MUX" value="CH2_AMIC3" />
+        <ctl name="AMIC3_MIXER Switch" value="1" />
+        <ctl name="TX_DEC2 Volume" value="84" />
+    </path>
+
     <path name="amic2">
         <ctl name="TX DEC0 MUX" value="SWR_MIC" />
         <ctl name="TX SMIC MUX0" value="SWR_MIC4" />
@@ -311,7 +340,7 @@
         <ctl name="TX DMIC MUX2" value="DMIC3" />
     </path>
 
-    <path name="speaker">
+    <!--<path name="speaker">
         <ctl name="WSA RX0 MUX" value="AIF1_PB" />
         <ctl name="WSA RX1 MUX" value="AIF1_PB" />
         <ctl name="WSA_RX0 INP0" value="RX0" />
@@ -325,6 +354,10 @@
         <ctl name="SpkrRight VISENSE Switch" value="1" />
         <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
         <ctl name="Idle Detect" value="1" />
+    </path>-->
+    <path name="speaker">
+        <ctl name="aw_dev_0_switch" value="Enable" />
+        <ctl name="aw_dev_1_switch" value="Enable" />
     </path>
 
     <path name="speaker-prot">
@@ -336,7 +369,7 @@
         <ctl name="SWR DAC_Port Switch" value="1" />
     </path>
 
-    <path name="speaker-mono">
+    <!--<path name="speaker-mono">
         <ctl name="WSA RX0 MUX" value="AIF1_PB" />
         <ctl name="WSA_RX0 INP0" value="RX0" />
         <ctl name="WSA_COMP1 Switch" value="1" />
@@ -344,6 +377,9 @@
         <ctl name="SpkrLeft VISENSE Switch" value="1" />
         <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
         <ctl name="Idle Detect" value="1" />
+    </path>-->
+    <path name="speaker-mono">
+        <ctl name="aw_dev_1_switch" value="Enable" />
     </path>
 
     <path name="speaker-mono-prot">
@@ -351,7 +387,7 @@
         <ctl name="WSA_RX0 Digital Volume" value="84" />
     </path>
 
-    <path name="speaker-mono-2">
+    <!--<path name="speaker-mono-2">
         <ctl name="WSA RX1 MUX" value="AIF1_PB" />
         <ctl name="WSA_RX1 INP0" value="RX1" />
         <ctl name="WSA_COMP2 Switch" value="1" />
@@ -359,6 +395,9 @@
         <ctl name="SpkrRight VISENSE Switch" value="1" />
         <ctl name="SpkrRight SWR DAC_Port Switch" value="1" />
         <ctl name="Idle Detect" value="1" />
+    </path>-->
+    <path name="speaker-mono-2">
+        <ctl name="aw_dev_1_switch" value="Enable" />
     </path>
 
     <path name="speaker-mono-2-prot">
@@ -469,11 +508,11 @@
     </path>
 
     <path name="speaker-mic">
-        <path name="dmic1" />
+        <path name="amic3" />
     </path>
 
     <path name="speaker-mic-liquid">
-        <path name="dmic1" />
+        <path name="amic3" />
     </path>
 
     <path name="speaker-mic-sbc">
@@ -483,6 +522,15 @@
         <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_1" value="1" />
         <ctl name="WSA_AIF_VI Mixer WSA_SPKR_VI_2" value="1" />
         <path name="speaker" />
+    </path>
+
+    <path name="voice-speaker-prot">
+        <ctl name="aw_dev_0_switch" value="Enable" />
+        <ctl name="aw_dev_1_switch" value="Enable" />
+        <ctl name="aw_dev_0_prof" value="voice" />
+        <ctl name="aw_dev_1_prof" value="voice" />
+        <ctl name="WSA_RX0 Digital Volume" value="84" />
+        <ctl name="WSA_RX1 Digital Volume" value="84" />
     </path>
 
     <path name="voice-speaker-protected">
@@ -547,7 +595,7 @@
         <ctl name="WSA_AIF_CPS Mixer WSA_SPKR_CPS_2" value="1" />
     </path>
 
-    <path name="handset">
+    <!--<path name="handset">
         <ctl name="WSA RX0 MUX" value="AIF1_PB" />
         <ctl name="WSA_RX0 INP0" value="RX0" />
         <ctl name="WSA_COMP1 Switch" value="1" />
@@ -556,15 +604,19 @@
         <ctl name="SpkrLeft VISENSE Switch" value="1" />
         <ctl name="SpkrLeft SWR DAC_Port Switch" value="1" />
         <ctl name="WSA_RX0 Digital Volume" value="70" />
+    </path>-->
+    <path name="handset">
+        <ctl name="aw_dev_0_switch" value="Enable" />
+        <ctl name="aw_dev_0_prof" value="receiver" />
     </path>
 
     <path name="handset-mic">
-        <path name="dmic2" />
+        <path name="amic1" />
     </path>
 
     <path name="handset-mic-unprocessed">
-        <path name="dmic2" />
-        <ctl name="TX_DEC2 Volume" value="105" />
+        <path name="amic1" />
+        <ctl name="TX_DEC2 Volume" value="84" />
     </path>
 
     <path name="ultrasound-handset">
@@ -679,8 +731,21 @@
         <path name="handset" />
     </path>
 
+    <!-- <path name="voice-hac">
+        <ctl name="RX_MACRO RX2 MUX" value="AIF2_PB"/>
+        <ctl name="RX INT2_1 MIX1 INP0" value="RX2"/>
+        <ctl name="AUX_MUX" value="RX2"/>
+        <ctl name="DAC2 Switch" value="1"/>
+        <ctl name="AUX_MIXER Switch" value="1"/>
+        <ctl name="RX_RX2 Digital Volume" value="84"/>
+        <ctl name="HAC_PA Switch" value="1"/>
+    </path> -->
+
     <path name="voice-handset-hac">
-        <path name="handset" />
+        <ctl name="aw_dev_0_switch" value="Enable" />
+        <ctl name="aw_dev_0_prof" value="receiver" />
+        <ctl name="aw_dev_2_switch" value="Enable" />
+        <ctl name="aw_dev_2_prof" value="receiver" />
     </path>
 
     <path name="voice-handset-hdk">
@@ -691,7 +756,10 @@
         <path name="handset" />
     </path>
     <path name="voice-speaker">
-        <path name="speaker-mono" />
+        <ctl name="aw_dev_0_switch" value="Enable" />
+        <ctl name="aw_dev_1_switch" value="Enable" />
+        <ctl name="aw_dev_0_prof" value="voice" />
+        <ctl name="aw_dev_1_prof" value="voice" />
     </path>
 
     <path name="voice-speaker-stereo">
@@ -995,18 +1063,26 @@
     </path>
 
     <!-- Dual MIC devices -->
-    <path name="handset-dmic-endfire">
+    <!--<path name="handset-dmic-endfire">
         <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
         <ctl name="TX DMIC MUX1" value="DMIC1" />
         <ctl name="TX_AIF1_CAP Mixer DEC2" value="1" />
         <ctl name="TX DMIC MUX2" value="DMIC3" />
+    </path>-->
+    <path name="handset-dmic-endfire">
+        <path name="amic1" />
+        <path name="amic3" />
     </path>
 
-    <path name="speaker-dmic-endfire">
+    <!--<path name="speaker-dmic-endfire">
         <ctl name="TX_AIF1_CAP Mixer DEC1" value="1" />
         <ctl name="TX DMIC MUX1" value="DMIC0" />
         <ctl name="TX_AIF1_CAP Mixer DEC2" value="1" />
         <ctl name="TX DMIC MUX2" value="DMIC1" />
+    </path>-->
+    <path name="speaker-dmic-endfire">
+        <path name="amic1" />
+        <path name="amic3" />
     </path>
 
     <path name="dmic-endfire">
@@ -1019,12 +1095,18 @@
         <ctl name="IIR0 INP0 MUX" value="DEC2" />
     </path>
 
-    <path name="handset-stereo-dmic-ef">
-        <path name="handset-dmic-endfire" />
+    <path name="handset-dual-mic-stereo">
+        <path name="amic1" />
+        <path name="amic3" />
     </path>
 
-    <path name="speaker-stereo-dmic-ef">
-        <path name="speaker-dmic-endfire" />
+    <path name="speaker-dual-mic-stereo">
+        <path name="amic1" />
+        <path name="amic3" />
+    </path>
+
+    <path name="speaker-bootom-mic">
+        <path name="amic1" />
     </path>
 
     <path name="voice-dmic-ef-tmus">
@@ -1171,17 +1253,17 @@
 
     <path name="unprocessed-hdr-mic-landscape">
         <path name="handset-dual-dmic-quad-dec" />
-        <ctl name="TX_DEC1 Volume" value="108" />
+        <ctl name="TX_DEC1 Volume" value="84" />
         <ctl name="TX_DEC2 Volume" value="84" />
-        <ctl name="TX_DEC3 Volume" value="108" />
+        <ctl name="TX_DEC3 Volume" value="84" />
         <ctl name="TX_DEC4 Volume" value="84" />
     </path>
 
     <path name="unprocessed-hdr-mic-inverted-landscape">
         <path name="handset-dual-dmic-quad-dec-reverse" />
-        <ctl name="TX_DEC1 Volume" value="108" />
+        <ctl name="TX_DEC1 Volume" value="84" />
         <ctl name="TX_DEC2 Volume" value="84" />
-        <ctl name="TX_DEC3 Volume" value="108" />
+        <ctl name="TX_DEC3 Volume" value="84" />
         <ctl name="TX_DEC4 Volume" value="84" />
     </path>
 
@@ -1198,17 +1280,17 @@
 
     <path name="unprocessed-hdr-mic-portrait">
         <path name="handset-single-dmic-quad-dec" />
-        <ctl name="TX_DEC1 Volume" value="108" />
+        <ctl name="TX_DEC1 Volume" value="84" />
         <ctl name="TX_DEC2 Volume" value="84" />
-        <ctl name="TX_DEC3 Volume" value="108" />
+        <ctl name="TX_DEC3 Volume" value="84" />
         <ctl name="TX_DEC4 Volume" value="84" />
     </path>
 
     <path name="unprocessed-hdr-mic-inverted-portrait">
         <path name="handset-single-dmic-quad-dec" />
-        <ctl name="TX_DEC1 Volume" value="108" />
+        <ctl name="TX_DEC1 Volume" value="84" />
         <ctl name="TX_DEC2 Volume" value="84" />
-        <ctl name="TX_DEC3 Volume" value="108" />
+        <ctl name="TX_DEC3 Volume" value="84" />
         <ctl name="TX_DEC4 Volume" value="84" />
     </path>
 
