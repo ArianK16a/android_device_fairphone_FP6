@@ -58,8 +58,8 @@ vendor/etc/acdbdata/nn_ns_models/fai__8.0.2_0.0__3.0.0_0.0__3.1.1_0.0__3.2.0_0.1
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_1.36_enpu2.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_2.10_enpuv3.pmd
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_3.4_enpuv4.pmd
-vendor/etc/acdbdata/volcano_mtp_fps/MTP_acdb_cal.acdb:vendor/etc/acdbdata/volcano_mtp/MTP_acdb_cal.acdb
-vendor/etc/acdbdata/volcano_mtp_fps/MTP_workspaceFileXml.qwsp:vendor/etc/acdbdata/volcano_mtp/MTP_workspaceFileXml.qwsp
+vendor/etc/acdbdata/volcano_mtp_fps/MTP_acdb_cal.acdb:vendor/etc/acdbdata/volcano_mtp/MTP_acdb_cal.acdb;TRYSRCFIRST
+vendor/etc/acdbdata/volcano_mtp_fps/MTP_workspaceFileXml.qwsp:vendor/etc/acdbdata/volcano_mtp/MTP_workspaceFileXml.qwsp;TRYSRCFIRST
 
 # ADSP
 vendor/bin/adsprpcd
