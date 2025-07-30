@@ -1050,6 +1050,25 @@ vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
 
+# QESDK
+vendor/bin/qesdk-manager
+vendor/bin/qesdk-secmanager
+vendor/etc/init/qesdk-manager.rc
+vendor/etc/init/qesdk-secmanager.rc
+vendor/etc/seccomp_policy/qesdk.policy
+vendor/etc/seccomp_policy/qesdksec.policy
+vendor/lib64/libqesdk2_0.so
+vendor/lib64/libqesdk_manager.so
+vendor/lib64/libqesdoem_query_sys.so
+vendor/lib64/vendor.qti.qesdhal-impl.so
+vendor/lib64/vendor.qti.qesdhal@1.0.so
+vendor/lib64/vendor.qti.qesdhal@1.1.so
+vendor/lib64/vendor.qti.qesdhal@1.2.so
+vendor/lib64/vendor.qti.qesdhal@1.3.so
+vendor/lib64/vendor.qti.qesdhalaidl-V2-ndk.so
+vendor/lib64/vendor.qti.qesdsys-V3-ndk.so
+vendor/lib64/vendor.qti.qesdsys-V4-ndk.so
+
 # QMI
 system/etc/sysconfig/qti_whitelist.xml
 system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
