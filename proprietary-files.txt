@@ -643,6 +643,7 @@ vendor/etc/init/cnd.rc
 vendor/etc/init/qms.rc
 vendor/etc/seccomp_policy/qms.policy
 vendor/etc/vintf/manifest/vendor.qti.hardware.data.iwlandata.xml
+vendor/lib64/libCneAppJni.so
 vendor/lib64/libcne.so
 vendor/lib64/libcneapiclient.so
 vendor/lib64/libcneoplookup.so
