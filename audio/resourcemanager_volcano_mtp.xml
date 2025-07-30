@@ -89,7 +89,7 @@
         </supported_streams>
     </config_volume>
     <config_lpm>
-        <use_disable_lpm>1</use_disable_lpm>
+        <use_disable_lpm>0</use_disable_lpm>
         <lpm_supported_streams>
             <lpm_supported_stream>PAL_STREAM_LOW_LATENCY</lpm_supported_stream>
             <lpm_supported_stream>PAL_STREAM_ULTRA_LOW_LATENCY</lpm_supported_stream>
@@ -191,6 +191,18 @@
                     <channels>4</channels>
                     <snd_device_name>unprocessed-hdr-mic-inverted-portrait</snd_device_name>
                 </custom-config>
+                <custom-config key="main">
+                    <channels>1</channels>
+                    <snd_device_name>amic1</snd_device_name>
+                </custom-config>
+                <custom-config key="sub">
+                    <channels>1</channels>
+                    <snd_device_name>amic3</snd_device_name>
+                </custom-config>
+                <custom-config key="dual-mic">
+                    <channels>2</channels>
+                    <snd_device_name>handset-dual-mic-stereo</snd_device_name>
+                </custom-config>
             </usecase>
         <!--Uncomment these lines instead of above lines if needing to enable EC per custom key
             <usecase>
@@ -203,6 +215,8 @@
             <usecase>
                 <name>PAL_STREAM_COMPRESSED</name>
                 <ec_enable>1</ec_enable>
+                <channels>2</channels>
+                <snd_device_name>handset-dual-mic-stereo</snd_device_name>
                 <custom-config key="unprocessed-hdr-mic-landscape">
                     <channels>4</channels>
                     <snd_device_name>unprocessed-hdr-mic-landscape</snd_device_name>
@@ -224,13 +238,54 @@
                 <name>PAL_STREAM_VOIP_TX</name>
                 <priority>2</priority>
                 <ec_enable>1</ec_enable>
+                <channels>2</channels>
+                <snd_device_name>handset-dual-mic-stereo</snd_device_name>
+                <custom-config key="voipapp1_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
             </usecase>
+
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
                 <priority>1</priority>
                 <sidetone_mode>HW</sidetone_mode>
                 <bit_width>16</bit_width>
                 <ec_enable>1</ec_enable>
+                <channels>2</channels>
+                <snd_device_name>handset-dual-mic-stereo</snd_device_name>
                 <custom-config key="nn-sm">
                     <channels>1</channels>
                     <snd_device_name>handset-mic</snd_device_name>
@@ -314,6 +369,10 @@
                     <channels>4</channels>
                     <snd_device_name>unprocessed-hdr-mic-inverted-portrait</snd_device_name>
                 </custom-config>
+                <custom-config key="dual-mic">
+                    <channels>2</channels>
+                    <snd_device_name>speaker-dual-mic-stereo</snd_device_name>
+                </custom-config>
             </usecase>
         <!--Uncomment these lines instead of above lines if needing to enable EC per custom key
             <usecase>
@@ -347,6 +406,44 @@
                 <name>PAL_STREAM_VOIP_TX</name>
                 <priority>2</priority>
                 <ec_enable>1</ec_enable>
+                <channels>1</channels>
+                <snd_device_name>speaker-bootom-mic</snd_device_name>
+                <custom-config key="voipapp1_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
@@ -354,6 +451,8 @@
                 <sidetone_mode>OFF</sidetone_mode>
                 <bit_width>16</bit_width>
                 <ec_enable>1</ec_enable>
+                <channels>1</channels>
+                <snd_device_name>speaker-bootom-mic</snd_device_name>
                 <custom-config key="nn-sm">
                     <channels>1</channels>
                     <snd_device_name>speaker-mic</snd_device_name>
@@ -424,6 +523,42 @@
                 <samplerate>48000</samplerate>
                 <bit_width>16</bit_width>
                 <ec_enable>1</ec_enable>
+                <custom-config key="voipapp1_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
@@ -464,6 +599,42 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
+                <custom-config key="voipapp1_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
@@ -522,6 +693,42 @@
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
                 <ec_enable>1</ec_enable>
+                <custom-config key="voipapp1_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_LOW_LATENCY</name>
@@ -589,16 +796,16 @@
         </in-device>
         <in-device>
             <id>PAL_DEVICE_IN_VI_FEEDBACK</id>
-            <back_end_name>CODEC_DMA-LPAIF_WSA-TX-0</back_end_name>
+            <back_end_name>MI2S-LPAIF_WSA-TX-PRIMARY</back_end_name>
             <max_channels>2</max_channels>
             <channels>2</channels>
-            <samplerate>8000</samplerate>
+            <samplerate>48000</samplerate>
             <bit_width>32</bit_width>
             <snd_device_name>vi-feedback</snd_device_name>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
                 <channels>1</channels>
-                <snd_device_name>vi-feedback-mono-2</snd_device_name>
+                <snd_device_name>vi-feedback</snd_device_name>
             </usecase>
         </in-device>
         <in-device>
@@ -640,6 +847,42 @@
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOIP_TX</name>
+                <custom-config key="voipapp1_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp1_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp2_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="voipapp3_48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
@@ -728,10 +971,11 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_SPEAKER</id>
-            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
+            <back_end_name>MI2S-LPAIF_WSA-RX-PRIMARY</back_end_name>
             <max_channels>2</max_channels>
             <channels>2</channels>
             <samplerate>48000</samplerate>
+            <bit_width>32</bit_width>
             <snd_device_name>speaker</snd_device_name>
             <speaker_protection_enabled>1</speaker_protection_enabled>
             <fractional_sr>0</fractional_sr>
@@ -742,16 +986,16 @@
                          CPS streaming: 1
                          ADSP control mode: 2
             -->
-            <cps_mode>2</cps_mode>
-            <vbat_enabled>1</vbat_enabled>
+            <cps_mode>0</cps_mode>
+            <vbat_enabled>0</vbat_enabled>
             <!--specify the supported bit format on speaker end point -->
             <!--this should be in the form of pal_audio_fmt_id-->
             <!--e.g <supported_bit_format >PAL_AUDIO_FMT_PCM_S24_LE</supported_bit_format>-->
             <!--We support 24 bit for speaker as of now, as some module in ADSP does not support Q31 format-->
             <!--This can be changed to PAL_AUDIO_FMT_PCM_S32_LE if 32 bit e2e support is required-->
-            <supported_bit_format>PAL_AUDIO_FMT_PCM_S24_LE</supported_bit_format>
+            <supported_bit_format>PAL_AUDIO_FMT_PCM_S32_LE</supported_bit_format>
             <!-- RAS should be enabled with speaker protection always -->
-            <ras_enabled>0</ras_enabled>
+            <ras_enabled>1</ras_enabled>
             <!-- Flag to specify speaker in case Voice call is switched from
                  handset to speaker with only 1 speaker.
                  Values: Both speaker : 0
@@ -764,8 +1008,14 @@
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
                 <priority>1</priority>
+                <channels>2</channels>
+                <snd_device_name>voice-speaker</snd_device_name>
+            </usecase>
+            <usecase>
+                <name>PAL_STREAM_VOICE_CALL</name>
+                <priority>1</priority>
                 <channels>1</channels>
-                <snd_device_name>speaker-mono-2</snd_device_name>
+                <snd_device_name>voice-speaker</snd_device_name>
             </usecase>
             <usecase>
                 <name>PAL_STREAM_VOICE_CALL</name>
@@ -778,6 +1028,19 @@
             <usecase>
                 <name>PAL_STREAM_VOIP_RX</name>
                 <priority>2</priority>
+                <snd_device_name>voice-speaker</snd_device_name>
+                <custom-config key="8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
             </usecase>
             <!--
                  Playback/Recording streams have a default priority of 3
@@ -799,20 +1062,23 @@
         </out-device>
         <out-device>
             <id>PAL_DEVICE_OUT_HANDSET</id>
-            <back_end_name>CODEC_DMA-LPAIF_WSA-RX-0</back_end_name>
+            <back_end_name>MI2S-LPAIF_WSA-RX-PRIMARY</back_end_name>
             <max_channels>2</max_channels>
             <channels>1</channels>
             <!-- To enable external EC reference the flag extec_ref_enabled must be added as 1 -->
             <ext_ec_ref_enabled>0</ext_ec_ref_enabled>
             <samplerate>48000</samplerate>
+            <bit_width>32</bit_width>
             <fractional_sr>0</fractional_sr>
             <snd_device_name>handset</snd_device_name>
             <handset_protection_enabled>0</handset_protection_enabled>
+            <supported_bit_format>PAL_AUDIO_FMT_PCM_S32_LE</supported_bit_format>
           <usecase>
               <name>PAL_STREAM_VOICE_CALL</name>
               <priority>1</priority>
               <custom-config key="HAC">
                  <snd_device_name>voice-handset-hac</snd_device_name> <!-- override sound device name with HAC handset -->
+                 <channels>2</channels>
               </custom-config>
           </usecase>
           <usecase>
@@ -820,6 +1086,19 @@
               <priority>2</priority>
               <custom-config key="HAC">
                  <snd_device_name>voice-handset-hac</snd_device_name> <!-- override sound device name with HAC handset for voip -->
+                 <channels>2</channels>
+              </custom-config>
+              <custom-config key="8K">
+                  <samplerate>8000</samplerate>
+              </custom-config>
+              <custom-config key="16K">
+                  <samplerate>16000</samplerate>
+              </custom-config>
+              <custom-config key="32K">
+                  <samplerate>32000</samplerate>
+              </custom-config>
+              <custom-config key="48K">
+                  <samplerate>48000</samplerate>
               </custom-config>
           </usecase>
           <usecase>
@@ -867,6 +1146,18 @@
                <priority>2</priority>
                <samplerate>48000</samplerate>
                <bit_width>16</bit_width>
+                <custom-config key="8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
            </usecase>
         </out-device>
         <out-device>
@@ -907,6 +1198,18 @@
                <priority>2</priority>
                <samplerate>48000</samplerate>
                <bit_width>16</bit_width>
+                <custom-config key="8K">
+                    <samplerate>8000</samplerate>
+                </custom-config>
+                <custom-config key="16K">
+                    <samplerate>16000</samplerate>
+                </custom-config>
+                <custom-config key="32K">
+                    <samplerate>32000</samplerate>
+                </custom-config>
+                <custom-config key="48K">
+                    <samplerate>48000</samplerate>
+                </custom-config>
            </usecase>
          </out-device>
         <out-device>
