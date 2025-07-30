@@ -6,6 +6,24 @@
 # libqtigefar depends on libar-pal, which is a gnu makefile target
 # libvui_intf depends on liblx-osal, which is a gnu makefile target
 
+# Init ### TODO sort or import to tree
+vendor/bin/init.qcom.coex.sh
+vendor/bin/init.qcom.efs.sync.sh
+vendor/bin/init.qti.graphics.sh
+vendor/bin/init.qti.kernel.debug-volcano.sh
+vendor/bin/init.qti.kernel.debug.sh
+vendor/bin/init.qti.kernel.early_debug-volcano.sh
+vendor/bin/init.qti.kernel.early_debug.sh
+vendor/bin/init.qti.kernel.sh
+vendor/bin/init.qti.write.sh
+vendor/bin/vendor_modprobe.sh
+vendor/etc/fstab_factory.qcom
+vendor/etc/init/hw/init.qti.kernel.rc
+vendor/etc/init/hw/init.qti.ufs.rc
+vendor/etc/init/init.embmssl_server.rc
+vendor/etc/init/init.qlm-service.rc
+vendor/etc/init/init.qti.graphics.rc
+
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
@@ -70,7 +88,10 @@ vendor/lib64/libadm.so
 vendor/lib64/libaudio_log_utils.so
 vendor/lib64/libcapiv2svacnnvendor.so
 vendor/lib64/libcapiv2svarnnvendor.so
+vendor/lib64/libcapiv2udk7vendor.so
 vendor/lib64/libcapiv2uvvendor.so
+vendor/lib64/libeai_fixed.so
+vendor/lib64/libeai_float.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/libmcs.so;DISABLE_CHECKELF
 vendor/lib64/libpal_net_if.so
@@ -215,6 +236,22 @@ vendor/etc/init/vendor.qti.camera.provider-service_64.rc
 vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
+vendor/lib64/bm4d68v02s12n52.bin
+vendor/lib64/bm4d68v02s12n53.bin
+vendor/lib64/bm4d68v02s12n63.bin
+vendor/lib64/bm4d73v02s12n02.bin
+vendor/lib64/bm4d73v02s12n06.bin
+vendor/lib64/bm4d73v02s12n12.bin
+vendor/lib64/bm4d73v02s12n31.bin
+vendor/lib64/bm4d73v02s12n33.bin
+vendor/lib64/bm4d73v02s12n43.bin
+vendor/lib64/bm4d73v02s12n44.bin
+vendor/lib64/bm4d73v02s12n64.bin
+vendor/lib64/bm4d73v02s12n65.bin
+vendor/lib64/bm4d73v02s12n66.bin
+vendor/lib64/bm4d73v02s12n67.bin
+vendor/lib64/bm4d73v02s12n68.bin
+vendor/lib64/bm4d73v02s12n69.bin
 vendor/lib64/camera/bitmlconfig.bin
 vendor/lib64/camera/camxfl115indices.bin
 vendor/lib64/camera/camxfl300v1indices.bin
@@ -427,17 +464,43 @@ vendor/lib64/com.tct.cameraalgo.singlebokehcap.so
 vendor/lib64/com.tct.cameraalgo.singlebokehprv.so
 vendor/lib64/com.tct.cameraalgo.tcldualbokeh.so
 vendor/lib64/com.tct.cameraalgo.watermark.so
+vendor/lib64/hw/camera.qcom.milos.so
 vendor/lib64/hw/camera.qcom.so
+vendor/lib64/hw/com.qti.chi.offline.so
 vendor/lib64/hw/com.qti.chi.override.so
+vendor/lib64/libQnnHtp.so
+vendor/lib64/libQnnHtpNetRunExtensions.so
+vendor/lib64/libQnnHtpPrepare.so
+vendor/lib64/libQnnHtpProfilingReader.so
+vendor/lib64/libQnnHtpV73.so
+vendor/lib64/libQnnHtpV73CalculatorStub.so
+vendor/lib64/libQnnHtpV73Stub.so
+vendor/lib64/libQnnHtpV75.so
+vendor/lib64/libQnnHtpV75CalculatorStub.so
+vendor/lib64/libQnnHtpV75Skel.so
+vendor/lib64/libQnnHtpV75Stub.so
+vendor/lib64/libQnnHtpV79.so
+vendor/lib64/libQnnHtpV79Skel.so
+vendor/lib64/libQnnHtpV79Stub.so
+vendor/lib64/libQnnSystem.so
 vendor/lib64/libTHIS.so
 vendor/lib64/libTclAISuperfine.so
+vendor/lib64/libaidenoiser.so
+vendor/lib64/libaidenoiserv2.so
 vendor/lib64/libanc_face.so
 vendor/lib64/libanc_facesr.so
+vendor/lib64/libanc_hdr.so
+vendor/lib64/libanc_hdr_adapter_front_main.so
+vendor/lib64/libanc_hdr_adapter_raw_sr.so
+vendor/lib64/libanc_hdr_adapter_rear_main.so
+vendor/lib64/libanc_hdr_adapter_rear_uw.so
 vendor/lib64/libanc_hdr_check_nothing.so
 vendor/lib64/libanc_single_bokeh.so
 vendor/lib64/libanc_single_rt_bokeh.so
 vendor/lib64/libanc_supervq.so
+vendor/lib64/libbitmlengine.so
 vendor/lib64/libbitmlenginev2.so
+vendor/lib64/libcamerapostproc.so
 vendor/lib64/libcamxcommonutils.so
 vendor/lib64/libcamxexternalformatutils.so
 vendor/lib64/libcamxfdengine.so
@@ -451,11 +514,16 @@ vendor/lib64/libcamxstatscore.so
 vendor/lib64/libcamxswispiqmodule.so
 vendor/lib64/libcamxswprocessalgo.so
 vendor/lib64/libcamxtintlessalgo.so
+vendor/lib64/libchifeature2.so
 vendor/lib64/libchilog.so
+vendor/lib64/libclstc_algorithm_adapter.so
+vendor/lib64/libclstc_gcp_adapter.so
+vendor/lib64/libclstc_tm.so
 vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libdepthcomputation.so
 vendor/lib64/libhdr10plus.so
+vendor/lib64/libisphwsetting.so
 vendor/lib64/libmfnr_raw_api.so
 vendor/lib64/libmmcamera_bestats.so
 vendor/lib64/libmmcamera_cac.so
@@ -466,8 +534,20 @@ vendor/lib64/libmmcamera_pdpc.so
 vendor/lib64/libmotionDetV2.so
 vendor/lib64/libopencv.so
 vendor/lib64/libopencv3a.so
+vendor/lib64/libopencv_calib3d.so
 vendor/lib64/libopencv_core.so
+vendor/lib64/libopencv_dnn.so
+vendor/lib64/libopencv_features2d.so
+vendor/lib64/libopencv_flann.so
+vendor/lib64/libopencv_gapi.so
+vendor/lib64/libopencv_highgui.so
+vendor/lib64/libopencv_imgcodecs.so
 vendor/lib64/libopencv_imgproc.so
+vendor/lib64/libopencv_ml.so
+vendor/lib64/libopencv_objdetect.so
+vendor/lib64/libopencv_photo.so
+vendor/lib64/libopencv_stitching.so
+vendor/lib64/libopencv_video.so
 vendor/lib64/libos.so
 vendor/lib64/libqcomisphidl.so
 vendor/lib64/libqshcamera.so
@@ -481,6 +561,7 @@ vendor/lib64/libtcltflitev2.so
 vendor/lib64/libtctcameraalgo.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libundistort.so
+vendor/lib64/libvideoml.so
 vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
@@ -629,6 +710,7 @@ vendor/etc/displayconfig/display_id_4630947039571902851.xml
 # Display HDR
 vendor/lib64/libgame_enhance.so
 vendor/lib64/libhdr_backlight_adapter.so
+vendor/lib64/libhdr_stub.so
 vendor/lib64/libhdr_tm.so
 
 # Display HWC
@@ -749,6 +831,14 @@ vendor/lib64/rfs/dsp/libfastcvdsp_skel.so
 vendor/lib64/rfs/dsp/libscveT2T_skel.so
 vendor/lib64/rfs/dsp/libvrt_aide_dsp_skel.so
 
+# Fingerprint
+vendor/bin/hw/android.hardware.biometrics.fingerprint-service
+vendor/etc/init/fingerprint-default.rc:vendor/etc/init/fingerprint-FP6.rc
+vendor/etc/permissions/qti_fingerprint_interface.xml
+vendor/etc/vintf/manifest/fingerprint-default.xml:vendor/etc/vintf/manifest/fingerprint-FP6.xml
+vendor/lib64/hw/fingerprint.default.so;FIX_SONAME
+vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
+
 # FM
 vendor/etc/init.qti.fm.sh
 vendor/etc/init/init.qti.fm.rc
@@ -842,6 +932,7 @@ vendor/firmware/gmu_gen70900.bin
 
 # Graphics (Vulkan)
 vendor/lib64/hw/vulkan.adreno.so
+vendor/lib64/hw/vulkan.pastel.so
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service-qti
@@ -856,6 +947,14 @@ vendor/bin/hw/vendor.qti.media.c2@1.0-service
 vendor/bin/hw/vendor.qti.media.c2audio@1.0-service
 vendor/etc/init/vendor.qti.media.c2@1.0-service.rc
 vendor/etc/init/vendor.qti.media.c2audio@1.0-service.rc
+vendor/etc/media_codecs.xml
+vendor/etc/media_codecs_google_audio.xml
+vendor/etc/media_codecs_google_c2.xml
+vendor/etc/media_codecs_google_c2_audio.xml
+vendor/etc/media_codecs_google_c2_video.xml
+vendor/etc/media_codecs_google_telephony.xml
+vendor/etc/media_codecs_google_video.xml
+vendor/etc/media_codecs_google_video_le.xml
 vendor/etc/media_codecs_performance_volcano_qv0.xml
 vendor/etc/media_codecs_performance_volcano_v0.xml
 vendor/etc/media_codecs_performance_volcano_v1.xml
@@ -866,6 +965,8 @@ vendor/etc/media_codecs_volcano_v0.xml
 vendor/etc/media_codecs_volcano_v1.xml
 vendor/etc/media_codecs_volcano_v2.xml
 vendor/etc/media_codecs_volcano_v3.xml
+vendor/etc/media_profiles.xml
+vendor/etc/media_profiles_V1_0.xml
 vendor/etc/media_profiles_volcano_qv0.xml
 vendor/etc/media_profiles_volcano_v0.xml
 vendor/etc/media_profiles_volcano_v1.xml
@@ -913,6 +1014,17 @@ vendor/etc/init/init.qti.media.rc
 
 # Native public libraries
 vendor/etc/public.libraries.txt
+
+# NFC
+vendor/bin/hw/android.hardware.nfc-service.sec
+vendor/etc/init/nfc-service-sec.rc
+vendor/etc/libnfc-nci.conf
+vendor/etc/libnfc-sec-vendor.conf
+vendor/etc/sec_s3nrn4v_hwreg.bin
+vendor/etc/sec_s3nrn4v_swreg.bin
+vendor/etc/vintf/manifest/nfc-service-sec.xml
+vendor/firmware/sec_s3nrn4v_firmware.bin
+vendor/lib64/nfc_nci_sec.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
@@ -1263,6 +1375,21 @@ vendor/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE_SUFFIX=_vendor
 # Secure element
 vendor/etc/vintf/manifest/android.hardware.secure_element.xml
 
+# Secureprocessor
+vendor/bin/hw/vendor.qti.hardware.secureprocessor
+vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
+vendor/etc/init/vendor.qti.hardware.secureprocessor.rc
+vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
+vendor/etc/vintf/manifest/vendor.qti.hardware.secureprocessor.xml
+vendor/lib64/vendor.qti.hardware.secureprocessor.common-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.common-helper.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.config-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.device-V1-ndk.so
+vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
+
 # Sensors
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service
 vendor/bin/init.qcom.sensors.sh
@@ -1344,17 +1471,23 @@ vendor/etc/sensors/config/volcano_vertigo_mmc56x3x_0.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml
+vendor/lib64/hw/sensors.dynamic_sensor_hal.so
+vendor/lib64/hw/sensors.vl53l1.so
 vendor/lib64/libprotobuf-cpp-lite-21.7.so
 vendor/lib64/libqsh.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
 vendor/lib64/libsns_device_mode_stub.so
 vendor/lib64/libsns_direct_channel_stub.so
+vendor/lib64/libsns_dynamic_loader_stub.so
 vendor/lib64/libsns_registry_skel.so
+vendor/lib64/libsns_remote_proc_state_stub.so
+vendor/lib64/libsnsapi-full.so
 vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libsnsutils.so
 vendor/lib64/libssc_default_listener.so
+vendor/lib64/sensors.qsh.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate-V1-ndk.so
 
 # SSR
@@ -1480,148 +1613,3 @@ vendor/lib64/libwfduibcsrcinterface_vendor.so
 vendor/lib64/libwfdutils_proprietary.so
 vendor/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.wifidisplaysessionl@1.0-halimpl.so
-
-# Camera
-vendor/lib64/bm4d68v02s12n52.bin
-vendor/lib64/bm4d68v02s12n53.bin
-vendor/lib64/bm4d68v02s12n63.bin
-vendor/lib64/bm4d73v02s12n02.bin
-vendor/lib64/bm4d73v02s12n06.bin
-vendor/lib64/bm4d73v02s12n12.bin
-vendor/lib64/bm4d73v02s12n31.bin
-vendor/lib64/bm4d73v02s12n33.bin
-vendor/lib64/bm4d73v02s12n43.bin
-vendor/lib64/bm4d73v02s12n44.bin
-vendor/lib64/bm4d73v02s12n64.bin
-vendor/lib64/bm4d73v02s12n65.bin
-vendor/lib64/bm4d73v02s12n66.bin
-vendor/lib64/bm4d73v02s12n67.bin
-vendor/lib64/bm4d73v02s12n68.bin
-vendor/lib64/bm4d73v02s12n69.bin
-vendor/lib64/hw/camera.qcom.milos.so
-vendor/lib64/hw/com.qti.chi.offline.so
-vendor/lib64/libQnnHtp.so
-vendor/lib64/libQnnHtpNetRunExtensions.so
-vendor/lib64/libQnnHtpPrepare.so
-vendor/lib64/libQnnHtpProfilingReader.so
-vendor/lib64/libQnnHtpV73.so
-vendor/lib64/libQnnHtpV73CalculatorStub.so
-vendor/lib64/libQnnHtpV73Stub.so
-vendor/lib64/libQnnHtpV75.so
-vendor/lib64/libQnnHtpV75CalculatorStub.so
-vendor/lib64/libQnnHtpV75Skel.so
-vendor/lib64/libQnnHtpV75Stub.so
-vendor/lib64/libQnnHtpV79.so
-vendor/lib64/libQnnHtpV79Skel.so
-vendor/lib64/libQnnHtpV79Stub.so
-vendor/lib64/libQnnSystem.so
-vendor/lib64/libaidenoiser.so
-vendor/lib64/libaidenoiserv2.so
-vendor/lib64/libanc_hdr.so
-vendor/lib64/libanc_hdr_adapter_front_main.so
-vendor/lib64/libanc_hdr_adapter_raw_sr.so
-vendor/lib64/libanc_hdr_adapter_rear_main.so
-vendor/lib64/libanc_hdr_adapter_rear_uw.so
-vendor/lib64/libbitmlengine.so
-vendor/lib64/libcamerapostproc.so
-vendor/lib64/libchifeature2.so
-vendor/lib64/libclstc_algorithm_adapter.so
-vendor/lib64/libclstc_gcp_adapter.so
-vendor/lib64/libclstc_tm.so
-vendor/lib64/libisphwsetting.so
-vendor/lib64/libopencv_calib3d.so
-vendor/lib64/libopencv_dnn.so
-vendor/lib64/libopencv_features2d.so
-vendor/lib64/libopencv_flann.so
-vendor/lib64/libopencv_gapi.so
-vendor/lib64/libopencv_highgui.so
-vendor/lib64/libopencv_imgcodecs.so
-vendor/lib64/libopencv_ml.so
-vendor/lib64/libopencv_objdetect.so
-vendor/lib64/libopencv_photo.so
-vendor/lib64/libopencv_stitching.so
-vendor/lib64/libopencv_video.so
-vendor/lib64/libvideoml.so
-
-# Camera? listensoundmodel
-vendor/lib64/libcapiv2udk7vendor.so
-vendor/lib64/libeai_fixed.so
-vendor/lib64/libeai_float.so
-
-# Display
-vendor/lib64/libhdr_stub.so
-
-# Fingerprint
-vendor/bin/hw/android.hardware.biometrics.fingerprint-service
-vendor/etc/init/fingerprint-default.rc:vendor/etc/init/fingerprint-FP6.rc
-vendor/etc/permissions/qti_fingerprint_interface.xml
-vendor/etc/vintf/manifest/fingerprint-default.xml:vendor/etc/vintf/manifest/fingerprint-FP6.xml
-vendor/lib64/hw/fingerprint.default.so;FIX_SONAME
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
-
-# Graphics
-vendor/lib64/hw/vulkan.pastel.so
-
-# Init
-vendor/bin/init.qcom.coex.sh
-vendor/bin/init.qcom.efs.sync.sh
-vendor/bin/init.qti.graphics.sh
-vendor/bin/init.qti.kernel.debug-volcano.sh
-vendor/bin/init.qti.kernel.debug.sh
-vendor/bin/init.qti.kernel.early_debug-volcano.sh
-vendor/bin/init.qti.kernel.early_debug.sh
-vendor/bin/init.qti.kernel.sh
-vendor/bin/init.qti.write.sh
-vendor/bin/vendor_modprobe.sh
-vendor/etc/fstab_factory.qcom
-vendor/etc/init/hw/init.qti.kernel.rc
-vendor/etc/init/hw/init.qti.ufs.rc
-vendor/etc/init/init.embmssl_server.rc
-vendor/etc/init/init.qlm-service.rc
-vendor/etc/init/init.qti.graphics.rc
-
-# Media
-vendor/etc/media_codecs.xml
-vendor/etc/media_codecs_google_audio.xml
-vendor/etc/media_codecs_google_c2.xml
-vendor/etc/media_codecs_google_c2_audio.xml
-vendor/etc/media_codecs_google_c2_video.xml
-vendor/etc/media_codecs_google_telephony.xml
-vendor/etc/media_codecs_google_video.xml
-vendor/etc/media_codecs_google_video_le.xml
-vendor/etc/media_profiles.xml
-vendor/etc/media_profiles_V1_0.xml
-
-# NFC
-vendor/bin/hw/android.hardware.nfc-service.sec
-vendor/etc/init/nfc-service-sec.rc
-vendor/etc/libnfc-nci.conf
-vendor/etc/libnfc-sec-vendor.conf
-vendor/etc/sec_s3nrn4v_hwreg.bin
-vendor/etc/sec_s3nrn4v_swreg.bin
-vendor/etc/vintf/manifest/nfc-service-sec.xml
-vendor/firmware/sec_s3nrn4v_firmware.bin
-vendor/lib64/nfc_nci_sec.so
-
-# Secureprocessor
-vendor/bin/hw/vendor.qti.hardware.secureprocessor
-vendor/bin/hw/vendor.qti.hardware.secureprocessor@1.0
-vendor/etc/init/vendor.qti.hardware.secureprocessor.rc
-vendor/etc/init/vendor.qti.hardware.secureprocessor@1.0.rc
-vendor/etc/vintf/manifest/vendor.qti.hardware.secureprocessor.xml
-vendor/lib64/vendor.qti.hardware.secureprocessor.common-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common-helper.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0-helper.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.common@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.config-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.config@1.0.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.device-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.secureprocessor.device@1.0.so
-
-# Sensors
-vendor/lib64/hw/sensors.dynamic_sensor_hal.so
-vendor/lib64/hw/sensors.vl53l1.so
-vendor/lib64/libsns_dynamic_loader_stub.so
-vendor/lib64/libsns_remote_proc_state_stub.so
-vendor/lib64/libsnsapi-full.so
-vendor/lib64/sensors.qsh.so
