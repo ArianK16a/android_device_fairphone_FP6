@@ -66,17 +66,6 @@ blob_fixups: blob_fixups_user_type = {
             'android.media.audio.common.types-V4-cpp.so',
         ),
     (
-        'vendor/bin/hw/android.hardware.security.keymint-service-spu-qti',
-        'vendor/lib64/libspukeymint.so',
-    ): blob_fixup().replace_needed(
-        'android.hardware.security.sharedsecret-V2-ndk.so',
-        'android.hardware.security.sharedsecret-V1-ndk.so',
-    ),
-    'vendor/lib64/libspukeymintprovision.so': blob_fixup().replace_needed(
-        'android.hardware.security.keymint-V2-ndk.so',
-        'android.hardware.security.keymint-V3-ndk.so',
-    ),
-    (
         'vendor/lib64/camera/com.qti.eeprom.gt24p128c2csli_imx766.so',
         'vendor/lib64/camera/com.qti.eeprom.gt24p64b_imx688.so',
         'vendor/lib64/camera/com.qti.eeprom.irs2381c_polar.so',
