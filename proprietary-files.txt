@@ -110,6 +110,7 @@ vendor/firmware/aw882xx_acf.bin
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@1.1-service-qti
 vendor/etc/init/android.hardware.bluetooth@1.1-service-qti.rc
+vendor/etc/vintf/manifest/bttpi-saidl.xml
 vendor/lib64/btaudio_offload_if.so
 vendor/lib64/hw/android.hardware.bluetooth.audio-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
