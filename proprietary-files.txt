@@ -646,6 +646,7 @@ vendor/etc/default-permissions/com.qualcomm.qti.cne.xml
 vendor/etc/init/cnd.rc
 vendor/etc/init/qms.rc
 vendor/etc/seccomp_policy/qms.policy
+vendor/etc/vintf/manifest/datafactoryservice-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.data.iwlandata.xml
 vendor/lib64/libCneAppJni.so
 vendor/lib64/libcne.so
