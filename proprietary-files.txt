@@ -754,6 +754,7 @@ vendor/etc/display/thermallevel_to_fps.xml
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libintervmipc.so
+vendor/lib64/libqrtrclient.so
 vendor/lib64/libqseed3.so
 vendor/lib64/librcmask.so
 vendor/lib64/libsdm-color.so
@@ -1129,6 +1130,8 @@ vendor/lib64/libqmi_csi.so
 vendor/lib64/libqmi_encdec.so
 vendor/lib64/libqmi_legacy.so
 vendor/lib64/libqmiservices.so
+vendor/lib64/libqrtr.so
+vendor/lib64/libqsocket.so
 
 # QSPM
 vendor/bin/vendor.qti.qspmhal-service
@@ -1293,9 +1296,6 @@ vendor/lib64/libqcrildataaidl.so
 vendor/lib64/libqcrildatactl.so
 vendor/lib64/libqcrildataqos.so
 vendor/lib64/libqdpr.so
-vendor/lib64/libqrtr.so
-vendor/lib64/libqrtrclient.so
-vendor/lib64/libqsocket.so
 vendor/lib64/librcc.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-legacy.so
