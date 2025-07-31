@@ -1007,6 +1007,28 @@ vendor/etc/vintf/manifest/nfc-service-sec.xml
 vendor/firmware/sec_s3nrn4v_firmware.bin
 vendor/lib64/nfc_nci_sec.so
 
+# Perf
+vendor/bin/hw/vendor.qti.hardware.perf2-hal-service
+vendor/etc/init/vendor.qti.hardware.perf2-hal-service.rc
+vendor/etc/perf/commonresourceconfigs.xml
+vendor/etc/perf/commonsysnodesconfigs.xml
+vendor/etc/perf/perfboostsconfig.xml
+vendor/etc/perf/perfconfigstore.xml
+vendor/etc/perf/targetconfig.xml
+vendor/etc/perf/targetresourceconfigs.xml
+vendor/etc/perf/targetsysnodesconfigs.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml
+vendor/lib64/libperfconfig.so
+vendor/lib64/libperfgluelayer.so
+vendor/lib64/libperfioctl.so
+vendor/lib64/libq-perflog.so
+vendor/lib64/libqti-perfd-client.so
+vendor/lib64/libqti-perfd.so
+vendor/lib64/libqti-util.so
+vendor/lib64/libthermalclient.so
+vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
+vendor/lib64/vendor.qti.memory.pasrmanager-V1-ndk.so
+
 # Peripheral manager
 vendor/bin/pm-proxy
 vendor/bin/pm-service
@@ -1066,6 +1088,7 @@ vendor/etc/seccomp_policy/qesdksec.policy
 vendor/lib64/libqesdk2_0.so
 vendor/lib64/libqesdk_manager.so
 vendor/lib64/libqesdoem_query_sys.so
+vendor/lib64/libqti-qesdk-secure.so
 vendor/lib64/vendor.qti.qesdhal-impl.so
 vendor/lib64/vendor.qti.qesdhal@1.0.so
 vendor/lib64/vendor.qti.qesdhal@1.1.so
