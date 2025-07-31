@@ -524,6 +524,8 @@ vendor/lib64/libcom.qti.chinodeutils.so
 vendor/lib64/libcommonchiutils.so
 vendor/lib64/libdepthcomputation.so
 vendor/lib64/libhdr10plus.so
+vendor/lib64/libhme.so
+vendor/lib64/libipebpsstriping.so
 vendor/lib64/libisphwsetting.so
 vendor/lib64/libmfnr_raw_api.so
 vendor/lib64/libmmcamera_bestats.so
@@ -553,6 +555,7 @@ vendor/lib64/libos.so
 vendor/lib64/libqcomisphidl.so
 vendor/lib64/libqshcamera.so
 vendor/lib64/libspectre.so
+vendor/lib64/libswregistrationalgo.so
 vendor/lib64/libsynx.so
 vendor/lib64/libtclSceneDetector.so
 vendor/lib64/libtcl_ai_denoise.so
@@ -560,6 +563,7 @@ vendor/lib64/libtcl_dualcam_bokeh_cap.so
 vendor/lib64/libtcl_dualcam_bokeh_prv.so
 vendor/lib64/libtcltflitev2.so
 vendor/lib64/libtctcameraalgo.so
+vendor/lib64/libtfestriping.so
 vendor/lib64/libthreadutils.so
 vendor/lib64/libundistort.so
 vendor/lib64/libvideoml.so
@@ -911,6 +915,7 @@ vendor/lib64/libCB.so
 vendor/lib64/libOpenCL.so
 vendor/lib64/libOpenCL_adreno.so
 vendor/lib64/libadreno_app_profiles.so
+vendor/lib64/libadreno_compiler_cl.so
 vendor/lib64/libadreno_utils.so
 vendor/lib64/libgpudataproducer.so
 vendor/lib64/libgsl.so
