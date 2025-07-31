@@ -891,7 +891,6 @@ vendor/lib64/liblocdiagiface.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_common.so
 vendor/lib64/liblowi_wifihal.so
-vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsys_info_cache.so
 vendor/lib64/libwifiobserver.so
@@ -1275,10 +1274,8 @@ vendor/lib64/libWlanServiceJni.so
 vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 vendor/lib64/libmdmdetect.so
-vendor/lib64/libminkdescriptor.so
 vendor/lib64/libpdmapper.so
 vendor/lib64/libpdnotifier.so
-vendor/lib64/libqcbor.so
 vendor/lib64/libqcci_legacy.so
 vendor/lib64/libqcrilDataModule.so
 vendor/lib64/libqcrilNr.so
@@ -1515,6 +1512,11 @@ vendor/lib64/libsnsutils.so
 vendor/lib64/libssc_default_listener.so
 vendor/lib64/sensors.qsh.so
 vendor/lib64/vendor.qti.hardware.sensorscalibrate-V1-ndk.so
+
+# SMC Invoke
+vendor/lib64/libminkdescriptor.so
+vendor/lib64/libminksocket_vendor.so
+vendor/lib64/libqcbor.so
 
 # SSR
 vendor/bin/ssr_diag
