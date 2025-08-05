@@ -165,6 +165,12 @@ on post-fs-data
     chown system system /sys/class/leds/aw_vibrator/activate_mode
     chown system system /sys/class/leds/aw_vibrator/gain
 
+# add tap-to-wake
+    wait /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/gesture_wakeup 20
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/gesture_wakeup
+    chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/gesture_wakeup
+# add tap-to-wake
+
 
 on early-boot
     verity_update_state
