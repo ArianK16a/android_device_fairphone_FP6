@@ -66,6 +66,8 @@ blob_fixups: blob_fixups_user_type = {
         ),
     'vendor/etc/init/tctd.rc': blob_fixup()
         .regex_replace('.+seclabel.+\n', ''),
+    'vendor/etc/seccomp_policy/wfdhdcphalservice.policy': blob_fixup()
+        .add_line_if_missing('rt_tgsigqueueinfo: 1'),
     (
         'vendor/lib64/camera/com.qti.eeprom.gt24p128c2csli_imx766.so',
         'vendor/lib64/camera/com.qti.eeprom.gt24p64b_imx688.so',
