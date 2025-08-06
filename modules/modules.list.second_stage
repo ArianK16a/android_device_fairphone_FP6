@@ -62,7 +62,6 @@ hvc_gunyah.ko
 hwmon.ko
 i2c-msm-geni.ko
 i3c-master-msm-geni.ko
-leds-qpnp-vibrator-ldo.ko
 leds-qti-flash.ko
 leds-qti-tri-led.ko
 llcc-qcom.ko
