@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Copyright (C) 2021 The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string-array name="alert_slider_action_entries" translatable="false">
+        <item>@string/alert_slider_mode_none</item>
+        <item>@string/alert_slider_mode_normal</item>
+        <item>@string/alert_slider_mode_vibration</item>
+        <item>@string/alert_slider_mode_silent</item>
+        <item>@string/alert_slider_mode_dnd_priority_only</item>
+        <item>@string/alert_slider_mode_dnd_total_silence</item>
+        <item>@string/alert_slider_mode_dnd_alarms_only</item>
+    </string-array>
+
+    <string-array name="alert_slider_action_entry_values" translatable="false">
+        <item>-1</item>
+        <item>2</item>
+        <item>1</item>
+        <item>0</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+</resources>
