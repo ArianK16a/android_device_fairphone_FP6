@@ -241,6 +241,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
+# Moments switch
+PRODUCT_PACKAGES += \
+    KeyHandler
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayout/fpv6_switch_key.kl:system/usr/keylayout/fpv6_switch_key.kl \
+
 # Network
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnel_migration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnel_migration.xml \
@@ -270,7 +277,8 @@ PRODUCT_PACKAGES += \
     WifiResTarget \
 
 PRODUCT_PACKAGES += \
-    ApertureResFP6
+    ApertureResFP6 \
+    LineageResFP6
 
 # Partitions
 PRODUCT_PACKAGES += \

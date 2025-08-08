@@ -68,13 +68,13 @@ class KeyHandler(context: Context) : DeviceKeyHandler {
     }
 
     override fun handleKeyEvent(event: KeyEvent): KeyEvent? {
-        if (event.action != KeyEvent.ACTION_DOWN) {
+        if (event.keyCode != KeyEvent.KEYCODE_DO_NOT_DISTURB) {
             return event
         }
 
         val deviceName = event.device.name
 
-        if (deviceName != "oplus,hall_tri_state_key" && deviceName != "oplus,tri-state-key") {
+        if (deviceName != "fpv6_switch_key") {
             return event
         }
 
@@ -84,9 +84,9 @@ class KeyHandler(context: Context) : DeviceKeyHandler {
     }
 
     private fun populateKeyState(vibrate: Boolean) {
-        when (File("/proc/tristatekey/tri_state").readText().trim()) {
-            "1" -> handleMode(POSITION_TOP, vibrate)
-            "3" -> handleMode(POSITION_BOTTOM, vibrate)
+        when (File("/sys/emkit/info/switch_state").readText().trim()) {
+            "0" -> handleMode(POSITION_TOP, vibrate)
+            "1" -> handleMode(POSITION_BOTTOM, vibrate)
         }
     }
 
