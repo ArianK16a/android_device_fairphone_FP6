@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Llithridd rhybuddion</string>
     <string name="alert_slider_selection_dialog_title">Gweithred</string>
     <string name="alert_slider_top_position">Lleoliad brig</string>
-    <string name="alert_slider_middle_position">Lleoliad canol</string>
     <string name="alert_slider_bottom_position">Lleoliad gwaelod</string>
     <string name="alert_slider_mode_none">Dim</string>
     <string name="alert_slider_mode_silent">Distaw</string>

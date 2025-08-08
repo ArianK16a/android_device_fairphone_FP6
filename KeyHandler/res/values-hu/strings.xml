@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Riasztási csúszka</string>
     <string name="alert_slider_selection_dialog_title">Művelet</string>
     <string name="alert_slider_top_position">Felül</string>
-    <string name="alert_slider_middle_position">Középen</string>
     <string name="alert_slider_bottom_position">Alul</string>
     <string name="alert_slider_mode_none">Egyik sem</string>
     <string name="alert_slider_mode_silent">Néma</string>

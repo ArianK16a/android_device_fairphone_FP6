@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">გაფრთხილების სრიალა</string>
     <string name="alert_slider_selection_dialog_title">მოქმედება</string>
     <string name="alert_slider_top_position">ზედა მდებარეობა</string>
-    <string name="alert_slider_middle_position">შუა მდებარეობა</string>
     <string name="alert_slider_bottom_position">ქვედა მდებარეობა</string>
     <string name="alert_slider_mode_none">არცერთი</string>
     <string name="alert_slider_mode_silent">უხმო</string>

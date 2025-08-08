@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Posuvník oznámení</string>
     <string name="alert_slider_selection_dialog_title">Akce</string>
     <string name="alert_slider_top_position">Pozice nahoře</string>
-    <string name="alert_slider_middle_position">Pozice uprostřed</string>
     <string name="alert_slider_bottom_position">Pozice dole</string>
     <string name="alert_slider_mode_none">Žádný</string>
     <string name="alert_slider_mode_silent">Tichý</string>

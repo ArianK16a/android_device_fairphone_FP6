@@ -86,7 +86,6 @@ class KeyHandler(context: Context) : DeviceKeyHandler {
     private fun populateKeyState(vibrate: Boolean) {
         when (File("/proc/tristatekey/tri_state").readText().trim()) {
             "1" -> handleMode(POSITION_TOP, vibrate)
-            "2" -> handleMode(POSITION_MIDDLE, vibrate)
             "3" -> handleMode(POSITION_BOTTOM, vibrate)
         }
     }
@@ -109,7 +108,6 @@ class KeyHandler(context: Context) : DeviceKeyHandler {
 
         val mode = when (position) {
             POSITION_TOP -> sharedPreferences.getString(ALERT_SLIDER_TOP_KEY, "0")!!.toInt()
-            POSITION_MIDDLE -> sharedPreferences.getString(ALERT_SLIDER_MIDDLE_KEY, "1")!!.toInt()
             POSITION_BOTTOM -> sharedPreferences.getString(ALERT_SLIDER_BOTTOM_KEY, "2")!!.toInt()
             else -> return
         }
@@ -161,12 +159,10 @@ class KeyHandler(context: Context) : DeviceKeyHandler {
 
         // Slider key positions
         private const val POSITION_TOP = 1
-        private const val POSITION_MIDDLE = 2
         private const val POSITION_BOTTOM = 3
 
         // Preference keys
         private const val ALERT_SLIDER_TOP_KEY = "config_top_position"
-        private const val ALERT_SLIDER_MIDDLE_KEY = "config_middle_position"
         private const val ALERT_SLIDER_BOTTOM_KEY = "config_bottom_position"
         private const val MUTE_MEDIA_WITH_SILENT = "config_mute_media"
 

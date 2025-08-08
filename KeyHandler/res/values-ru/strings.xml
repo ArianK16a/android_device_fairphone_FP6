@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Переключатель оповещений </string>
     <string name="alert_slider_selection_dialog_title">Действие</string>
     <string name="alert_slider_top_position">Верхнее положение</string>
-    <string name="alert_slider_middle_position">Среднее положение</string>
     <string name="alert_slider_bottom_position">Нижнее положение</string>
     <string name="alert_slider_mode_none">Ничего</string>
     <string name="alert_slider_mode_silent">Без звука</string>

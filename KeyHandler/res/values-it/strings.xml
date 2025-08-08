@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Slider notifiche</string>
     <string name="alert_slider_selection_dialog_title">Azione</string>
     <string name="alert_slider_top_position">Posizione superiore</string>
-    <string name="alert_slider_middle_position">Posizione centrale</string>
     <string name="alert_slider_bottom_position">Posizione inferiore</string>
     <string name="alert_slider_mode_none">Nessuna</string>
     <string name="alert_slider_mode_silent">Silenzioso</string>

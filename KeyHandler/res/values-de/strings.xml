@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Alarmschieberegler</string>
     <string name="alert_slider_selection_dialog_title">Aktion</string>
     <string name="alert_slider_top_position">Obere Position</string>
-    <string name="alert_slider_middle_position">Mittlere Position</string>
     <string name="alert_slider_bottom_position">Untere Position</string>
     <string name="alert_slider_mode_none">Keine</string>
     <string name="alert_slider_mode_silent">Lautlos</string>
