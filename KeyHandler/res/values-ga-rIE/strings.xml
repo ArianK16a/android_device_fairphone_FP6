@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Sleamhnán foláirimh</string>
     <string name="alert_slider_selection_dialog_title">Gníomh</string>
     <string name="alert_slider_top_position">Seasamh barr</string>
-    <string name="alert_slider_middle_position">Seasamh meánach</string>
     <string name="alert_slider_bottom_position">Seasamh bun</string>
     <string name="alert_slider_mode_none">Dada</string>
     <string name="alert_slider_mode_silent">Ciúin</string>

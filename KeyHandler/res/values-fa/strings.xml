@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">نوار لغزنده هشدار</string>
     <string name="alert_slider_selection_dialog_title">عمل</string>
     <string name="alert_slider_top_position">موقعیت بالا</string>
-    <string name="alert_slider_middle_position">موقعیت وسط</string>
     <string name="alert_slider_bottom_position">موقعیت پایین</string>
     <string name="alert_slider_mode_none">هیچ</string>
     <string name="alert_slider_mode_silent">بی‌صدا</string>

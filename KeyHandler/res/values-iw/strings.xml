@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">מתג התראות</string>
     <string name="alert_slider_selection_dialog_title">פעולה</string>
     <string name="alert_slider_top_position">ממוקם למעלה</string>
-    <string name="alert_slider_middle_position">ממוקם באמצע</string>
     <string name="alert_slider_bottom_position">ממוקם למטה</string>
     <string name="alert_slider_mode_none">ללא</string>
     <string name="alert_slider_mode_silent">שקט</string>

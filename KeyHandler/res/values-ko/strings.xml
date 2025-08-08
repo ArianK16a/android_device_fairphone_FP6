@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">알림 슬라이더</string>
     <string name="alert_slider_selection_dialog_title">동작</string>
     <string name="alert_slider_top_position">슬라이더가 위쪽에 있을 때</string>
-    <string name="alert_slider_middle_position">슬라이더가 중간에 있을 때</string>
     <string name="alert_slider_bottom_position">슬라이더가 아래에 있을 때</string>
     <string name="alert_slider_mode_none">없음</string>
     <string name="alert_slider_mode_silent">무음</string>

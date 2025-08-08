@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Διακόπτης ειδοποιήσεων</string>
     <string name="alert_slider_selection_dialog_title">Ενέργεια</string>
     <string name="alert_slider_top_position">Πάνω θέση</string>
-    <string name="alert_slider_middle_position">Μεσαία θέση</string>
     <string name="alert_slider_bottom_position">Κάτω θέση</string>
     <string name="alert_slider_mode_none">Τίποτα</string>
     <string name="alert_slider_mode_silent">Αθόρυβο</string>

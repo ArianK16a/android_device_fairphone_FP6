@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Control lliscant d\'alerta</string>
     <string name="alert_slider_selection_dialog_title">Acció</string>
     <string name="alert_slider_top_position">Posició superior</string>
-    <string name="alert_slider_middle_position">Posició central</string>
     <string name="alert_slider_bottom_position">Posició inferior</string>
     <string name="alert_slider_mode_none">Cap</string>
     <string name="alert_slider_mode_silent">Silenci</string>

@@ -6,7 +6,6 @@
 <resources>
     <string name="alert_slider_selection_dialog_title">Tindakan</string>
     <string name="alert_slider_top_position">Posisi atas</string>
-    <string name="alert_slider_middle_position">Posisi tengah</string>
     <string name="alert_slider_bottom_position">Posisi bawah</string>
     <string name="alert_slider_mode_none">Tidak ada</string>
     <string name="alert_slider_mode_silent">Senyap</string>

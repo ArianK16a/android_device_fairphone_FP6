@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Botão deslizante</string>
     <string name="alert_slider_selection_dialog_title">Ação</string>
     <string name="alert_slider_top_position">Para cima</string>
-    <string name="alert_slider_middle_position">No meio</string>
     <string name="alert_slider_bottom_position">Em baixo</string>
     <string name="alert_slider_mode_none">Nenhum</string>
     <string name="alert_slider_mode_silent">Silencioso</string>

@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Control deslizante de alertas</string>
     <string name="alert_slider_selection_dialog_title">Acción</string>
     <string name="alert_slider_top_position">Posición superior</string>
-    <string name="alert_slider_middle_position">Posición central</string>
     <string name="alert_slider_bottom_position">Posición inferior</string>
     <string name="alert_slider_mode_none">Ninguno</string>
     <string name="alert_slider_mode_silent">Silencio</string>

@@ -7,7 +7,6 @@
     <string name="alert_slider_category_title">Curseur d\'alerte</string>
     <string name="alert_slider_selection_dialog_title">Action</string>
     <string name="alert_slider_top_position">En haut</string>
-    <string name="alert_slider_middle_position">Au milieu</string>
     <string name="alert_slider_bottom_position">En bas</string>
     <string name="alert_slider_mode_none">Aucun</string>
     <string name="alert_slider_mode_silent">Silencieux</string>
