@@ -1,0 +1,1 @@
+allow system_server fp_mmitest_sysfs:file r_file_perms;
