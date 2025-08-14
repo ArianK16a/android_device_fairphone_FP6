@@ -582,6 +582,16 @@ vendor/lib64/vendor.qti.hardware.camera.aon-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.offlinecamera-service-impl.so
 vendor/lib64/vendor.qti.hardware.camera.postproc@1.0-service-impl.so
 vendor/lib64/vendor.tcl.camera.algoservice-V2-ndk.so
+system_ext/bin/fpconfig_util
+system_ext/etc/init/fpconfig_util.rc
+system_ext/etc/public.libraries-tct.txt  
+system_ext/lib64/libtctcameraalgo_jni.tct.so;DISABLE_CHECKELF;DISABLE_DEPS
+system_ext/lib64/vendor.qti.hardware.seccam@1.0.so
+system/lib64/android.hardware.audio.sounddose-V2-ndk.so
+system/lib64/vendor.tcl.camera.algoservice-V2-ndk.so:system/lib64/vendor.tcl.camera.algoservice-V2-ndk.so;MODULE=system.vendor.tcl.camera.algoservice-V2-ndk
+vendor/bin/aecxsimulator;DISABLE_CHECKELF;DISABLE_DEPS
+vendor/etc/init/algoservice-default.rc
+vendor/lib64/libcamera2ndk_vendor.so
 
 # Camera firmware
 vendor/firmware/CAMERA_ICP.b00

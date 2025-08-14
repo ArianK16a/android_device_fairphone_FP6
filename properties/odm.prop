@@ -1,2 +1,11 @@
 # Qti
 ro.vendor.qti.va_odm.support=1
+ro.vendor.qti.va_aosp.support=1
+persist.vendor.camera.fprom=1
+ro.boot.vendor.qspa.nsp=enabled
+ro.boot.vendor.qspa.sensors=enabled
+ro.boot.vendor.qspa.spss=enabled
+ro.boot.vendor.qspa.video=enabled
+ro.boot.vendor.qspa.wlan=enabled
+vendor.camera.siq.empty_lib=0
+vendor.tinfo.kb.device_id=Fairphone_FP6_0000012331

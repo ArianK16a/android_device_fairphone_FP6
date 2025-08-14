@@ -97,6 +97,23 @@ blob_fixups: blob_fixups_user_type = {
             'android.media.audio.common.types-V2-cpp.so',
             'android.media.audio.common.types-V4-cpp.so',
         ),
+    'vendor/lib64/libcamera2ndk_vendor.so': blob_fixup()
+        .replace_needed(
+            'android.hardware.graphics.common-V5-ndk.so',
+            'android.hardware.graphics.common-V6-ndk.so',
+        )
+        .replace_needed(
+            'android.media.audio.common.types-V2-cpp.so',
+            'android.media.audio.common.types-V4-cpp.so',
+        )
+        .replace_needed(
+            'android.frameworks.cameraservice.device-V1-ndk.so',
+            'android.frameworks.cameraservice.device-V3-ndk.so',
+        )
+        .replace_needed(
+            'android.frameworks.cameraservice.service-V1-ndk.so',
+            'android.frameworks.cameraservice.service-V3-ndk.so',
+        ),
     'vendor/etc/init/tctd.rc': blob_fixup()
         .regex_replace('.+seclabel.+\n', ''),
     'vendor/etc/seccomp_policy/wfdhdcphalservice.policy': blob_fixup()
