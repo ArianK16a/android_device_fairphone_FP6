@@ -1582,6 +1582,11 @@ vendor/lib64/libtrustedapploader.so
 vendor/bin/cnss-daemon
 vendor/etc/init/init.vendor.wlan.rc
 
+# WiFi mac address
+vendor/bin/setwlanmac.sh
+vendor/bin/tctd
+vendor/etc/init/tctd.rc
+
 # WiFi Display
 system/framework/WfdCommon.jar;BOOT_JAR
 system_ext/bin/wfdservice64

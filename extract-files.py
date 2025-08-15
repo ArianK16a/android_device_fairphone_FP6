@@ -65,6 +65,8 @@ blob_fixups: blob_fixups_user_type = {
             'android.media.audio.common.types-V2-cpp.so',
             'android.media.audio.common.types-V4-cpp.so',
         ),
+    'vendor/etc/init/tctd.rc': blob_fixup()
+        .regex_replace('.+seclabel.+\n', ''),
     'vendor/etc/seccomp_policy/wfdhdcphalservice.policy': blob_fixup()
         .add_line_if_missing('rt_tgsigqueueinfo: 1'),
     (
