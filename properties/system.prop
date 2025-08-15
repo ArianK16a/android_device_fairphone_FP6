@@ -1,4 +1,5 @@
 ro.vendor.qti.va_aosp.support=1
+persist.vendor.camera.fprom=1
 #
 # system.prop for qssi
 #
