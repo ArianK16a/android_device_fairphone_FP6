@@ -116,8 +116,6 @@ persist.sys.force_sw_gles=1
 persist.vendor.radio.atfwd.start=true
 ro.kernel.qemu.gles=0
 qemu.hw.mainkeys=0
-#Expose aux camera for below packages
-vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.fps.camera,com.fps.mtf,com.fps.verifytool,com.android.mmi
 #Add snapcam in privapp list
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam,com.fps.camera,com.fps.mtf,com.fps.verifytool,com.android.mmi
 #enable IZat OptInApp overlay
