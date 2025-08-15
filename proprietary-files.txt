@@ -1508,7 +1508,10 @@ system_ext/etc/sysconfig/qti_telephony_system_packages_config.xml
 system_ext/etc/sysconfig/qti_whitelist_system_ext.xml
 system_ext/priv-app/QtiTelephony/QtiTelephony.apk;REQUIRED=QtiTelephonyCompat
 vendor/bin/ATFWD-daemon
+vendor/bin/qms
+vendor/etc/init/qms.rc
 vendor/etc/seccomp_policy/atfwd@2.0.policy
+vendor/etc/seccomp_policy/qms.policy
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 vendor/etc/vintf/manifest/android.hardware.radio.data.xml
 vendor/etc/vintf/manifest/android.hardware.radio.messaging.xml
@@ -1518,6 +1521,7 @@ vendor/etc/vintf/manifest/android.hardware.radio.sap.xml
 vendor/etc/vintf/manifest/android.hardware.radio.sim.xml
 vendor/etc/vintf/manifest/android.hardware.radio.voice.xml
 vendor/etc/vintf/manifest/atfwd-saidl.xml
+vendor/etc/vintf/manifest/qms-saidl.xml
 vendor/etc/vintf/manifest/qtiradio-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.qtiradioconfig.xml
 vendor/lib64/vendor.qti.hardware.radio.atfwd-V1-ndk.so
