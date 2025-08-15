@@ -4,9 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <!-- Whether to show Smooth Display feature in Settings Options -->
-    <bool name="config_show_smooth_display">true</bool>
-
     <!-- Display settings screen, Color mode options. Must be the same length and order as
          config_color_mode_options_values below. Only the values that also appear in
          frameworks/base/core/res/res/values/config.xml's config_availableColorModes are shown. -->
