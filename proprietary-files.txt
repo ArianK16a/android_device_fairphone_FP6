@@ -530,8 +530,10 @@ vendor/lib64/libcommonchiutils.so
 vendor/lib64/libdepthcomputation.so
 vendor/lib64/libhdr10plus.so
 vendor/lib64/libhme.so
+vendor/lib64/libiccprofile.so
 vendor/lib64/libipebpsstriping.so
 vendor/lib64/libisphwsetting.so
+vendor/lib64/libjpege.so
 vendor/lib64/libmfnr_raw_api.so
 vendor/lib64/libmmcamera_bestats.so
 vendor/lib64/libmmcamera_cac.so
