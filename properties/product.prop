@@ -1,29 +1,23 @@
-remote_provisioning.enable_rkpd=true
-remote_provisioning.hostname=remoteprovisioning.googleapis.com
-af.fast_track_multiplier=1
-audio.offload.video=true
-audio.deep_buffer.media=true
-audio.sys.noisy.broadcast.delay=500
-audio.sys.mute.latency.factor=2
-audio.sys.routing.latency=0
+# Audio
 audio.offload.min.duration.secs=30
-audio.sys.offload.pstimeout.secs=3
-ro.af.client_heap_size_kbyte=7168
 media.stagefright.audio.deep=false
-aaudio.mmap_policy=2
-aaudio.mmap_exclusive_policy=2
-aaudio.hw_burst_min_usec=2000
+
+# Bluetooth
+bluetooth.device_id.vendor_id=0x001D
 bluetooth.profile.a2dp.source.enabled=true
-bluetooth.profile.avrcp.target.enabled=true
 bluetooth.profile.avrcp.controller.enabled=true
-bluetooth.profile.hfp.ag.enabled=true
+bluetooth.profile.avrcp.target.enabled=true
+bluetooth.profile.bas.client.enabled=true
 bluetooth.profile.gatt.enabled=true
-bluetooth.profile.hid.host.enabled=true
+bluetooth.profile.hfp.ag.enabled=true
 bluetooth.profile.hid.device.enabled=true
+bluetooth.profile.hid.host.enabled=true
 bluetooth.profile.map.server.enabled=true
 bluetooth.profile.opp.enabled=true
 bluetooth.profile.pan.nap.enabled=true
 bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
-bluetooth.profile.bas.client.enabled=true
-bluetooth.device_id.vendor_id=0x001D
+
+# Remote Provisioning
+remote_provisioning.enable_rkpd=true
+remote_provisioning.hostname=remoteprovisioning.googleapis.com
