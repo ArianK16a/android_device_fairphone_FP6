@@ -1,0 +1,3 @@
+# Common
+type vendor_traceability_block_device, dev_type;
+type vendor_mfg_block_device, dev_type;
