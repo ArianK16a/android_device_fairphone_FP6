@@ -1,0 +1,6 @@
+#set wlan mac
+type vendor_wlan_mac, domain;
+type vendor_wlan_mac_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(vendor_wlan_mac)
+allow vendor_wlan_mac vendor_shell_exec:file { rx_file_perms };
