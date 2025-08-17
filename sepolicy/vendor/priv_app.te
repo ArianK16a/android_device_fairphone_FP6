@@ -1,0 +1,3 @@
+allow priv_app vendor_tct_camera_algo_service:service_manager find;
+binder_call(priv_app, hal_algoservice_default)
+allow priv_app hal_algoservice_default:binder { call transfer };
