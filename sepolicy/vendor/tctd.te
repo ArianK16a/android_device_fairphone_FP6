@@ -1,0 +1,78 @@
+type tctd, domain;
+type tctd_exec, exec_type, file_type, vendor_file_type;
+
+init_daemon_domain(tctd)
+
+# self socket
+allow tctd self:socket { write read create ioctl };
+allowxperm tctd self:socket ioctl msm_sock_ipc_ioctls;
+
+# Allow to reach block devices in /dev/block.
+allow tctd block_device:dir search;
+# Allow to read/write traceability block device.
+allow tctd vendor_traceability_block_device:blk_file rw_file_perms;
+
+# set properties
+set_prop(tctd, vendor_fp_prop)
+set_prop(tctd, vendor_odm_info_prop)
+set_prop(tctd, ctl_start_prop)
+set_prop(tctd, ctl_stop_prop)
+
+# for btmac
+get_prop(vendor_init, vendor_odm_info_prop)
+
+# for trace_util
+get_prop(vendor_init, vendor_fp_prop)
+
+# execute
+allow tctd vendor_file:file rx_file_perms;
+
+# TODO, why?
+allow tctd system_data_file:dir getattr;
+
+# mfg
+allow tctd vendor_mfg_block_device:blk_file { open read write };
+
+# MMITest
+allow tctd audio_device:dir search;
+allow tctd audio_device:chr_file rw_file_perms;
+allow tctd proc:file { getattr read open };
+
+# widevine key
+allow tctd tee_device:chr_file rw_file_perms;
+allow tctd firmware_file:dir r_dir_perms;
+allow tctd firmware_file:file r_file_perms;
+allow tctd ion_device:chr_file r_file_perms;
+
+# forkExecv function
+allow tctd self:process setexec;
+
+# wifi macaddr
+allow tctd mnt_vendor_file:dir r_dir_perms;
+allow tctd mnt_vendor_file:dir search;
+allow tctd vendor_persist_trace_param_file:file create_file_perms;
+allow tctd vendor_persist_trace_param_file:dir create_dir_perms;
+
+# PM permition for diagnostics.
+allow tctd audio_device:dir search;
+allow tctd audio_device:chr_file { read write ioctl open };
+
+allow tctd vendor_shell_exec:file { getattr read execute open execute_no_trans };
+allow tctd vendor_audioftm_exec:file { getattr read execute open execute_no_trans };
+allow tctd tctd:capability { setgid };
+
+allow tctd tctd:qipcrtr_socket { create getattr write setopt read };
+
+allow tctd proc_asound:dir search;
+allow tctd vendor_proc_audiod:file { read getattr open };
+dontaudit tctd self:capability {dac_override dac_read_search };
+allow tctd fuse:dir { write search add_name };
+allow tctd fuse:file { write read create open };
+allow tctd mnt_user_file:dir search;
+allow tctd mnt_user_file:lnk_file read;
+
+# console
+allow tctd tctd_socket:sock_file write;
+
+get_prop(vendor_init, shell_prop)
+set_prop(vendor_init, vendor_ssr_prop)
