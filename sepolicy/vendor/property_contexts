@@ -1,2 +1,5 @@
 # Camera
 vendor.camera.             u:object_r:vendor_camera_prop:s0
+
+# NFC
+vendor.nfc.                                  u:object_r:vendor_nfc_prop:s0

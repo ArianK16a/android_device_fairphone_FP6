@@ -1,3 +1,6 @@
 # Common
 vendor_public_prop(vendor_fp_prop);
 vendor_public_prop(vendor_odm_info_prop);
+
+# NFC
+vendor_restricted_prop(vendor_nfc_prop);
