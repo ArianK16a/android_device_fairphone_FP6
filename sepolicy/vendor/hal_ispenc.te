@@ -1,0 +1,6 @@
+# allow hal_ispenc_client binder call with hal_ispenc_server
+binder_call(hal_ispenc_client, hal_ispenc_server)
+binder_call(hal_ispenc_server, hal_ispenc_client)
+
+#allow hal_ispenc_server to add postproc hwservice and hal_ispenc_client to find the hwservice
+hal_attribute_hwservice(hal_ispenc, vendor_hal_camera_postproc_hwservice)
