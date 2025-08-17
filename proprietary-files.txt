@@ -772,10 +772,8 @@ vendor/etc/display/DPU1020.xml
 vendor/etc/display/DPU10__.xml
 vendor/etc/display/DPU870.xml
 vendor/etc/display/DPU9__.xml
-vendor/etc/display/advanced_sf_offsets.xml
 vendor/etc/display/perf_hint_threshold.xml
 vendor/etc/display/qdcm_calib_data_nt37705_amoled_command_mode_dsi_panel.json
-vendor/etc/display/thermallevel_to_fps.xml
 vendor/lib64/libdisplayqos.so
 vendor/lib64/libdisplayskuutils.so
 vendor/lib64/libintervmipc.so
