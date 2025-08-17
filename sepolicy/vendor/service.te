@@ -1,0 +1,2 @@
+# Camera
+type vendor_tct_camera_algo_service, hal_service_type, protected_service, service_manager_type;
