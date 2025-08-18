@@ -39,6 +39,11 @@
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:49476/model                           u:object_r:vendor_sysfs_info:s0
 /sys/devices/platform/soc/1d84000.ufshc/host0/target0:0:0/0:0:0:49476/vendor                           u:object_r:vendor_sysfs_info:s0
 
+# Fingerprint
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint-service u:object_r:hal_fingerprint_default_exec:s0
+/dev/focaltech_fp        u:object_r:ff_device:s0
+/data/vendor/focaltech(/.*)?        u:object_r:ff_data_file:s0
+
 # NFC
 /(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.sec         u:object_r:hal_nfc_default_exec:s0
 /dev/sec-nfc    u:object_r:nfc_device:s0

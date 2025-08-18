@@ -1,0 +1,43 @@
+
+# ------------------- focaltech fingerprint begin -------------------
+type ff_service, service_manager_type;
+type ff_hwservice, hwservice_manager_type;
+type ff_device, dev_type;
+type ff_data_file, file_type, data_file_type;
+
+vndbinder_use(hal_fingerprint_default)
+hwbinder_use(hal_fingerprint_default)
+
+allow hal_fingerprint_default ff_service:service_manager { add };
+
+allow hal_fingerprint_default ff_device:chr_file rw_file_perms;
+allow hal_fingerprint_default self:netlink_kobject_uevent_socket { create setopt bind read };
+allow hal_fingerprint_default ff_data_file:dir create_dir_perms;
+allow hal_fingerprint_default ff_data_file:file create_file_perms;
+allow hal_fingerprint_default ff_service:service_manager { add };
+
+#allow hal_fingerprint_default power_service:service_manager { find };
+#allow hal_fingerprint_default shell_exec:file rx_file_perms;
+allow hal_fingerprint_default ff_hwservice:hwservice_manager { add };
+allow hal_fingerprint_default ff_hwservice:hwservice_manager { find };
+
+allow hal_fingerprint_default sysfs_leds:dir { search };
+allow hal_fingerprint_default sysfs_leds:lnk_file { read };
+allow hal_fingerprint_default sysfs_leds:file rw_file_perms;
+#allow hal_fingerprint_default sysfs:file w_file_perms;
+
+allow system_app hal_fingerprint_default:binder call;
+
+allow hal_fingerprint_default ff_service:service_manager { find };
+allow hal_fingerprint_default hal_fingerprint_default:binder { call };
+allow hal_fingerprint_default tee_device: chr_file {open read write ioctl};
+#allow hal_fingerprint_default vendor_default_prop:property_service {set get};
+#allow hal_fingerprint_default vendor_default_prop:property_service {set};
+
+allow hal_fingerprint_default tee_device:chr_file open;
+allow hal_fingerprint_default property_socket:sock_file write;
+allow hal_fingerprint_default init:unix_stream_socket connectto;
+
+allow hal_fingerprint_default vendor_dmabuf_qseecom_heap_device:chr_file { read write open ioctl };
+allow hal_fingerprint_default vendor_dmabuf_qseecom_ta_heap_device:chr_file { open read write ioctl};
+# ------------------- focaltech fingerprint end ---------------------
