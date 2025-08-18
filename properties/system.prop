@@ -25,7 +25,9 @@ ro.media.xml_variant.profiles=_volcano_v1
 ro.vendor.qti.va_aosp.support=1
 
 # Radio
+persist.vendor.data.mode=concurrent
 ril.subscription.types=NV,RUIM
+telephony.lteOnCdmaDevice=1
 
 # System properties
 ro.product.property_source_order=odm,vendor,product,system_ext,system
