@@ -84,8 +84,7 @@ BOARD_BOOTCONFIG := \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.load_modules_parallel=true \
     androidboot.vendor.qspa=true \
-    androidboot.console=0 \
-    androidboot.selinux=permissive
+    androidboot.console=0
 
 KERNEL_LTO := none
 
