@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from FP6.QREL.15.91.0.20250606204727_VS15-factory.zip
+# All unpinned blobs below are extracted from FP6.QREL.15.122.0.20250718182448_VS1E-factory.zip
 
 # Current blobs with ELF checks disabled:
 # libmcs depends on libar-acdb, libagm, libats, liblx-osal which are gnu makefile targets
@@ -730,7 +730,7 @@ system/lib64/vendor.qti.diaghal-V1-ndk.so
 system_ext/lib64/libdiag_system.so
 system_ext/lib64/vendor.qti.diaghal@1.0.so
 vendor/bin/diag-router
-vendor/etc/init/vendor.qti.diag.rc
+vendor/etc/init/vendor.qti.diag_userdebug.rc
 vendor/etc/vintf/manifest/vendor.qti.diag.hal.service.xml
 vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
