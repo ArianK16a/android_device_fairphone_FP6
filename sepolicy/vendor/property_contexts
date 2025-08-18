@@ -1,2 +1,12 @@
 # Camera
 vendor.camera.             u:object_r:vendor_camera_prop:s0
+
+# Common
+vendor.tinfo.                   u:object_r:vendor_odm_info_prop:s0
+ro.vendor.hw_version            u:object_r:vendor_odm_info_prop:s0
+ro.vendor.trace.                u:object_r:vendor_odm_info_prop:s0
+
+# Fingerprint
+vendor.fp.                      u:object_r:vendor_fp_prop:s0
+ro.vendor.fp.                   u:object_r:vendor_fp_prop:s0
+persist.vendor.fp.              u:object_r:vendor_fp_prop:s0
