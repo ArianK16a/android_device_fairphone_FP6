@@ -1,3 +1,5 @@
 # emkit
 allow hal_sensors_default vendor_sysfs_info:dir { search };
 allow hal_sensors_default vendor_sysfs_info:file rw_file_perms;
+
+set_prop(hal_sensors_default, vendor_fp_prop)
