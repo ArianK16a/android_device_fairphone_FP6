@@ -8,5 +8,5 @@
     <dimen name="rounded_corner_radius">20.0dip</dimen>
 
     <!-- Default paddings for content around the corners. -->
-    <dimen name="rounded_corner_content_padding">0.0dip</dimen>
+    <dimen name="rounded_corner_content_padding">32px</dimen>
 </resources>
