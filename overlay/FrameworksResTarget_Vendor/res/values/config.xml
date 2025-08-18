@@ -37,6 +37,9 @@
          and Strength as defined in Authenticators.java -->
     <array name="config_biometric_sensors" translatable="false" />
 
+    <!-- Indicates whether device has a power button fingerprint sensor. -->
+    <bool name="config_is_powerbutton_fps" translatable="false">true</bool>
+
     <!-- A string config in svg path format for the main display shape.
          (@see https://www.w3.org/TR/SVG/paths.html#PathData).
 
