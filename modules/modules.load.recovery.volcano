@@ -235,6 +235,7 @@ qcom-cpufreq-hw-debug.ko
 qcom_lpm.ko
 leds-qti-flash.ko
 leds-qti-tri-led.ko
+leds-qpnp-vibrator-ldo.ko
 qcom_pil_info.ko
 rproc_qcom_common.ko
 qcom_q6v5.ko
