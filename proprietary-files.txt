@@ -738,6 +738,7 @@ vendor/lib64/vendor.qti.diaghal@1.0.so;MODULE_SUFFIX=_vendor
 # Display config
 vendor/etc/displayconfig/display_id_4630947039571902850.xml
 vendor/etc/displayconfig/display_id_4630947039571902851.xml
+vendor/etc/displayconfig/display_id_4630947039571902851.xml:vendor/etc/displayconfig/display_id_4630946639017191810.xml
 
 # Display HDR
 vendor/lib64/libgame_enhance.so
