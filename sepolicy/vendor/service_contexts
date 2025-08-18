@@ -1,2 +1,5 @@
 # Camera
 vendor.tcl.camera.algoservice.ITctCameraAlgoService/default    u:object_r:vendor_tct_camera_algo_service:s0
+
+# Fingerprint
+FocalFingerprintService    u:object_r:ff_service:s0
