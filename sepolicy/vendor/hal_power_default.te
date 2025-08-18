@@ -1,0 +1,3 @@
+# Touchscreen gestures
+allow hal_power_default fp_mmitest_sysfs:dir search;
+allow hal_power_default fp_mmitest_sysfs:file rw_file_perms;
