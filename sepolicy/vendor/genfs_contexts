@@ -1,2 +1,5 @@
+# emkit
+genfscon sysfs /emkit/info                           u:object_r:vendor_sysfs_info:s0
+
 # Vibrator
 genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-005a/leds/aw_vibrator         u:object_r:sysfs_leds:s0
