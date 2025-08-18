@@ -314,9 +314,6 @@ PRODUCT_COPY_FILES += \
 # Screen density
 TARGET_SCREEN_DENSITY := xxxhdpi
 
-# Screen tap-to-wake
-TARGET_TAP_TO_WAKE_NODE := /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/gesture_wakeup
-
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
     $(LOCAL_PATH)
