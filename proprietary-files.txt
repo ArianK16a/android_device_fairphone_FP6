@@ -609,6 +609,10 @@ vendor/firmware/CAMERA_ICP.mbn
 vendor/firmware/CAMERA_ICP.mdt
 vendor/firmware/CAMERA_ICP_170.elf
 
+# Carrier config
+system_ext/etc/permissions/com.fp.customercarrierconfig.xml
+system_ext/priv-app/CustomerCarrierConfig/CustomerCarrierConfig.apk
+
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
