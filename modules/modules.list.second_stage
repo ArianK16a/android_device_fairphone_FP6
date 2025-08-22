@@ -39,6 +39,8 @@ focaltech_fp.ko
 fsa4480-i2c.ko
 glink_pkt.ko
 glink_probe.ko
+governor_gpubw_mon.ko
+governor_msm_adreno_tz.ko
 gpr_dlkm.ko
 gpu_dump_skip_cdev.ko
 gpucc-volcano.ko
@@ -49,6 +51,7 @@ hung_task_enh.ko
 hwmon.ko
 i2c-msm-geni.ko
 i3c-master-msm-geni.ko
+leds-qcom-lpg.ko
 leds-qti-flash.ko
 leds-qti-tri-led.ko
 llcc-qcom.ko
@@ -119,6 +122,7 @@ qmi_helpers.ko
 qpnp-lcdb-regulator.ko
 qrtr-mhi.ko
 qrtr-smd.ko
+qrtr-tun.ko
 qsee_ipc_irq_bridge.ko
 qseecom_proxy.ko
 qti-fixed-regulator.ko
@@ -129,6 +133,7 @@ qti_battery_charger.ko
 qti_battery_debug.ko
 qti_cpufreq_cdev.ko
 qti_devfreq_cdev.ko
+qti_pmic_glink.ko
 qti_qmi_cdev.ko
 qti_qmi_sensor_v2.ko
 qti_thermal_vendor_hooks.ko
@@ -161,10 +166,11 @@ sync_fence.ko
 sys_pm_vx.ko
 sysmon_subsystem_stats.ko
 thermal_config.ko
-ucsi_glink.ko
+ucsi_qti_glink.ko
 usb_f_ccid.ko
 usb_f_cdev.ko
 usb_f_gsi.ko
 usb_f_qdss.ko
 videocc-volcano.ko
 wcd_usbss_i2c.ko
+xhci-sideband.ko
