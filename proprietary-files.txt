@@ -1238,6 +1238,7 @@ vendor/etc/qcril_database/upgrade/other/0013_version_update_ecc_table.sql
 vendor/etc/qcril_database/upgrade/other/0014_version_update_modules.sql
 vendor/etc/qcril_database/upgrade/other/0015_version_add_iccid_clir_pref_table.sql
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
+vendor/etc/vintf/manifest/dataconnection-saidl.xml
 vendor/etc/vintf/manifest/deviceinfo-saidl.xml
 vendor/etc/vintf/manifest/qcrilhook-saidl.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.data.connectionaidl.xml
