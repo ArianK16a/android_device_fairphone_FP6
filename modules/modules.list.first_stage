@@ -67,6 +67,7 @@ qcom_cpu_vendor_hooks.ko
 qcom_cpucp.ko
 qcom_dma_heaps.ko
 qcom_hwspinlock.ko
+qcom_ice.ko
 qcom_iommu_util.ko
 qcom_ipc_logging.ko
 qcom_llcc_pmu.ko
@@ -94,6 +95,6 @@ stub-regulator.ko
 tcsrcc-pineapple.ko
 thermal_pause.ko
 tmecom-intf.ko
-ufs_qcom.ko
+ufs-qcom.ko
 ufshcd-crypto-qti.ko
 videocc-pineapple.ko

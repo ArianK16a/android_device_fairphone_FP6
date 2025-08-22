@@ -74,7 +74,8 @@ BOARD_KERNEL_PAGESIZE    := 4096
 TARGET_KERNEL_SOURCE := kernel/fairphone/sm7635
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
-    vendor/fps_GKI.config
+    vendor/pineapple_perf.config \
+    vendor/fps_perf.config
 
 BOARD_KERNEL_CMDLINE := \
     nosoftlockup \

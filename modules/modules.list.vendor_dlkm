@@ -33,12 +33,14 @@ mbhc_dlkm.ko
 msm_kgsl.ko
 msm_video.ko
 pinctrl_lpi_dlkm.ko
+q2spi-geni.ko
 q6_dlkm.ko
 qca_cld3_peach_v2.ko
 qca_cld3_qca6750.ko
 qca_cld3_wcn6450.ko
 qce50_dlkm.ko
 qcedev-mod_dlkm.ko
+qcom-amoled-regulator.ko
 qcrypto-msm_dlkm.ko
 qrng_dlkm.ko
 radio-i2c-rtc6226-qca.ko

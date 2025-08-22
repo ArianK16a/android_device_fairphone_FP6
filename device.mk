@@ -229,6 +229,10 @@ PRODUCT_PACKAGES += \
     hwservicemanager \
     android.hidl.allocator@1.0-service
 
+# Kernel
+ PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/modules/system_dlkm.modules.blocklist:$(TARGET_COPY_OUT_VENDOR_DLKM)/lib/modules/system_dlkm.modules.blocklist
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
