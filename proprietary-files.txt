@@ -1357,7 +1357,6 @@ product/app/uimgbaservice/uimgbaservice.apk
 product/app/uimlpaservice/uimlpaservice.apk
 product/etc/permissions/UimGba.xml
 product/etc/permissions/UimService.xml
-product/etc/permissions/lpa.xml
 product/framework/uimgbalibrary.jar
 product/framework/uimservicelibrary.jar
 vendor/etc/vintf/manifest/vendor.qti.hardware.radio.uim.xml
