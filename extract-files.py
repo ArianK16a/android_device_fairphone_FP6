@@ -4,7 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+from extract_utils.file import File
 from extract_utils.fixups_blob import (
+    BlobFixupCtx,
     blob_fixup,
     blob_fixups_user_type,
 )
@@ -58,6 +60,37 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 
+def blob_fixup_sql_reorder(
+    ctx: BlobFixupCtx, file: File, file_path: str, *args, **kwargs
+):
+    # fairphone tries to insert before creating the table, leading to build errors
+    # this moves the create table up before the first insert statement
+    create_stmt = 'CREATE TABLE qcril_emergency_source_voice_mcc_mnc_table'
+    insert_stmt = 'INSERT INTO qcril_emergency_source_voice_mcc_mnc_table'
+
+    with open(file_path, 'rb+') as f:
+        text = f.read().decode('utf-8')
+        lines = text.splitlines()
+
+        # Remove the table creation
+        create_line = None
+        for i, line in enumerate(lines):
+            if line.strip().startswith(create_stmt):
+                create_line = lines.pop(i)
+                break
+
+        # Add the table creation before the first insert
+        if create_line:
+            for i, line in enumerate(lines):
+                if line.strip().startswith(insert_stmt):
+                    lines.insert(i, create_line)
+                    break
+
+        f.seek(0)
+        f.write(('\n'.join(lines) + '\n').encode('utf-8'))
+        f.truncate()
+
+
 blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/libwfdservice.so': blob_fixup()
         .replace_needed(
@@ -68,6 +101,8 @@ blob_fixups: blob_fixups_user_type = {
         .regex_replace('.+seclabel.+\n', ''),
     'vendor/etc/seccomp_policy/wfdhdcphalservice.policy': blob_fixup()
         .add_line_if_missing('rt_tgsigqueueinfo: 1'),
+    'vendor/etc/qcril_database/upgrade/other/0000_initial_qcrilnr.sql': blob_fixup().
+        call(blob_fixup_sql_reorder),
     (
         'vendor/lib64/camera/com.qti.eeprom.gt24p128c2csli_imx766.so',
         'vendor/lib64/camera/com.qti.eeprom.gt24p64b_imx688.so',
