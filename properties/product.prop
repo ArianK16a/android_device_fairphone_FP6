@@ -24,3 +24,4 @@ masterclear.allow_retain_esim_profiles_after_fdr=true
 # Remote Provisioning
 remote_provisioning.enable_rkpd=true
 remote_provisioning.hostname=remoteprovisioning.googleapis.com
+remote_provisioning.tee.rkp_only=true
