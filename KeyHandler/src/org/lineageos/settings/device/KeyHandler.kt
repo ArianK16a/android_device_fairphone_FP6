@@ -73,7 +73,12 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
 
         val deviceName = event.device.name
 
-        if (deviceName != "oplus,hall_tri_state_key" && deviceName != "oplus,tri-state-key") {
+        if (
+            deviceName == null ||
+                !packageContext.resources
+                    .getStringArray(R.array.config_alertSliderDeviceNames)
+                    .contains(deviceName)
+        ) {
             return event
         }
 

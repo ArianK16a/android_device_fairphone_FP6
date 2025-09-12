@@ -25,4 +25,10 @@
         <item>2</item> <!-- POSITION_MIDDLE -->
         <item>3</item> <!-- POSITION_BOTTOM -->
     </integer-array>
+
+    <!-- Events from these devices are treated as alert slider events -->
+    <string-array name="config_alertSliderDeviceNames">
+        <item>oplus,hall_tri_state_key</item>
+        <item>oplus,tri-state-key</item>
+    </string-array>
 </resources>
