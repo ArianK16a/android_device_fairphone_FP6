@@ -83,11 +83,19 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
     }
 
     private fun populateKeyState(firstRun: Boolean) {
-        when (File("/proc/tristatekey/tri_state").readText().trim()) {
-            "1" -> handleMode(POSITION_TOP, firstRun)
-            "2" -> handleMode(POSITION_MIDDLE, firstRun)
-            "3" -> handleMode(POSITION_BOTTOM, firstRun)
-        }
+        val node = packageContext.resources.getString(R.string.config_alertSliderNode)
+        val state =
+            try {
+                File(node).readText().trim().toInt()
+            } catch (e: Exception) {
+                return
+            }
+
+        val position =
+            packageContext.resources
+                .getIntArray(R.array.config_alertSliderPositionValues)
+                .indexOf(state)
+        handleMode(position, firstRun)
     }
 
     private fun vibrateIfNeeded(mode: Int) {
@@ -175,14 +183,14 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
         const val CHANGED_ACTION = "org.lineageos.settings.UPDATE_SETTINGS"
 
         // Slider key positions
-        const val POSITION_TOP = 1
-        const val POSITION_MIDDLE = 2
-        const val POSITION_BOTTOM = 3
+        const val POSITION_TOP = 0
+        const val POSITION_MIDDLE = 1
+        const val POSITION_BOTTOM = 2
 
         // Preference keys
-        private const val ALERT_SLIDER_TOP_KEY = "config_top_position"
-        private const val ALERT_SLIDER_MIDDLE_KEY = "config_middle_position"
-        private const val ALERT_SLIDER_BOTTOM_KEY = "config_bottom_position"
+        const val ALERT_SLIDER_TOP_KEY = "config_top_position"
+        const val ALERT_SLIDER_MIDDLE_KEY = "config_middle_position"
+        const val ALERT_SLIDER_BOTTOM_KEY = "config_bottom_position"
         private const val MUTE_MEDIA_WITH_SILENT = "config_mute_media"
         private const val SHOW_DIALOG = "config_show_dialog"
 
@@ -199,5 +207,10 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
         // Vibration effects
         private val MODE_NORMAL_EFFECT = VibrationEffect.get(VibrationEffect.EFFECT_HEAVY_CLICK)
         private val MODE_VIBRATION_EFFECT = VibrationEffect.get(VibrationEffect.EFFECT_DOUBLE_CLICK)
+
+        fun isPositionSupported(context: Context, position: Int): Boolean {
+            return context.resources
+                .getIntArray(R.array.config_alertSliderPositionValues)[position] != -1
+        }
     }
 }

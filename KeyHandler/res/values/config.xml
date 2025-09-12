@@ -13,4 +13,16 @@
          Should also match side of the device where the physical switch
          is located. -->
     <item name="alert_slider_dialog_left" type="bool">false</item>
+
+    <!-- Path to the sysfs node exposing the alert slider state.
+         Should report the values specified in config_alertSliderPositionValues. -->
+    <string name="config_alertSliderNode">/proc/tristatekey/tri_state</string>
+
+    <!-- Mapping of supported positions to the values reported by config_alertSliderNode
+         Values can be -1 if a position is not supported. -->
+    <integer-array name="config_alertSliderPositionValues">
+        <item>1</item> <!-- POSITION_TOP -->
+        <item>2</item> <!-- POSITION_MIDDLE -->
+        <item>3</item> <!-- POSITION_BOTTOM -->
+    </integer-array>
 </resources>
