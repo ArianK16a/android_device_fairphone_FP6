@@ -261,6 +261,11 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.memtrack-service
 
 # Moments switch
+PRODUCT_PACKAGES += \
+    AlertSliderResFP6 \
+    KeyHandler \
+    LineageResAlertSlider
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/fpv6_switch_key.kl:system/usr/keylayout/fpv6_switch_key.kl
 
