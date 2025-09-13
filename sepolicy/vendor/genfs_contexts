@@ -4,6 +4,7 @@ genfscon sysfs /class/qcom-battery/chgmod_fcc     u:object_r:vendor_sysfs_batter
 
 # emkit
 genfscon sysfs /emkit/info                           u:object_r:vendor_sysfs_info:s0
+genfscon sysfs /emkit/info/switch_state              u:object_r:fp_mmitest_sysfs:s0
 
 # Touchscreen
 genfscon sysfs /bus/spi/drivers/eswin_eph861x	u:object_r:fp_mmitest_sysfs:s0

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Path to the sysfs node exposing the alert slider state.
+         Should report the values specified in config_alertSliderPositionValues. -->
+    <string name="config_alertSliderNode">/sys/emkit/info/switch_state</string>
+
+    <!-- Mapping of supported positions to the values reported by config_alertSliderNode
+         Values can be -1 if a position is not supported. -->
+    <integer-array name="config_alertSliderPositionValues">
+        <item>0</item>  <!-- POSITION_TOP -->
+        <item>-1</item> <!-- POSITION_MIDDLE -->
+        <item>1</item>  <!-- POSITION_BOTTOM -->
+    </integer-array>
+
+    <!-- Events from these devices are treated as alert slider events -->
+    <string-array name="config_alertSliderDeviceNames">
+        <item>fpv6_switch_key</item>
+    </string-array>
+</resources>
