@@ -71,6 +71,10 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
             return event
         }
 
+        if (event.keyCode != KeyEvent.KEYCODE_DO_NOT_DISTURB) {
+            return event
+        }
+
         val deviceName = event.device.name
 
         if (
