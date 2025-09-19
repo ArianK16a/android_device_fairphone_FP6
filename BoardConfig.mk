@@ -108,38 +108,38 @@ BOOT_KERNEL_MODULES := $(BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD)
 
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/fairphone/sm7635-modules
 TARGET_KERNEL_EXT_MODULES := \
+    nxp/opensource/driver \
     qcom/opensource/mmrm-driver \
-    qcom/opensource/mm-drivers/hw_fence \
-    qcom/opensource/mm-drivers/msm_ext_display \
-    qcom/opensource/mm-drivers/sync_fence \
-    qcom/opensource/securemsm-kernel \
     qcom/opensource/audio-kernel \
-    qcom/opensource/synx-kernel \
+    qcom/opensource/bt-kernel \
     qcom/opensource/camera-kernel \
-    qcom/opensource/datarmnet-ext/mem \
     qcom/opensource/dataipa/drivers/platform/msm \
-    qcom/opensource/datarmnet/core \
     qcom/opensource/datarmnet-ext/aps \
+    qcom/opensource/datarmnet-ext/mem \
     qcom/opensource/datarmnet-ext/offload \
-    qcom/opensource/datarmnet-ext/shs \
     qcom/opensource/datarmnet-ext/perf \
     qcom/opensource/datarmnet-ext/perf_tether \
     qcom/opensource/datarmnet-ext/sch \
+    qcom/opensource/datarmnet-ext/shs \
     qcom/opensource/datarmnet-ext/wlan \
+    qcom/opensource/datarmnet/core \
     qcom/opensource/display-drivers/msm \
     qcom/opensource/dsp-kernel \
     qcom/opensource/eva-kernel \
-    qcom/opensource/video-driver \
     qcom/opensource/graphics-kernel \
+    qcom/opensource/mm-drivers/hw_fence \
+    qcom/opensource/mm-drivers/msm_ext_display \
+    qcom/opensource/mm-drivers/sync_fence \
+    qcom/opensource/mm-sys-kernel/ubwcp \
+    qcom/opensource/securemsm-kernel \
+    qcom/opensource/spu-kernel \
+    qcom/opensource/synx-kernel \
+    qcom/opensource/touch-drivers \
+    qcom/opensource/video-driver \
     qcom/opensource/wlan/platform \
     qcom/opensource/wlan/qcacld-3.0/.peach_v2 \
     qcom/opensource/wlan/qcacld-3.0/.qca6750 \
     qcom/opensource/wlan/qcacld-3.0/.wcn6450 \
-    qcom/opensource/bt-kernel \
-    qcom/opensource/spu-kernel \
-    qcom/opensource/mm-sys-kernel/ubwcp \
-    qcom/opensource/touch-drivers \
-    nxp/opensource/driver \
     samsung_slsi/nfc/driver
 
 # Metadata
