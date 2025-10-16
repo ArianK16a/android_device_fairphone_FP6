@@ -17,3 +17,4 @@ genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-
 genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/wakeup    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a84000.i2c/i2c-1/1-0027/wakeup              u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:focalfp_ft9362/wakeup                                               u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:hall_1/wakeup                                                       u:object_r:sysfs_wakeup:s0
