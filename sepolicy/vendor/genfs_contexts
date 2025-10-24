@@ -1,5 +1,6 @@
 # Battery
 genfscon sysfs /class/qcom-battery/charge_disable u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/chgmod_fcc     u:object_r:vendor_sysfs_battery_supply:s0
 
 # emkit
 genfscon sysfs /emkit/info                           u:object_r:vendor_sysfs_info:s0
