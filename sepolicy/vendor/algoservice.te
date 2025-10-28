@@ -1,4 +1,4 @@
-type hal_algoservice_default, domain;
+typealias hal_camera_default alias hal_algoservice_default;
 type hal_algoservice_default_exec, exec_type, vendor_file_type, file_type;
 
 add_service(hal_algoservice_default, vendor_tct_camera_algo_service)
