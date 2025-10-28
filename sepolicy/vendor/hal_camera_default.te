@@ -1,5 +1,3 @@
-hal_server_domain(hal_camera_default, hal_ispenc)
-
 allow hal_camera_default fp_mmitest_sysfs:file { read write open getattr };
 allow hal_camera_default fp_mmitest_sysfs:dir { search open read };
 

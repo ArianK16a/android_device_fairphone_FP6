@@ -1,4 +1,0 @@
-# camerapostproc service
-attribute hal_ispenc;
-attribute hal_ispenc_client;
-attribute hal_ispenc_server;
