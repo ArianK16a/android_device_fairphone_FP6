@@ -32,16 +32,6 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
 ==========================================================================
 -->
 <manifest version="1.0" type="device" target-level="8">
-    <!-- CapabilityConfigStore HAL Service  -->
-    <hal format="hidl">
-        <name>vendor.qti.hardware.capabilityconfigstore</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ICapabilityConfigStore</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
     <hal format="hidl">
         <name>android.hardware.audio</name>
         <transport>hwbinder</transport>
