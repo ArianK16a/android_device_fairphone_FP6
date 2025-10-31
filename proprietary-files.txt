@@ -1451,7 +1451,6 @@ vendor/etc/sensors/config/volcano_vertigo_mmc56x3x_0.json
 vendor/etc/sensors/hals.conf
 vendor/etc/sensors/sns_reg_config
 vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml
-vendor/lib64/hw/sensors.dynamic_sensor_hal.so
 vendor/lib64/hw/sensors.vl53l1.so
 vendor/lib64/libqsh.so
 vendor/lib64/libsensorcal.so
