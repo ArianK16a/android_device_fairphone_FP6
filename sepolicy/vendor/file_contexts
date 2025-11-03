@@ -46,6 +46,9 @@
 /dev/focaltech_fp                                                                    u:object_r:ff_device:s0
 /data/vendor/focaltech(/.*)?                                                         u:object_r:ff_data_file:s0
 
+# Hall Sensor
+/sys/devices/virtual/hall_switch/soc:hall_1/hall_status    u:object_r:fp_mmitest_sysfs:s0
+
 # tctd
 /vendor/bin/tctd    u:object_r:tctd_exec:s0
 /dev/socket/tctd    u:object_r:tctd_socket:s0
