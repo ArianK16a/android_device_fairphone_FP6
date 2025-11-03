@@ -619,3 +619,6 @@ subsystem mem_buf_vm
 # Battery
 /sys/class/qcom-battery                                 charge_disable                  0660    system  system
 /sys/class/qcom-battery                                 chgmod_fcc                      0660    system  system
+
+# Hall status
+/sys/devices/virtual/hall_switch/soc:hall_1/hall_status   0660    system  system
