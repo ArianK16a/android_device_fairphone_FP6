@@ -175,6 +175,8 @@ on boot
     chmod 0660 /sys/bus/spi/devices/spi0.0/fw_version
     chown system system /sys/module/qcom_dload_mode/parameters/download_mode
     chmod 0660 /sys/module/qcom_dload_mode/parameters/download_mode
+    chown system system /sys/devices/virtual/hall_switch/soc:hall_1/hall_status
+    chmod 0660 /sys/devices/virtual/hall_switch/soc:hall_1/hall_status
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
