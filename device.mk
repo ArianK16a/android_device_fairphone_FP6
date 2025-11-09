@@ -340,7 +340,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/sku_volcano/android.hardware.sensor.stepdetector.xml
 
 # Screen density
-TARGET_SCREEN_DENSITY := xxxhdpi
+TARGET_SCREEN_DENSITY := 440
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
