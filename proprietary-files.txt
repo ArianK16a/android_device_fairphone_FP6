@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from FP6.QREL.15.122.0.20250718182448_VS1E-factory.zip
+# All unpinned blobs below are extracted from FP6.QREL.15.151.0
 
 # Init ### TODO sort or import to tree
 vendor/bin/init.qcom.coex.sh
