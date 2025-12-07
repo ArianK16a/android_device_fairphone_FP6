@@ -46,10 +46,6 @@
 /dev/focaltech_fp        u:object_r:ff_device:s0
 /data/vendor/focaltech(/.*)?        u:object_r:ff_data_file:s0
 
-# NFC
-/(vendor|system/vendor)/bin/hw/android\.hardware\.nfc-service\.sec         u:object_r:hal_nfc_default_exec:s0
-/dev/sec-nfc    u:object_r:nfc_device:s0
-
 # tctd
 /vendor/bin/tctd                u:object_r:tctd_exec:s0
 /dev/socket/tctd                u:object_r:tctd_socket:s0
