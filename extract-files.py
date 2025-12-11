@@ -52,6 +52,8 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'system_ext/lib64/libwfdnative.so': blob_fixup()
         .add_needed('libinput_shim.so'),
+    'system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so': blob_fixup()
+        .replace_needed('libprotobuf-cpp-full.so', 'libprotobuf-cpp-full-21.7.so'),
     (
         'vendor/bin/qcc-vendor',
         'vendor/bin/qms',
