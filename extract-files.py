@@ -198,6 +198,14 @@ blob_fixups: blob_fixups_user_type = {
         'android.hardware.graphics.allocator-V2-ndk.so',
     ),
     (
+        'vendor/lib64/libcapiv2uvvendor.so',
+        'vendor/lib64/liblistensoundmodel2vendor.so',
+        'vendor/lib64/libVoiceSdk.so',
+    ): blob_fixup().replace_needed(
+        'libtensorflowlite_c.so',
+        'libtensorflowlite_c_vendor.so',
+    ),
+    (
         'vendor/lib64/libmfnr_raw_api.so',
         'vendor/lib64/libTclAISuperfine.so',
         'vendor/lib64/libTclImage_ImageEngine.so',
