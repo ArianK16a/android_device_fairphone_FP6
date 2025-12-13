@@ -302,6 +302,7 @@ PRODUCT_PACKAGES += \
     vendor_firmware_mnt_mountpoint
 
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_BUILD_PVMFW_IMAGE := true
 
 # Power
 PRODUCT_PACKAGES += \
