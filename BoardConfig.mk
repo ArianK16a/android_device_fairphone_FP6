@@ -199,7 +199,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2025-10-05
+VENDOR_SECURITY_PATCH := 2025-11-05
 
 # Sepolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
@@ -209,7 +209,7 @@ SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
 # Verified Boot
-STOCK_SECURITY_PATCH_TIMESTAMP := $(shell date -d 'TZ="GMT" 2025-10-05' +%s)
+STOCK_SECURITY_PATCH_TIMESTAMP := $(shell date -d 'TZ="GMT" 2025-11-05' +%s)
 BOARD_AVB_ENABLE := true
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 3
 
