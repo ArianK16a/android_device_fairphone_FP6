@@ -94,7 +94,6 @@ vendor/lib64/libqtigefar.so
 vendor/lib64/libtensorflowlite_c.so
 vendor/lib64/libvui_dmgr.so
 vendor/lib64/libvui_dmgr_client.so
-vendor/lib64/libvui_intf.so
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libquasar.so
 vendor/lib64/soundfx/libshoebox.so
