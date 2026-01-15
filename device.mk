@@ -76,8 +76,10 @@ PRODUCT_PACKAGES += \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
     libbatterylistener \
+    libcustomva_intf \
     libfmpal \
     libhfp_pal \
+    libhotword_intf \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
