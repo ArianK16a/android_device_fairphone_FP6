@@ -5,14 +5,12 @@ add_service(hal_algoservice_default, vendor_tct_camera_algo_service)
 init_daemon_domain(hal_algoservice_default)
 binder_use(hal_algoservice_default)
 
-allow hal_algoservice_default hwservicemanager_prop:file {read open getattr map};
 allow hal_algoservice_default priv_app:binder { call transfer };
 allow hal_algoservice_default platform_app:binder { call transfer };
 allow hal_algoservice_default fwk_camera_hwservice:hwservice_manager find;
 allow hal_algoservice_default fwk_sensor_hwservice:hwservice_manager find;
 allow hal_algoservice_default cameraserver_service:service_manager find;
 allow hal_algoservice_default fwk_camera_service:service_manager find;
-#allow hal_algoservice_default hal_graphics_mapper_hwservice:hwservice_manager find;
 hal_client_domain(hal_algoservice_default, hal_graphics_allocator)
 
 allow hal_algoservice_default gpu_device:dir search;
@@ -25,15 +23,10 @@ allow hal_algoservice_default vendor_camera_dump_file:file create_file_perms;
 
 allow hal_algoservice_default vendor_camera_data_file:dir create_dir_perms;
 allow hal_algoservice_default vendor_camera_data_file:file create_file_perms;
-allow hal_algoservice_default vendor_camera_data_file:dir search;
 
-#allow hal_algoservice_default proc_ged:file r_file_perms;
-#allowxperm hal_algoservice_default proc_ged:file ioctl { proc_ged_ioctls };
-#allow hal_algoservice_default debugfs_ion:dir search;
-
+get_prop(hal_algoservice_default, hwservicemanager_prop)
 get_prop(hal_algoservice_default, vendor_default_prop)
 get_prop(hal_algoservice_default, camera_config_prop)
-get_prop(hal_algoservice_default, vendor_camera_prop)
 get_prop(hal_algoservice_default, vendor_fp_prop)
 set_prop(hal_algoservice_default, vendor_camera_prop)
 
@@ -44,10 +37,12 @@ binder_call(hal_algoservice_default, cameraserver)
 allow dumpstate hal_algoservice_default:binder call;
 
 # ADSP access
-allow hal_algoservice_default vendor_xdsp_device:chr_file { r_file_perms };
+allow hal_algoservice_default vendor_xdsp_device:chr_file r_file_perms;
 r_dir_file(hal_algoservice_default, adsprpcd_file);
 get_prop(hal_algoservice_default, vendor_adsprpc_prop)
+
 allow hal_algoservice_default vendor_hal_dspmanager_hwservice:hwservice_manager find;
 hal_client_domain(hal_algoservice_default, vendor_hal_dspmanager)
+
 allow hal_algoservice_default vendor_hal_qspmhal_service:service_manager find;
 hal_client_domain(hal_algoservice_default, vendor_hal_qspmhal)

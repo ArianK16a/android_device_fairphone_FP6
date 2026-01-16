@@ -1,18 +1,18 @@
 # Battery
-genfscon sysfs /class/qcom-battery/charge_disable u:object_r:vendor_sysfs_battery_supply:s0
-genfscon sysfs /class/qcom-battery/chgmod_fcc     u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/charge_disable    u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /class/qcom-battery/chgmod_fcc        u:object_r:vendor_sysfs_battery_supply:s0
 
 # emkit
-genfscon sysfs /emkit/info                           u:object_r:vendor_sysfs_info:s0
+genfscon sysfs /emkit/info    u:object_r:vendor_sysfs_info:s0
 
 # Touchscreen
-genfscon sysfs /bus/spi/drivers/eswin_eph861x	u:object_r:fp_mmitest_sysfs:s0
-genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0			u:object_r:fp_mmitest_sysfs:s0
-genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/wakeup  u:object_r:sysfs_wakeup:s0
+genfscon sysfs /bus/spi/drivers/eswin_eph861x                                                         u:object_r:fp_mmitest_sysfs:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0    u:object_r:fp_mmitest_sysfs:s0
 
 # Vibrator
-genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-005a/leds/aw_vibrator         u:object_r:sysfs_leds:s0
+genfscon sysfs /devices/platform/soc/8c0000.qcom,qupv3_1_geni_se/880000.i2c/i2c-7/7-005a/leds/aw_vibrator    u:object_r:sysfs_leds:s0
 
 # Wakeup
-genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a84000.i2c/i2c-1/1-0027/wakeup u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/platform/soc/soc:focalfp_ft9362/wakeup u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/wakeup    u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a84000.i2c/i2c-1/1-0027/wakeup              u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:focalfp_ft9362/wakeup                                               u:object_r:sysfs_wakeup:s0

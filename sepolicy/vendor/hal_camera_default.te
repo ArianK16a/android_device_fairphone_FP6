@@ -1,17 +1,19 @@
-allow hal_camera_default fp_mmitest_sysfs:file { read write open getattr };
 allow hal_camera_default fp_mmitest_sysfs:dir { search open read };
+allow hal_camera_default fp_mmitest_sysfs:file { read write open getattr };
 
-allow hal_camera_default vendor_camera_dump_file:file create_file_perms;
 allow hal_camera_default vendor_camera_dump_file:dir create_dir_perms;
+allow hal_camera_default vendor_camera_dump_file:file create_file_perms;
+
 allow hal_camera_default vendor_tct_camera_algo_service:service_manager find;
 binder_call(hal_camera_default, hal_algoservice_default)
 
 allow hal_camera_default mnt_vendor_file:dir { search write add_name };
 allow hal_camera_default mnt_vendor_file:file { read write create open setattr getattr };
 
-#for tof function
+# for tof function
 allow hal_camera_default vl53l1_device:chr_file rw_file_perms;
+
 # for tof cali
+allow hal_camera_default mnt_vendor_file:dir search;
 allow hal_camera_default persist_camera_file:dir w_dir_perms;
 allow hal_camera_default persist_camera_file:file create_file_perms;
-allow hal_camera_default mnt_vendor_file:dir search;

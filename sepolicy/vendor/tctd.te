@@ -65,7 +65,7 @@ allow tctd tctd:qipcrtr_socket { create getattr write setopt read };
 
 allow tctd proc_asound:dir search;
 allow tctd vendor_proc_audiod:file { read getattr open };
-dontaudit tctd self:capability {dac_override dac_read_search };
+dontaudit tctd self:capability { dac_override dac_read_search };
 allow tctd fuse:dir { write search add_name };
 allow tctd fuse:file { write read create open };
 allow tctd mnt_user_file:dir search;
