@@ -73,31 +73,20 @@ on init
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     start logd
 
-# add sensor sysfs node
-    chmod 0666 /sys/emkit/info/proximity
-    chown system system /sys/emkit/info/proximity
-
-    chmod 0666 /sys/emkit/info/acceleration
+    chmod 0660 /sys/emkit/info/acceleration
+    chmod 0660 /sys/emkit/info/gyroscope
+    chmod 0660 /sys/emkit/info/hall
+    chmod 0660 /sys/emkit/info/light
+    chmod 0660 /sys/emkit/info/magnetic
+    chmod 0660 /sys/emkit/info/pressure
+    chmod 0660 /sys/emkit/info/proximity
     chown system system /sys/emkit/info/acceleration
-
-    chmod 0666 /sys/emkit/info/gyroscope
     chown system system /sys/emkit/info/gyroscope
-
-    chmod 0666 /sys/emkit/info/magnetic
-    chown system system /sys/emkit/info/magnetic
-
-    chmod 0666 /sys/emkit/info/light
-    chown system system /sys/emkit/info/light
-
-    chmod 0666 /sys/emkit/info/pressure
-    chown system system /sys/emkit/info/pressure
-    
-    chmod 0666 /sys/emkit/info/hall
     chown system system /sys/emkit/info/hall
-# add sensor sysfs node
-
-on late-init
-
+    chown system system /sys/emkit/info/light
+    chown system system /sys/emkit/info/magnetic
+    chown system system /sys/emkit/info/pressure
+    chown system system /sys/emkit/info/proximity
 
 on early-fs
     start vold
@@ -133,44 +122,23 @@ on post-fs-data
     # Enable WLAN cold boot calibration
     write /sys/kernel/cnss/fs_ready 1
 
-# Set permission for OTP check file by chengming.xiang
-#add for tof
-on post-fs-data
-    chmod 0666 /sys/class/deviceinfo/device_info/CamNameB
-    chmod 0666 /sys/class/deviceinfo/device_info/CamNameB2
-    chmod 0666 /sys/class/deviceinfo/device_info/CamNameF
-    chmod 0666 /sys/class/deviceinfo/device_info/CamOTPB
-    chmod 0666 /sys/class/deviceinfo/device_info/CamOTPB2
-    chmod 0666 /sys/class/deviceinfo/device_info/CamOTPF
-    mkdir /mnt/vendor/persist/cam_cali 0777 system system
+    chmod 0660 /sys/class/deviceinfo/device_info/CamOTPB
+    chmod 0660 /sys/class/deviceinfo/device_info/CamOTPB2
+    chmod 0660 /sys/class/deviceinfo/device_info/CamOTPF
+    mkdir /mnt/vendor/persist/cam_cali 0770 system system
     restorecon_recursive /mnt/vendor/persist/cam_cali
-    mkdir /mnt/vendor/persist/camera 0777 system system
+    mkdir /mnt/vendor/persist/camera 0770 system system
     chown system system /dev/stmvl53l1_ranging
-    chmod 0666 /dev/stmvl53l1_ranging
-    chmod 0666 /sys/class/debug_ois/accgain
-    chmod 0666 /sys/class/debug_ois/afdrift
-    chmod 0666 /sys/class/debug_ois/oisops
-    chmod 0666 /sys/class/debug_ois/oisreg
-    #add vibrator
-    chown system system /sys/class/leds/aw_vibrator/trigger
-    chown system system /sys/class/leds/aw_vibrator/activate
-    chown system system /sys/class/leds/aw_vibrator/brightness
-    chown system system /sys/class/leds/aw_vibrator/duration
-    chown system system /sys/class/leds/aw_vibrator/state
-    chown system system /sys/class/leds/aw_vibrator/loop
-    chown system system /sys/class/leds/aw_vibrator/seq
-    chown system system /sys/class/leds/aw_vibrator/index
-    chown system system /sys/class/leds/aw_vibrator/enable
-    chown system system /sys/class/leds/aw_vibrator/rtp
-    chown system system /sys/class/leds/aw_vibrator/activate_mode
-    chown system system /sys/class/leds/aw_vibrator/gain
+    chmod 0660 /dev/stmvl53l1_ranging
+    chmod 0660 /sys/class/debug_ois/afdrift
+    chmod 0660 /sys/class/debug_ois/oisops
+    chmod 0660 /sys/class/debug_ois/oisreg
 
-# add tap-to-wake
     wait /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/gesture_wakeup 20
     chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/gesture_wakeup
     chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_0_geni_se/a80000.spi/spi_master/spi0/spi0.0/gesture_wakeup
-# add tap-to-wake
 
+    mkdir /data/vendor/camera_dump 0770 system system
 
 on early-boot
     verity_update_state
@@ -185,21 +153,17 @@ on boot
     chown cameraserver cameraserver /dev/cpuset/camera-daemon
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
-    chmod 0666 /dev/aw882xx_smartpa
     chown system /sys/devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable
     chmod 0660 /sys/devices/platform/soc/990000.i2c/i2c-0/0-0038/trusted_touch_enable
     chown system /sys/devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_enable
     chmod 0660 /sys/devices/platform/soc/990000.spi/spi_master/spi0/spi0.0/trusted_touch_enable
     chown system /sys/devices/system/cpu/hyp_core_ctl/enable
     chown system /sys/devices/system/cpu/hyp_core_ctl/hcc_min_freq
-    # double tap
-    chmod 0666 /sys/devices/platform/goodix_ts.0/gesture/double_en
-    # charging enable
 
     chown system system /dev/focaltech_fp
     chmod 0660 /dev/focaltech_fp
 
-    #MMITest
+    # MMITest
     chown system system /sys/class/qcom-battery/typec_cc_orientation
     chmod 0666 /sys/class/qcom-battery/typec_cc_orientation
     chown system system /sys/class/udc/a600000.dwc3/current_speed
@@ -211,11 +175,6 @@ on boot
     chmod 0660 /sys/bus/spi/devices/spi0.0/fw_version
     chown system system /sys/module/qcom_dload_mode/parameters/download_mode
     chmod 0660 /sys/module/qcom_dload_mode/parameters/download_mode
-
-#Begin added by juting.huang for cameraalgoservice
-on post-fs-data
-    mkdir /data/vendor/camera_dump 0777 system system
-#End added by juting.huang for cameraalgoservice
 
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
@@ -229,12 +188,6 @@ on init && property:ro.boot.mode=charger
     start vendor.pd_mapper
     wait /sys/kernel/boot_adsp/boot
     write /sys/kernel/boot_adsp/boot 1
-
-on property:debug.mmitest.tprawdata=1
-    chown system system /sys/bus/spi/drivers/eswin_eph861x/spi0.0/write_device_message
-    chmod 0666 /sys/bus/spi/drivers/eswin_eph861x/spi0.0/write_device_message
-    chown system system /sys/bus/spi/drivers/eswin_eph861x/spi0.0/read_device_message
-    chmod 0666 /sys/bus/spi/drivers/eswin_eph861x/spi0.0/read_device_message
 
 on charger
     start vendor.power_off_alarm
@@ -284,45 +237,6 @@ on property:sys.shutdown.requested=*
 on property:vold.decrypt=trigger_restart_framework
    start vendor.cnss_diag
 
-on property:sys.boot_completed=1 && property:persist.odm.double_en=1
-   write /sys/bus/spi/devices/spi0.0/gesture_wakeup "2"
-
-on property:persist.odm.double_en=0
-   write /sys/bus/spi/devices/spi0.0/gesture_wakeup "-2"
-
-on property:persist.odm.setflashlight=1
-   write /sys/class/leds/led:torch_0/brightness 70
-
-on property:persist.odm.screen_mode=0
-    write /sys/bus/spi/devices/spi0.0/edge_suppresion 0
-on property:persist.odm.screen_mode=1
-    write /sys/bus/spi/devices/spi0.0/edge_suppresion 3
-on property:persist.odm.screen_mode=2
-    write /sys/bus/spi/devices/spi0.0/edge_suppresion 1
-
-on property:sys.boot_completed=1 && property:persist.odm.touch_sensitivity=0
-    write sys/bus/spi/devices/spi0.0/glove_mode 0
-on property:sys.boot_completed=1 && property:persist.odm.touch_sensitivity=1
-    write sys/bus/spi/devices/spi0.0/glove_mode 1
-
-on property:persist.odm.charge_mode=0
-    write /sys/class/qcom-battery/chgmod_fcc 6000000
-on property:persist.odm.charge_mode=1
-    write /sys/class/qcom-battery/chgmod_fcc 1000000
-
-on property:persist.odm.charge_disable=0
-    write /sys/class/qcom-battery/charge_disable 0
-on property:persist.odm.charge_disable=1
-    write /sys/class/qcom-battery/charge_disable 1
-
-on property:odm.charge_speed_limit=0 && property:vendor.tinfo.thermal.socd_path=*
-    write ${vendor.tinfo.thermal.socd_path}/trip_point_2_temp 90
-
-on property:odm.charge_speed_limit=0
-    write /sys/class/qcom-battery/display_fcc 4000000
-on property:odm.charge_speed_limit=1
-    write /sys/class/qcom-battery/display_fcc 6000000
-
 service vendor.cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    class main
    user system
@@ -345,21 +259,11 @@ service fan_control_turn_off /vendor/bin/fan_service 0
     disabled
     oneshot
 
-#add by yangxuguang for set wlan mac FPS-70
 service set_wifi_mac /vendor/bin/sh /vendor/bin/setwlanmac.sh
     class late_start
     user root
     group root
     oneshot
-#add end
-
-on property:persist.sys.oem.debug.enable_ramdump=true
-   setprop persist.vendor.ssr.restart_level  ALL_DISABLE
-   write /sys/module/qcom_dload_mode/parameters/download_mode 1
-
-on property:persist.sys.oem.debug.enable_ramdump=false
-   setprop persist.vendor.ssr.restart_level  ALL_ENABLE
-   write /sys/module/qcom_dload_mode/parameters/download_mode 0
 
 on property:vendor.audio.ssr.trigger=1
     write /sys/kernel/boot_adsp/ssr 1
