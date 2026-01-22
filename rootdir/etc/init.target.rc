@@ -287,3 +287,6 @@ on property:sys.boot_completed=1
     chown media audio /sys/kernel/wdsp0/boot
     chown media audio /sys/kernel/wcd_cpe0/fw_name
     chown media audio /sys/kernel/aud_dev/state
+
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
