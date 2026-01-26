@@ -15,3 +15,6 @@ allow hal_camera_default vl53l1_device:chr_file rw_file_perms;
 allow hal_camera_default persist_camera_file:dir w_dir_perms;
 allow hal_camera_default persist_camera_file:file create_file_perms;
 allow hal_camera_default mnt_vendor_file:dir search;
+
+# Perf hints
+hal_client_domain(hal_camera_default, hal_power)

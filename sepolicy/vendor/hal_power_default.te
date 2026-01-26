@@ -1,3 +1,8 @@
 # Touchscreen gestures
 allow hal_power_default fp_mmitest_sysfs:dir search;
 allow hal_power_default fp_mmitest_sysfs:file rw_file_perms;
+
+# Powerhints
+allow hal_power_default vendor_sysfs_msm_perf:file rw_file_perms;
+# FIXME
+allow hal_power_default proc:file rw_file_perms;
