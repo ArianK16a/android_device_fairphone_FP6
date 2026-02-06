@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from FP6.QREL.15.162.0
+# All unpinned blobs below are extracted from FP6.QREL.15.176.0
 
 # Init ### TODO sort or import to tree
 vendor/bin/init.qcom.coex.sh
