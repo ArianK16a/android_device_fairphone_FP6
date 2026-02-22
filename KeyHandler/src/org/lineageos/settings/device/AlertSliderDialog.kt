@@ -1,7 +1,7 @@
 /*
  * SPDX-FileCopyrightText: 2019 CypherOS
  * SPDX-FileCopyrightText: 2014-2020 Paranoid Android
- * SPDX-FileCopyrightText: 2023-2024 The LineageOS Project
+ * SPDX-FileCopyrightText: 2023-2026 The LineageOS Project
  * SPDX-FileCopyrightText: 2023 Yet Another AOSP Project
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -148,6 +148,7 @@ class AlertSliderDialog(private val context: Context) :
                 else -> R.string.alert_slider_mode_none
             }
         )
+        textView.setTextColor(context.getColor(R.color.alert_slider_text_color))
     }
 
     private fun backgroundFor(rotation: Int, position: Int, flip: Boolean): Int {
