@@ -89,7 +89,6 @@ vendor/lib64/libeai_fixed.so
 vendor/lib64/libeai_float.so
 vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/libmcs.so
-vendor/lib64/libpal_net_if.so
 vendor/lib64/libqtigefar.so
 vendor/lib64/libtensorflowlite_c.so:vendor/lib64/libtensorflowlite_c_vendor.so;FIX_SONAME
 vendor/lib64/libvui_dmgr.so
@@ -913,6 +912,7 @@ vendor/lib64/liblocdiagiface.so
 vendor/lib64/liblowi_client.so
 vendor/lib64/liblowi_common.so
 vendor/lib64/liblowi_wifihal.so
+vendor/lib64/libpal_net_if.so
 vendor/lib64/libsynergy_loc_api.so
 vendor/lib64/libsys_info_cache.so
 vendor/lib64/libwifiobserver.so
