@@ -22,9 +22,6 @@
     <!-- DEPRECATED: Use CarrierConfigManager#KEY_CSP_ENABLED_BOOL -->
     <bool name="csp_enabled">true</bool>
 
-    <!-- The package name for the platform carrier config app, bundled with system image. -->
-    <string name="platform_carrier_config_package" translatable="false">com.fp.customercarrierconfig</string>
-
     <!-- Flag indicating whether the device supports RTT (real-time text) -->
     <bool name="config_support_rtt">true</bool>
 
