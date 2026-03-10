@@ -287,6 +287,7 @@ PRODUCT_COPY_FILES += \
 
 # Overlays
 PRODUCT_PACKAGES += \
+    CarrierConfigResCommon_Sys \
     FrameworksResCommon_Sys \
     SettingsResCommon_Sys \
     SystemUIResCommon_Sys \
