@@ -25,7 +25,6 @@
         <boolean name="com.google.android.dialer.display_wifi_calling_button_bool" value="true" />
         <boolean name="carrier_name_override_bool" value="false" />
         <boolean name="show_iccid_in_sim_status_bool" value="true" />
-        <boolean name="show_operator_name_in_statusbar_bool" value="true" />
         <boolean name="rtt_supported_bool" value="true" />
         <boolean name="rtt_auto_upgrade_bool" value="true" />
         <boolean name="rtt_supported_for_vt_bool" value="true" />
