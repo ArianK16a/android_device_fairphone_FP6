@@ -68,7 +68,7 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
 
     override fun handleKeyEvent(event: KeyEvent): KeyEvent? {
         if (event.action != KeyEvent.ACTION_DOWN) {
-            return event
+            return if (event.action == KeyEvent.ACTION_UP) null else event
         }
 
         val deviceName = event.device.name
