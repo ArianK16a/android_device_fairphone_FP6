@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from FP6.QREL.15.176.0
+# All unpinned blobs below are extracted from FP6.QREL.16.48.0
 
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
@@ -47,6 +47,7 @@ vendor/lib64/libadsprpc.so
 vendor/lib/rfsa/adsp/libadsp_jpege_skel.so
 vendor/lib/rfsa/adsp/libbitml_nsp_skel.so
 vendor/lib/rfsa/adsp/libdsp_streamer_binning.so
+vendor/lib/rfsa/adsp/libhdr_skel.so
 vendor/lib/rfsa/adsp/libhme_dsp_skel.so
 vendor/lib/rfsa/adsp/libmctfengine_skel.so
 vendor/lib/rfsa/adsp/libmlawbpostproc_dsp_skel.so
@@ -113,6 +114,7 @@ vendor/lib64/vendor.qti.hardware.cacert@1.0.so
 # Camera
 vendor/bin/hw/cameraalgoservice
 vendor/bin/hw/vendor.qti.camera.provider-service_64
+vendor/etc/camera/400_528_float16.tflite
 vendor/etc/camera/AncRawAlgos/cache_front_main
 vendor/etc/camera/AncRawAlgos/cache_raw_sr
 vendor/etc/camera/AncRawAlgos/cache_rear_main
@@ -139,6 +141,10 @@ vendor/etc/camera/AncRawAlgos/superiq_model_rear_main
 vendor/etc/camera/AncRawAlgos/superiq_model_rear_uw
 vendor/etc/camera/MotionDetParams.cfg
 vendor/etc/camera/MotionDetParams_oneshot.cfg
+vendor/etc/camera/algoservice/400_528_float16.tflite
+vendor/etc/camera/algoservice/bayer_preproc.bin
+vendor/etc/camera/algoservice/image_bpc_1f7ad02c58698f97b7bdb2505d00cb3a82a21b7c6abd22e8260c762b44f0d87f.clbin
+vendor/etc/camera/algoservice/imx896_low_iso.model
 vendor/etc/camera/anc_hdrchecker_config.json
 vendor/etc/camera/app/motion/cbb/cache/MOD_HKResBlurDet_14132813453306724852.bin
 vendor/etc/camera/app/motion/cbb/cache/MOD_HKResClassificationDet_11249559976143278055.bin
@@ -177,26 +183,29 @@ vendor/etc/camera/hi3231q_low_iso.model
 vendor/etc/camera/hi3231q_mfnr_ai.model
 vendor/etc/camera/imx896_high_iso.model
 vendor/etc/camera/imx896_low_iso.model
+vendor/etc/camera/imx896_mfnr_ai.model
 vendor/etc/camera/intsense_config_singlebokeh.bin
 vendor/etc/camera/modnet_c12v2_in_h416_w544.bin
 vendor/etc/camera/modnet_c12v2_in_h416_w544.mnn
 vendor/etc/camera/params.cfg
 vendor/etc/camera/params_prod_20220218_8_latest_toend.tflite
 vendor/etc/camera/rawmfnr_kernel_cache/bayer_preproc.bin
-vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_bilateral_6cb77a3d2aded0822f04aa916b9cde58efa012a4e1ef2674d33482da4cd8de67.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_bilateral_d4e4239a0966c97a72868e4634b7ee64286c2e44cb84ef73ef35effd27d9b866.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_bilateral_dbb741ef9861c97d6085e6291e42917483a111f83cd6a027e5dc6e9ca4ca6785.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_downscale_3091dde5e4b9830d2c5343c49d4d1db6995d4e1c410f5eb22cbac3aaa8bdbace.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_downscale_5a5c7cfb0c4ec1034747a752b408dc06782036c9f399402f759979ce6441adc4.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/deghost_363e2bcdd8fb12aadcd63c09213a2ba0605a99e6a4f68268166310347edc5ac3.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/fast_aligner_0122c32cd21ea720165d6a1d6c2fb5e65213cf123cce8ae261fda3a59dddb118.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/image_bpc_af2c008da52c55d20de6db5fae7fbdc036e947a7c0ea4bff68575d1615f81170.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/image_grayscale_456335102b6c764d13ca2870b2face1c77ac0e9b7899216a24b28dce2eccad1e.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/image_median_robustness_c02f5fd65c9a38753c40f1c7dbdcbbca309050a39b1f040583105ef252d0acda.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/image_merge_9753636f79c3be8b253f006248a99cdc68281e06a2377e66e2f8dc96969427a1.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/image_postprocessing_d6d734356f7b5afb6e7f407fae521ddee233c4808ac7252e4470eed837ec4c05.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/lucas_kanade_89f3402272160922c06ead5bd7e39dd87303ac908df9ff29ab1b5a1e9c3c4c48.clbin
-vendor/etc/camera/rawmfnr_kernel_cache/median_kernel_cov_mat_b59dcebd1c56936c126daf58735c9cd6abeab64c3a31f85c587b4cd14cc39eec.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_bilateral_14cc1f87f97d4ff2676de912ebf7a7e9f349f40549d756cb6b78a0dde0945fc1.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_bilateral_b7663bb609228f7799c9ba9a8b0fae44104d16f1cf64dda1885898adfe359729.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_bilateral_e2b6efbbc0c79697750cd16548877cf3c32ea5bcce4490f9e9d56be1f5ccdb1e.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_downscale_0c7ad63ead83af11350bf405fbe5f80d3cbc435d9954b194e2cc446ece7500b4.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/channel_utils_downscale_5342233f93f78d8ead91b194207ecda62809969f99bcd717e08d74d494e9eb72.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/deghost_848102068c26134ec61ece6be58ff7153091ef30617b1f20b77186ecc66364f3.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/fast_aligner_c2c05f8fc971fad4e0494cf25b24f7a2caffe24041d0dd6a6aa66abf76110c6d.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/image_bpc_8c0a21509eef5df0d596188138398290c71e85992451fe46156372681559a320.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/image_grayscale_895594d117365fa51fe9b1a080ae00fc344a260fd4b4e0665666cd9b0b22c618.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/image_grayscale_a1837eff0d7c22bf9b84ec4bbccb7c2c59687ec93e2432c46ddc9cdb82981206.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/image_median_robustness_511405e54e05bc16a2627ea3f892b3d61d91a0022d83ebec2703428cb5345396.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/image_merge_787af8c2a4b6b6db259db81845f23f3ef71385d73ce3609dd11c2623844ea8b4.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/image_merge_83fe60e019ff8c1598a446ca89006ed4b7cc7dfdeb665df787b647b46c0b05c0.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/image_postprocessing_ea332fd93af0c9917c85eaf37cf4b1931a8e7ef17d6ffc941933be715a77c849.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/lucas_kanade_5edf2e67824db3da70c7c3d7c6773b9d1f80386c63547158c79695718b809ccb.clbin
+vendor/etc/camera/rawmfnr_kernel_cache/median_kernel_cov_mat_846d0d2847f32026a2d5e058b64fa9e1cc579d3d14c245a5df579e9c01204f5c.clbin
 vendor/etc/camera/s5khm6_high_iso.model
 vendor/etc/camera/s5khm6_low_iso.model
 vendor/etc/camera/s5khm6_mfnr_ai.model
@@ -973,6 +982,7 @@ system_ext/lib64/lib-imsvtutils.so
 system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimscamera_jni.so
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so
 system_ext/lib64/vendor.qti.ImsRtpService-V1-ndk.so
+system_ext/lib64/vendor.qti.ImsRtpService-V2-ndk.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.0.so
 system_ext/lib64/vendor.qti.imsrtpservice@3.1.so
 system_ext/priv-app/ims/ims.apk;REQUIRED=QtiTelephonyCompat
@@ -1271,7 +1281,7 @@ vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
 
 # QESDK
-system_ext/app/QesdkSysService/QesdkSysService.apk
+system_ext/app/FrameworksUtilsSysService/FrameworksUtilsSysService.apk
 system_ext/etc/vintf/manifest/vendor.qti.qesdsys.service.xml
 vendor/bin/qesdk-manager
 vendor/bin/qesdk-secmanager
@@ -1561,35 +1571,35 @@ vendor/bin/setwlanmac.sh
 vendor/bin/tctd
 vendor/etc/init/tctd.rc
 
-# WiFi Display (system) - from dada OS2.0.217.0.WOCMIXM
-system/framework/WfdCommon.jar;BOOT_JAR|76fab5ed43206989057284fa26e8b894f1da102f
-system_ext/bin/wfdservice64|34851904d02d11d3cfebbc7b8745a9444ba3e7c5
-system_ext/etc/init/wfdservice.rc|907def8565d8f91f531ca7dfad880af05d540b0c
-system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml|6669d5ee462c981663b8ac573d84d334e4eed96c
-system_ext/etc/seccomp_policy/wfdservice64.policy|1e331272649395423b11c575892e0bdc9433b820
-system_ext/etc/wfdconfigsink.xml|d718bc1ccb3e6e52a0af7bf4de62445c0b083651
-system_ext/lib64/libmmrtpdecoder.so|8b143c0b004a2f5ab8d7911dd463de0ceea794e7
-system_ext/lib64/libmmrtpencoder.so|eef3f64e6c2892fc0c87e176f5a83f7fe07761d3
-system_ext/lib64/libwfdavenhancements.so|8c968c6930e44901ef8c6abd6356f2308600d90e
-system_ext/lib64/libwfdclient.so|2d1bf9b010ecfb8532eaf6a12c8bf60f9e8ffe08
-system_ext/lib64/libwfdcommonutils.so|3ae375016a9551e51f26710e8b07d20eeef2b76f
-system_ext/lib64/libwfdconfigutils.so|4d8200cc4c455f54fcbce927f5cabeb7b591f5d0
-system_ext/lib64/libwfddisplayconfig.so|27f5d6e284edf05cc7776e5be010912973000ab9
-system_ext/lib64/libwfdmminterface.so|8d3d493fef797aef2feaab4e09e50250ddf5dc9a
-system_ext/lib64/libwfdmmsink.so|4569ce9941eb5d06db599146ed80b8a32d7cd97f
-system_ext/lib64/libwfdmmsrc_system.so|0cc970954800566baddbf760b153b027940180f5
-system_ext/lib64/libwfdnative.so;SYMLINK=system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so|9513bbbd813dd05fb063d3c9e72640a1bc9156c2|f2918bbd8e4c691299e840863e8cb502a47bb773
-system_ext/lib64/libwfdrtsp.so|1ab4fc5b75d25f551df3593d5856e6f7893a4176
-system_ext/lib64/libwfdservice.so|af0e31f17ed997a5d8bad64cdad486be28cb9f07
-system_ext/lib64/libwfdsinksm.so|cc899b719fa11d844c65908d7fdc18600451324d
-system_ext/lib64/libwfduibcinterface.so|432d54b072d8f1c80409b6e11f4f833ca9576937
-system_ext/lib64/libwfduibcsink.so|d12b05bbcefdff6addc2c31567a656b7540d7489
-system_ext/lib64/libwfduibcsinkinterface.so|a41b4d1fa4307a247b1f059a5b5cdf7f6a645db3
-system_ext/lib64/libwfduibcsrc.so|5be7d282be9ab45297bd030f8e37a45f48aa8677
-system_ext/lib64/libwfduibcsrcinterface.so|0e32acc87c8518e8ebb44f6ef341a2e278e1e7c2
-system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so|2b2563450ad6a8d46d5648b97f63f87c5d9983ca
-system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so|58cd9358df40aa16ddf0e603b736c58588623b9e
-system_ext/priv-app/WfdService/WfdService.apk|b8a1d9f83804d274fab6e09e0607082801207f60
+# WiFi Display (system)
+system/framework/WfdCommon.jar;BOOT_JAR
+system_ext/bin/wfdservice64
+system_ext/etc/init/wfdservice.rc
+system_ext/etc/permissions/wfd-system-ext-privapp-permissions-qti.xml
+system_ext/etc/seccomp_policy/wfdservice64.policy
+system_ext/etc/wfdconfigsink.xml
+system_ext/lib64/libmmrtpdecoder.so
+system_ext/lib64/libmmrtpencoder.so
+system_ext/lib64/libwfdavenhancements.so
+system_ext/lib64/libwfdclient.so
+system_ext/lib64/libwfdcommonutils.so
+system_ext/lib64/libwfdconfigutils.so
+system_ext/lib64/libwfddisplayconfig.so
+system_ext/lib64/libwfdmminterface.so
+system_ext/lib64/libwfdmmsink.so
+system_ext/lib64/libwfdmmsrc_system.so
+system_ext/lib64/libwfdnative.so;SYMLINK=system_ext/priv-app/WfdService/lib/arm64/libwfdnative.so
+system_ext/lib64/libwfdrtsp.so
+system_ext/lib64/libwfdservice.so
+system_ext/lib64/libwfdsinksm.so
+system_ext/lib64/libwfduibcinterface.so
+system_ext/lib64/libwfduibcsink.so
+system_ext/lib64/libwfduibcsinkinterface.so
+system_ext/lib64/libwfduibcsrc.so
+system_ext/lib64/libwfduibcsrcinterface.so
+system_ext/lib64/vendor.qti.hardware.wifidisplaysession@1.0.so
+system_ext/lib64/vendor.qti.hardware.wifidisplaysession_aidl-V1-ndk.so
+system_ext/priv-app/WfdService/WfdService.apk
 
 # WiFi Display (vendor)
 vendor/bin/wfdhdcphalservice

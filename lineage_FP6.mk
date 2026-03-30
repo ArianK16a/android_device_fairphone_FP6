@@ -22,8 +22,8 @@ PRODUCT_NAME_FOR_ATTESTATION := FP6
 PRODUCT_GMS_CLIENTID_BASE := android-fairphone
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BuildDesc="qssi_64-user 15 FP6.QREL.15.176.0 VS21 release-keys" \
-    BuildFingerprint=Fairphone/FP6/FP6:15/FP6.QREL.15.176.0/VS21:user/release-keys \
+    BuildDesc="qssi_64-user 16 FP6.QREL.16.48.0 WS15 release-keys" \
+    BuildFingerprint=Fairphone/FP6/FP6:16/FP6.QREL.16.48.0/WS15:user/release-keys \
     DeviceName=FP6 \
     DeviceProduct=FP6 \
     SystemDevice=FP6 \
