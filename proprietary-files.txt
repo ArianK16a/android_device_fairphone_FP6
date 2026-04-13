@@ -8,12 +8,9 @@ vendor/bin/init.qti.kernel.debug-volcano.sh
 vendor/bin/init.qti.kernel.debug.sh
 vendor/bin/init.qti.kernel.early_debug-volcano.sh
 vendor/bin/init.qti.kernel.early_debug.sh
-vendor/bin/init.qti.kernel.sh
 vendor/bin/init.qti.write.sh
 vendor/bin/system_dlkm_modprobe.sh
-vendor/bin/vendor_modprobe.sh
 vendor/etc/fstab_factory.qcom
-vendor/etc/init/hw/init.qti.kernel.rc
 vendor/etc/init/hw/init.qti.ufs.rc
 vendor/etc/init/init.embmssl_server.rc
 vendor/etc/init/init.qlm-service.rc
@@ -1034,6 +1031,21 @@ vendor/lib64/vendor.qti.ims.rcssipaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.ims.rcsuceaidlservice-V1-ndk.so
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.imsrtpservice@3.1.so;MODULE_SUFFIX=_vendor
+
+# Kernel
+vendor/bin/init.kernel.early_boot-memory.sh
+vendor/bin/init.kernel.post_boot-memory.sh
+vendor/bin/init.kernel.post_boot-volcano.sh
+vendor/bin/init.kernel.post_boot-volcano_2_2_1.sh
+vendor/bin/init.kernel.post_boot-volcano_3_2_1.sh
+vendor/bin/init.kernel.post_boot-volcano_3_3_1.sh
+vendor/bin/init.kernel.post_boot-volcano_4_2_1.sh
+vendor/bin/init.kernel.post_boot-volcano_4_3_0.sh
+vendor/bin/init.kernel.post_boot-volcano_default_4_3_1.sh
+vendor/bin/init.kernel.post_boot.sh
+vendor/bin/init.qti.kernel.sh
+vendor/bin/vendor_modprobe.sh
+vendor/etc/init/hw/init.qti.kernel.rc
 
 # Keymint
 vendor/bin/hw/android.hardware.security.keymint-service-qti

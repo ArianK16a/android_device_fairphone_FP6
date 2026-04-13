@@ -437,16 +437,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/init.class_main.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.class_main.sh \
     $(LOCAL_PATH)/rootdir/bin/init.crda.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.crda.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.early_boot-memory.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.early_boot-memory.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot-memory.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-memory.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot-volcano_2_2_1.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-volcano_2_2_1.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot-volcano_3_2_1.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-volcano_3_2_1.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot-volcano_3_3_1.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-volcano_3_3_1.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot-volcano_4_2_1.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-volcano_4_2_1.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot-volcano_4_3_0.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-volcano_4_3_0.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot-volcano_default_4_3_1.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-volcano_default_4_3_1.sh \
-    $(LOCAL_PATH)/rootdir/bin/init.kernel.post_boot-volcano.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.kernel.post_boot-volcano.sh \
     $(LOCAL_PATH)/rootdir/bin/init.mdm.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.mdm.sh \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.class_core.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.class_core.sh \
     $(LOCAL_PATH)/rootdir/bin/init.qcom.crashdata.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.crashdata.sh \
