@@ -1,21 +1,5 @@
 # All unpinned blobs below are extracted from FP6.QREL.15.176.0
 
-# Init ### TODO sort or import to tree
-vendor/bin/init.qcom.coex.sh
-vendor/bin/init.qcom.efs.sync.sh
-vendor/bin/init.qti.graphics.sh
-vendor/bin/init.qti.kernel.debug-volcano.sh
-vendor/bin/init.qti.kernel.debug.sh
-vendor/bin/init.qti.kernel.early_debug-volcano.sh
-vendor/bin/init.qti.kernel.early_debug.sh
-vendor/bin/init.qti.write.sh
-vendor/bin/system_dlkm_modprobe.sh
-vendor/etc/fstab_factory.qcom
-vendor/etc/init/hw/init.qti.ufs.rc
-vendor/etc/init/init.embmssl_server.rc
-vendor/etc/init/init.qlm-service.rc
-vendor/etc/init/init.qti.graphics.rc
-
 # ACDB
 vendor/etc/acdbdata/adsp_avs_config.acdb
 vendor/etc/acdbdata/ffv_models/ffv__5.0.1_0.1__3.0.0_0.0__eai_2.10_enpu3.pmd
@@ -953,6 +937,10 @@ vendor/firmware/gen80300_sqe.fw
 vendor/firmware/gen80300_zap.mbn
 vendor/firmware/gmu_gen70900.bin
 
+# Graphics (Init)
+vendor/bin/init.qti.graphics.sh
+vendor/etc/init/init.qti.graphics.rc
+
 # Graphics (Vulkan)
 vendor/lib64/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.pastel.so
@@ -1044,6 +1032,8 @@ vendor/bin/init.kernel.post_boot-volcano_4_3_0.sh
 vendor/bin/init.kernel.post_boot-volcano_default_4_3_1.sh
 vendor/bin/init.kernel.post_boot.sh
 vendor/bin/init.qti.kernel.sh
+vendor/bin/init.qti.write.sh
+vendor/bin/system_dlkm_modprobe.sh
 vendor/bin/vendor_modprobe.sh
 vendor/etc/init/hw/init.qti.kernel.rc
 
