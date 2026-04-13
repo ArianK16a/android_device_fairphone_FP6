@@ -899,6 +899,10 @@ vendor/lib64/qcril_client.so
 vendor/lib64/vendor.qti.gnss-V6-ndk.so
 vendor/lib64/vendor.qti.gnss-service.so
 
+# GNSS configs
+vendor/etc/lowi.conf
+vendor/etc/sap.conf
+
 # Graphics (Adreno)
 vendor/gpu/kbc/sequence_manifest.bin
 vendor/gpu/kbc/unified_kbcs_32.bin

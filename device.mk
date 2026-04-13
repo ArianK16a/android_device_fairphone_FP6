@@ -193,9 +193,7 @@ PRODUCT_PACKAGES += \
     batching.conf \
     gnss_antenna_info.conf \
     gps.conf \
-    izat.conf \
-    lowi.conf \
-    sap.conf
+    izat.conf
 
 PRODUCT_PACKAGES += \
     gnss@2.0-base.policy \

@@ -23,18 +23,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "lowi.conf",
-    vendor: true,
-    src: "lowi.conf",
-}
-
-prebuilt_etc {
-    name: "sap.conf",
-    vendor: true,
-    src: "sap.conf",
-}
-
-prebuilt_etc {
     name: "gnss@2.0-base.policy",
     vendor: true,
     sub_dir: "seccomp_policy",
