@@ -47,6 +47,7 @@ vendor.hw.fm.init=0
 
 # Camera
 camera.disable_zsl_mode=1
+ro.camera.disableHeicUltraHDR=true
 ro.camera.enableCamera1MaxZsl=1
 
 # Chipset
