@@ -854,7 +854,6 @@ vendor/bin/hw/android.hardware.biometrics.fingerprint-service
 vendor/etc/init/fingerprint-default.rc:vendor/etc/init/fingerprint-FP6.rc
 vendor/etc/vintf/manifest/fingerprint-default.xml:vendor/etc/vintf/manifest/fingerprint-FP6.xml
 vendor/lib64/hw/fingerprint.default.so;FIX_SONAME
-vendor/lib64/vendor.qti.hardware.fingerprint@1.0.so
 
 # FM
 vendor/etc/init.qti.fm.sh
