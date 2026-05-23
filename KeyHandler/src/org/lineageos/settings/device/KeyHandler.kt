@@ -82,6 +82,11 @@ class KeyHandler(private val context: Context) : DeviceKeyHandler {
             return event
         }
 
+        if (event.scanCode != packageContext.resources
+                .getInteger(R.integer.config_alertSliderScancode)) {
+            return event
+        }
+
         populateKeyState(false)
 
         return null

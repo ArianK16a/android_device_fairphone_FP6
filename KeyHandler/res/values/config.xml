@@ -28,7 +28,8 @@
 
     <!-- Events from these devices are treated as alert slider events -->
     <string-array name="config_alertSliderDeviceNames">
-        <item>oplus,hall_tri_state_key</item>
-        <item>oplus,tri-state-key</item>
+        <item>fpv6_switch_key</item>
     </string-array>
+
+    <integer name="config_alertSliderScancode">15</integer>
 </resources>
