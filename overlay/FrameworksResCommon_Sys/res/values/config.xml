@@ -367,12 +367,6 @@
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
-    <!-- Controls the navigation bar interaction mode:
-         0: 3 button mode (back, home, overview buttons)
-         1: 2 button mode (back, home buttons + swipe up for overview)
-         2: gestures only for back, home and overview -->
-    <integer name="config_navBarInteractionMode">2</integer>
-
     <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
     <bool name="config_useRoundIcon">true</bool>
 
