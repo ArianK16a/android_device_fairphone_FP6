@@ -3,12 +3,21 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
          manually by the user. Off by default, since the expected haptic feedback may not be
          available on some devices. -->
     <bool name="config_enableHapticTextHandle">true</bool>
 
+    <!-- This string array should be overridden by the device to present a list of network
+         attributes.  This is used by the connectivity manager to decide which networks can coexist
+         based on the hardware -->
+    <!-- An Array of "[Connection name],[ConnectivityManager.TYPE_xxxx],
+         [associated radio-type],[priority],[restoral-timer(ms)],[dependencyMet]  -->
+    <!-- the 5th element "resore-time" indicates the number of milliseconds to delay
+         before automatically restore the default connection.  Set -1 if the connection
+         does not require auto-restore. -->
+    <!-- the 6th element indicates boot-time dependency-met value. -->
     <!-- NOTE: The telephony module is no longer reading the configuration below for available
          APN types.  The set of APN types and relevant settings are specified within the telephony
          module and are non-configurable.  Whether or not data connectivity over a cellular network
@@ -28,6 +37,9 @@
         <item>ethernet,9,9,9,-1,true</item>
     </string-array>
 
+    <!-- This string array should be overridden by the device to present a list of radio
+         attributes.  This is used by the connectivity manager to decide which networks can coexist
+         based on the hardware -->
     <!-- An Array of "[ConnectivityManager connectionType],
                       [# simultaneous connection types]"  -->
     <string-array name="radioAttributes" translatable="false">
@@ -84,7 +96,7 @@
 
     <!-- This setting is deprecated, please use
          com.android.networkstack.tethering.R.array.config_tether_upstream_types. -->
-    <integer-array name="config_tether_upstream_types" translatable="false">
+    <integer-array name="config_tether_upstream_types">
         <item>0</item>
         <item>1</item>
         <item>5</item>
@@ -96,10 +108,10 @@
     <bool name="config_automatic_brightness_available">true</bool>
 
     <!-- Fast brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_fast" translatable="false">5000</integer>
+    <integer name="config_brightness_ramp_rate_fast">5000</integer>
 
     <!-- Slow brightness animation ramp rate in brightness units per second-->
-    <integer name="config_brightness_ramp_rate_slow" translatable="false">1500</integer>
+    <integer name="config_brightness_ramp_rate_slow">1500</integer>
 
     <!-- If this is true, the screen will come on when you unplug usb/power/whatever. -->
     <bool name="config_unplugTurnsOnScreen">true</bool>
@@ -153,10 +165,6 @@
 
     <!-- Is the device capable of hot swapping an UICC Card -->
     <bool name="config_hotswapCapable">true</bool>
-
-    <!-- Note: This setting is deprecated, please use
-    config_screenBrightnessSettingMinimumFloat instead -->
-    <integer name="config_screenBrightnessSettingMinimum">10</integer>
 
     <!-- Note: This setting is deprecated, please use
     config_screenBrightnessSettingMaximumFloat instead -->
@@ -247,7 +255,7 @@
          This array should have size one greater than the size of the config_autoBrightnessLevels
          array. The brightness values must be non-negative and non-decreasing. This must be
          overridden in platform specific overlays -->
-    <integer-array name="config_autoBrightnessDisplayValuesNits">
+    <array name="config_autoBrightnessDisplayValuesNits">
         <item>3</item>
         <item>7</item>
         <item>10</item>
@@ -266,7 +274,7 @@
         <item>580</item>
         <item>650</item>
         <item>800</item>
-    </integer-array>
+    </array>
 
     <!-- An array describing the screen's backlight values corresponding to the brightness
          values in the config_screenBrightnessNits array.
@@ -301,7 +309,7 @@
          brightness modes but only the maximum brightness value obtainable in a sustainable manner.
 
          This array should be equal in size to config_screenBrightnessBacklight -->
-    <integer-array name="config_screenBrightnessNits">
+    <array name="config_screenBrightnessNits">
         <item>2</item>
         <item>10</item>
         <item>20</item>
@@ -321,7 +329,7 @@
         <item>650</item>
         <item>800</item>
         <item>1400</item>
-    </integer-array>
+    </array>
 
     <!-- The default volume for the notification stream -->
     <integer name="config_audio_notif_vol_default">4</integer>
@@ -332,13 +340,19 @@
     <!-- The name of the package that will hold the SMS role by default. -->
     <string name="config_defaultSms" translatable="false">com.android.mms</string>
 
+    <!-- Boolean indicating if restoring network selection should be skipped -->
     <!-- The restoring is handled by modem if it is true-->
-    <bool name="skip_restoring_network_selection" translatable="false">true</bool>
+    <bool name="skip_restoring_network_selection">true</bool>
 
-    <!-- MMS user agent string -->
+    <!-- MMS user agent string, for example OemNameDeviceName
+         If the string contains a '%s' format string then that substring will be replaced
+         with the value of Build.MODEL , ie
+         <string name="config_mms_user_agent">OemName%s</string> -->
     <string name="config_mms_user_agent" translatable="false">Android-Mms/2.0</string>
 
-    <!-- MMS user agent prolfile url -->
+    <!-- MMS user agent prolfile url, for example https://uaprof.oem_name.com/DeviceName.xml
+         if the string contains a '%s' format string then that substring will be replaced
+         with the value of Build.MODEL , ie https://uaprof.oem_name.com/%s.xml -->
     <string name="config_mms_user_agent_profile_url" translatable="false">http://www.google.com/oha/rdf/ua-profile-kila.xml</string>
 
     <!-- Whether a software navigation bar should be shown. NOTE: in the future this may be
@@ -363,41 +377,29 @@
          Doze dreams will run whenever the power manager is in a dozing state. -->
     <string name="config_dozeComponent" translatable="false">com.android.systemui/com.android.systemui.doze.DozeService</string>
 
-    <!-- Control whether the always on display mode is available. This should only be enabled on
-         devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
-         states. -->
-    <bool name="config_dozeAlwaysOnDisplayAvailable">false</bool>
+    <!--  Maximum number of supported switchable users (excluding Guests & Demo users).
+          Does not include profiles. See {@link UserManager#getMaxSwitchableUsers()} for details.
 
-    <!-- Control whether the always on display mode is enabled by default. This value will be used
-         during initialization when the setting is still null. -->
-    <bool name="config_dozeAlwaysOnEnabled">false</bool>
+          Setting to 1 disables multiple switchable users (e.g. secondary users).
 
-    <!-- Power Management: Specifies whether to decouple the interactive state of the
-         device from the display on/off state.
+          To limit the number of any particular user type (whether switchable or not), set the
+          appropriate maximum in {@link com.android.internal.R.xml#config_user_types}.
 
-         When false, setInteractive(..., true) will be called before the display is turned on
-         and setInteractive(..., false) will be called after the display is turned off.
-         This mode provides best compatibility for devices that expect the interactive
-         state to be tied to the display state.
-
-         When true, setInteractive(...) will be called independently of whether the display
-         is being turned on or off.  This mode enables the power manager to reduce
-         clocks and disable the touch controller while the display is on.
-
-         This resource should be set to "true" when a doze component has been specified
-         to maximize power savings but not all devices support it.
-
-         Refer to power.h for details.
-    -->
-    <bool name="config_powerDecoupleInteractiveModeFromDisplay">false</bool>
-
-    <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
-    <bool name="config_cellBroadcastAppLinks">true</bool>
-
-    <!--  Maximum number of supported users -->
+         Note: If > 1, it is expected that UserManager.USER_TYPE_FULL_SECONDARY users are supported
+         on the device (at least for testing purposes, even if in practice the UI really only allows
+         other switchable types, such as restricted profiles or guests, to be created).
+         -->
     <integer name="config_multiuserMaximumUsers">4</integer>
 
-    <!-- Whether UI for multi user should be shown -->
+    <!-- Whether UI for multi user should be shown.
+         Note: If true, it is expected that secondary users are supported on the device (at least
+         for testing purposes, even if in practice the UI really only allows other switchable
+         types, such as restricted profiles or guests, to be created).
+         @deprecated  Use config_multiuserMaximumUsers instead.
+         This config will likely be removed in the future; config_multiuserMaximumUsers, which now
+         only applies to full users, not profiles, should be updated accordingly as needed.
+         TODO(b/435521983): Remove this since it's now made redundant by config_multiuserMaximumUsers
+         -->
     <bool name="config_enableMultiUserUI">true</bool>
 
     <!-- Safe USB headset gain. This value is used to ensure that the SPL on the USB
@@ -438,9 +440,6 @@
          flag is set for wifi displays.
     -->
     <bool name="config_wifiDisplaySupportsProtectedBuffers">true</bool>
-
-    <!-- Whether camera shutter sound is forced or not  (country specific). -->
-    <bool name="config_camera_sound_forced">false</bool>
 
     <!-- Flag indicating if the speed up audio on mt call code should be executed -->
     <bool name="config_speed_up_audio_on_mt_calls">true</bool>
@@ -490,10 +489,6 @@
 
     <!-- Flag specifying whether WFC over IMS is available on device -->
     <bool name="config_device_wfc_ims_available">true</bool>
-
-    <!--Support decoding the user data payload as pack GSM 8-bit (a GSM alphabet
-        string that's stored in 8-bit unpacked format) characters.-->
-    <bool name="config_sms_decode_gsm_8bit_data" translatable="false">true</bool>
 
     <!-- Config determines whether to update phone object when voice registration
          state changes. Voice radio tech change will always trigger an update of

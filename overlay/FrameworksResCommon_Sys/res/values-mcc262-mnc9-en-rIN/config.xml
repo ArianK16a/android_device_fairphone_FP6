@@ -3,7 +3,7 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <!-- National language single shift tables to enable for SMS encoding.
          Decoding is always enabled. 3GPP TS 23.038 states that this feature
          should not be enabled until a formal request is issued by the relevant

@@ -3,14 +3,16 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <!-- Determine whether we should show the "listen for instructions" screen after
          successfully placing the OTA call -->
     <integer name="OtaShowListeningScreen">1</integer>
 
+    <!-- Flag indicating if the phone is a world phone -->
     <!-- DEPRECATED: Use CarrierConfigManager#KEY_WORLD_PHONE_BOOL -->
     <bool name="world_phone">true</bool>
 
+    <!-- Flag indicating if dtmf tone type is enabled -->
     <!-- DEPRECATED: Use CarrierConfigManager#KEY_DTMF_TYPE_ENABLED_BOOL -->
     <bool name="dtmf_type_enabled">true</bool>
 
@@ -19,6 +21,10 @@
          the com.android.internal.telephony.Phone interface (false). -->
     <bool name="send_mic_mute_to_AudioManager">true</bool>
 
+    <!-- If this is true, the SIM card (through Customer Service Profile EF file) will be
+         able to prevent manual operator selection. If false, this SIM setting will be
+         ignored and manual operator selection will always be available. See
+         CPHS4_2.WW6, CPHS B.4.7.1 for more information -->
     <!-- DEPRECATED: Use CarrierConfigManager#KEY_CSP_ENABLED_BOOL -->
     <bool name="csp_enabled">true</bool>
 

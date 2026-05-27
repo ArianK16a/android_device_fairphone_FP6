@@ -3,9 +3,9 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <!-- Default radius of the software rounded corners. -->
-    <dimen name="rounded_corner_radius">20.0dip</dimen>
+    <dimen name="rounded_corner_radius">20dp</dimen>
 
     <!-- Default paddings for content around the corners. -->
     <dimen name="rounded_corner_content_padding">32px</dimen>

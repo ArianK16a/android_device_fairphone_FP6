@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <!-- Whether to interpret CCC supported sync codes value as little endian.
+    If enabled, CCC supported sync codes value will be interpreted as little endian.
+    -->
+    <bool name="ccc_supported_sync_codes_little_endian">true</bool>
+
+    <!-- Whether to use a persistent cache in the algorithm to determine country code or not.
+    If enabled, will fallback to the cache to determine device location for
+    UWB regulatory purposes when  other sources (telephony, wifi, location, etc) is not available.
+    -->
+    <bool name="persistent_cache_use_for_country_code_enabled">true</bool>
+
+    <!-- Whether multicast list update notification v2 is supported or not.
+     If enabled, the notification will be parsed into version 2 if uci major version is 2.0. -->
+    <bool name="is_multicast_list_update_ntf_v2_supported">true</bool>
+
+    <!-- Whether multicast list update response v2 is supported or not.
+     If enabled, the response will be parsed into version 2 if uci major version is 2.0. -->
+    <bool name="is_multicast_list_update_rsp_v2_supported">true</bool>
+</resources>

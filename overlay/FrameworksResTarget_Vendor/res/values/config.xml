@@ -3,7 +3,7 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <!-- Control whether the always on display mode is available. This should only be enabled on
          devices where the display has been tuned to be power efficient in DOZE and/or DOZE_SUSPEND
          states. -->
@@ -31,14 +31,8 @@
         <item>/vendor/lib64/libllvm-glnext.so</item>
     </string-array>
 
-    <!-- List of biometric sensors on the device, in decreasing strength. Consumed by AuthService
-         when registering authenticators with BiometricService. Format must be ID:Modality:Strength,
-         where: IDs are unique per device, Modality as defined in BiometricAuthenticator.java,
-         and Strength as defined in Authenticators.java -->
-    <array name="config_biometric_sensors" translatable="false" />
-
     <!-- Indicates whether device has a power button fingerprint sensor. -->
-    <bool name="config_is_powerbutton_fps" translatable="false">true</bool>
+    <bool name="config_is_powerbutton_fps">true</bool>
 
     <!-- A string config in svg path format for the main display shape.
          (@see https://www.w3.org/TR/SVG/paths.html#PathData).

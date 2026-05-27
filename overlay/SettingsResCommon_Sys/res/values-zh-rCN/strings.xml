@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
-     SPDX-FileCopyrightText: The LineageOS Project
-     SPDX-License-Identifier: Apache-2.0
--->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="backup_calling_setting_summary">"通过蜂窝互联网扩大语音覆盖范围。\n免责声明：可能会产生与数据流量使用相关的费用"</string>
-    <string name="backup_calling_settings_title">移动数据通话</string>
-</resources>

@@ -3,7 +3,7 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources>
     <!-- Show battery cycle count -->
-    <bool name="config_show_battery_cycle_count" translatable="false">true</bool>
+    <bool name="config_show_battery_cycle_count">true</bool>
 </resources>

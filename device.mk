@@ -289,14 +289,12 @@ PRODUCT_PACKAGES += \
     FrameworksResCommon_Sys \
     SettingsResCommon_Sys \
     SystemUIResCommon_Sys \
-    TelecommResCommon_Sys \
     TelephonyResCommon_Sys \
     UwbResCommon_Sys \
     WifiResCommon_Sys
 
 PRODUCT_PACKAGES += \
     FrameworksResTarget_Vendor \
-    SecureElementResTarget_Vendor \
     SettingsProviderResCommon \
     WifiResTarget \
 

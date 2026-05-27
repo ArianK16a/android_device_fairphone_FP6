@@ -4,10 +4,8 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.providers.settings.overlay.common">
-
-    <overlay
-        android:isStatic="true"
-        android:priority="200"
-        android:targetPackage="com.android.providers.settings" />
+          package="com.android.providers.settings.overlay.common">
+    <overlay android:targetPackage="com.android.providers.settings"
+             android:isStatic="true"
+             android:priority="200" />
 </manifest>
