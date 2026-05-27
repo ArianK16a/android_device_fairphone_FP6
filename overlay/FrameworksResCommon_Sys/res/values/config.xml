@@ -391,10 +391,4 @@
 
     <!-- Whether to select voice/data/sms preference without user confirmation -->
     <bool name="config_voice_data_sms_auto_fallback">true</bool>
-
-    <!-- Whether this device is supporting the software microphone toggle -->
-    <bool name="config_supportsMicToggle">true</bool>
-
-    <!-- Whether this device is supporting the camera toggle -->
-    <bool name="config_supportsCamToggle">true</bool>
 </resources>
