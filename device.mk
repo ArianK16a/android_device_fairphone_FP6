@@ -290,7 +290,6 @@ PRODUCT_PACKAGES += \
     SettingsResCommon_Sys \
     SystemUIResCommon_Sys \
     TelephonyResCommon_Sys \
-    UwbResCommon_Sys \
     WifiResCommon_Sys
 
 PRODUCT_PACKAGES += \
