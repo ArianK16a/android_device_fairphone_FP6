@@ -325,14 +325,6 @@
          phone object irrespective of this config -->
     <bool name="config_switch_phone_on_voice_reg_state_change">false</bool>
 
-    <!--The default "usage setting" indicating that the device is either a voice-centric
-    device (1) or a data-centric device (2). A voice-centric device will require that any cellular
-    service that it uses provides access to voice capability, and a data-centric device will
-    likewise require that the network provides access to data services. These settings are
-    sent to the cellular modem and control the behavior in accordance with 3gpp TS 24.301 sec 4.3
-    (and equivalent functionality in other generations of cellular).-->
-    <integer name="config_default_cellular_usage_setting">-1</integer>
-
     <!-- The bounding path of the cutout region of the main built-in display.
          Must either be empty if there is no cutout region, or a string that is parsable by
          {@link android.util.PathParser}.
