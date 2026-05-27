@@ -248,13 +248,6 @@
          autodetected from the Configuration. -->
     <bool name="config_showNavigationBar">true</bool>
 
-    <!-- SNTP client config: NTP servers to use to obtain an accurate time.
-         Items must be in the form: "ntp://<host>[:port]"
-         This is not a registered IANA URI scheme. -->
-    <string-array name="config_ntpServers" translatable="false">
-        <item>ntp://asia.pool.ntp.org</item>
-    </string-array>
-
     <!-- ComponentName of a dream to show whenever the system would otherwise have
          gone to sleep.  When the PowerManager is asked to go to sleep, it will instead
          try to start this dream if possible.  The dream should typically call startDozing()
