@@ -367,12 +367,6 @@
     <!-- Whether the Unprocessed audio source supports the required frequency range and level -->
     <bool name="config_supportAudioSourceUnprocessed">true</bool>
 
-    <!-- Flag indicating whether round icons should be parsed from the application manifest. -->
-    <bool name="config_useRoundIcon">true</bool>
-
-    <!-- Specifies the path that is used by AdaptiveIconDrawable class to crop launcher icons. -->
-    <string name="config_icon_mask" translatable="false">M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0</string>
-
     <!-- The default refresh rate for a given device. Change this value to set a higher default
          refresh rate. If the hardware composer on the device supports display modes with a higher
          refresh rate than the default value specified here, the framework may use those higher
