@@ -225,6 +225,8 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/vendor.libdpmframework.so': blob_fixup()
         .add_needed('libbinder_shim.so')
         .add_needed('libhidlbase_shim.so'),
+    'vendor/lib64/libqti-perfd.so': blob_fixup()
+        .add_needed('libqti-perfd-shim.so'),
 
 }  # fmt: skip
 

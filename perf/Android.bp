@@ -1,0 +1,8 @@
+cc_library {
+    name: "libqti-perfd-shim",
+    shared_libs: ["liblog"],
+    srcs: [
+        "FetchHintExcluder.cpp",
+    ],
+    vendor: true,
+}
