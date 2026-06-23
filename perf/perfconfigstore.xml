@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PerfConfigsStore>
+    <PerfConfigs>
+        <Prop Name="vendor.debug.enable.lm" Value="false" />
+        <Prop Name="vendor.debug.enable.memperfd" Value="false" />
+        <Prop Name="ro.vendor.perf.lal" Value="false" />
+        <Prop Name="ro.vendor.perf.lgl" Value="false" />
+        <Prop Name="ro.vendor.perf.lplh" Value="false" />
+        <Prop Name="ro.vendor.perf.splh" Value="false" />
+        <Prop Name="ro.vendor.perf.ss" Value="false" />
+        <Prop Name="ro.vendor.perf.ssv2" Value="false" />
+        <Prop Name="ro.vendor.perf.dplh" Value="false" />
+        <Prop Name="ro.vendor.perf.attach.hint.ll" Value="false" />
+        <Prop Name="vendor.perf.fps_switch_hyst_time_secs" Value="6" />
+    </PerfConfigs>
+</PerfConfigsStore>
