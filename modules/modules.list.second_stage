@@ -46,7 +46,6 @@ focaltech_fp.ko
 fsa4480-i2c.ko
 gh_ctrl.ko
 gh_irq_lend.ko
-gh_mem_notifier.ko
 gh_panic_notifier.ko
 gh_rm_booster.ko
 gh_tlmm_vm_mem_access.ko
