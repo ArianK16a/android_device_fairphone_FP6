@@ -70,7 +70,6 @@ llcc_perfmon.ko
 lt9611uxc.ko
 max31760_fan.ko
 mem-hooks.ko
-mem-offline.ko
 memlat.ko
 mhi.ko
 mhi_dev_satellite.ko
