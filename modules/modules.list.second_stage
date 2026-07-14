@@ -46,7 +46,6 @@ hdcp_qseecom_dlkm.ko
 health_monitor.ko
 heap_mem_ext_v01.ko
 hung_task_enh.ko
-hvc_gunyah.ko
 hwmon.ko
 i2c-msm-geni.ko
 i3c-master-msm-geni.ko
