@@ -118,7 +118,6 @@ qcom_stats.ko
 qcom_sysmon.ko
 qfprom-sys.ko
 qmi_helpers.ko
-qpnp-amoled-regulator.ko
 qpnp-lcdb-regulator.ko
 qrtr-mhi.ko
 qrtr-smd.ko
