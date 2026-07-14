@@ -92,7 +92,6 @@ socinfo.ko
 spmi-pmic-arb.ko
 stub-regulator.ko
 tcsrcc-pineapple.ko
-thermal_minidump.ko
 thermal_pause.ko
 tmecom-intf.ko
 ufs_qcom.ko
