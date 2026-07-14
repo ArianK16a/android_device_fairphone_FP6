@@ -36,7 +36,6 @@ dwc3-msm.ko
 dynpf_scmi.ko
 eswin_ts.ko
 eud.ko
-f_fs_ipc_log.ko
 focaltech_fp.ko
 fsa4480-i2c.ko
 gh_ctrl.ko
