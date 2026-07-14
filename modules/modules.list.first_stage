@@ -8,7 +8,6 @@ cmd-db.ko
 cpu_hotplug.ko
 cqhci.ko
 crm.ko
-crypto-qti.ko
 dcc_v2.ko
 dcvs_fp.ko
 debug-regulator.ko
