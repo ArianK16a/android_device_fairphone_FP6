@@ -31,8 +31,6 @@ cpucp_log.ko
 cpufreq_stats_scmi_v2.ko
 crc-itu-t.ko
 ddr_cdev.ko
-debugcc-pineapple.ko
-debugcc-volcano.ko
 dmesg_dumper.ko
 drm_display_helper.ko
 drm_dp_aux_bus.ko
