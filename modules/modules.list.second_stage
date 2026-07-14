@@ -5,7 +5,6 @@ bam_dma.ko
 bcl_soc.ko
 boot_stats.ko
 bwmon.ko
-bwprof.ko
 c1dcvs_scmi_v2.ko
 camcc-volcano.ko
 cdsprm.ko
