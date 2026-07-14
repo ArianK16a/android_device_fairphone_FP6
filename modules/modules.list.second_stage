@@ -86,7 +86,7 @@ phy-generic.ko
 phy-msm-snps-eusb2.ko
 phy-msm-ssusb-qmp.ko
 phy-qcom-emu.ko
-phy-qcom-ufs-qmp-v4.ko
+phy-qcom-ufs-qmp-v4-pineapple.ko
 pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pm8941-pwrkey.ko
