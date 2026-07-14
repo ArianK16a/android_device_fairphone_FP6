@@ -91,7 +91,6 @@ pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pm8941-pwrkey.ko
 pmic-glink-debug.ko
-pmic_glink.ko
 pwm-qti-lpg.ko
 q6_notifier_dlkm.ko
 q6_pdr_dlkm.ko
