@@ -31,7 +31,6 @@ cpucp_log.ko
 cpufreq_stats_scmi_v2.ko
 crc-itu-t.ko
 ddr_cdev.ko
-debugcc-cliffs.ko
 debugcc-pineapple.ko
 debugcc-volcano.ko
 dmesg_dumper.ko
@@ -53,7 +52,6 @@ glink_pkt.ko
 glink_probe.ko
 gpr_dlkm.ko
 gpu_dump_skip_cdev.ko
-gpucc-cliffs.ko
 gpucc-volcano.ko
 hdcp_qseecom_dlkm.ko
 health_monitor.ko

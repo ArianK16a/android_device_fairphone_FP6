@@ -1,6 +1,5 @@
 arm_smmu.ko
 bcl_pmic5.ko
-camcc-cliffs.ko
 camcc-pineapple.ko
 clk-dummy.ko
 clk-qcom.ko
@@ -17,7 +16,6 @@ debug_symbol.ko
 dispcc-pineapple.ko
 dispcc-volcano.ko
 emkit_info.ko
-gcc-cliffs.ko
 gcc-pineapple.ko
 gcc-volcano.ko
 gdsc-regulator.ko
@@ -54,7 +52,6 @@ phy-qcom-ufs-qmp-v4-crow.ko
 phy-qcom-ufs-qmp-v4-pineapple.ko
 phy-qcom-ufs-qrbtc-sdm845.ko
 phy-qcom-ufs.ko
-pinctrl-cliffs.ko
 pinctrl-msm.ko
 pinctrl-pineapple.ko
 pinctrl-volcano.ko
@@ -86,7 +83,6 @@ qcom_scmi_vendor.ko
 qcom_tsens.ko
 qcom_va_minidump.ko
 qcom_wdt_core.ko
-qnoc-cliffs.ko
 qnoc-pineapple.ko
 qnoc-qos.ko
 qnoc-volcano.ko
