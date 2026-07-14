@@ -82,7 +82,6 @@ qnoc-pineapple.ko
 qnoc-qos.ko
 qnoc-volcano.ko
 qrtr.ko
-qti-regmap-debugfs.ko
 rpmh-regulator.ko
 rtc-pm8xxx.ko
 sched-walt.ko
