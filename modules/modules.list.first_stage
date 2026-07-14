@@ -27,8 +27,6 @@ gh_rm_drv.ko
 gh_virt_wdt.ko
 gic_intr_routing.ko
 gpucc-pineapple.ko
-gunyah_loader.ko
-gunyah_qcom.ko
 hall_det.ko
 haptic.ko
 hwkm.ko
@@ -83,7 +81,6 @@ qcom_wdt_core.ko
 qnoc-pineapple.ko
 qnoc-qos.ko
 qnoc-volcano.ko
-qrtr-gunyah.ko
 qrtr.ko
 qti-regmap-debugfs.ko
 rpmh-regulator.ko
