@@ -132,7 +132,6 @@ TARGET_KERNEL_EXT_MODULES += \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/display-drivers/msm \
     qcom/opensource/graphics-kernel \
-    qcom/opensource/mm-sys-kernel/ubwcp \
     qcom/opensource/touch-drivers \
     qcom/opensource/video-driver \
     qcom/opensource/wlan/qcacld-3.0/.peach_v2 \
