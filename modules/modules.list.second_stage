@@ -95,7 +95,6 @@ pwm-qti-lpg.ko
 q6_notifier_dlkm.ko
 q6_pdr_dlkm.ko
 qcom-cpufreq-hw-debug.ko
-qcom-hv-haptics.ko
 qcom-pon.ko
 qcom-spmi-adc5-gen3.ko
 qcom-spmi-temp-alarm.ko
