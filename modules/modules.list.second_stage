@@ -147,7 +147,6 @@ slimbus.ko
 smcinvoke_dlkm.ko
 smp2p.ko
 smp2p_sleepstate.ko
-snd-soc-hdmi-codec.ko
 snd-usb-audio-qmi.ko
 snd_event_dlkm.ko
 spf_core_dlkm.ko
