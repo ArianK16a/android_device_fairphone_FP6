@@ -20,7 +20,6 @@ gcc-pineapple.ko
 gcc-volcano.ko
 gdsc-regulator.ko
 gh_arm_drv.ko
-gh_cpusys_vm_mem_access.ko
 gh_dbl.ko
 gh_mem_notifier.ko
 gh_msgq.ko
