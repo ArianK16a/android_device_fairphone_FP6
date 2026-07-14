@@ -63,7 +63,6 @@ swr_dlkm.ko
 swr_dmic_dlkm.ko
 swr_haptics_dlkm.ko
 tz_log_dlkm.ko
-ubwcp.ko
 wcd9378_dlkm.ko
 wcd9378_slave_dlkm.ko
 wcd937x_dlkm.ko
