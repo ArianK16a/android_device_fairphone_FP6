@@ -117,7 +117,6 @@ TARGET_KERNEL_EXT_MODULES := \
     qcom/opensource/mm-drivers/sync_fence \
     qcom/opensource/mmrm-driver \
     qcom/opensource/securemsm-kernel \
-    qcom/opensource/synx-kernel \
     qcom/opensource/wlan/platform
 
 TARGET_KERNEL_EXT_MODULES += \
