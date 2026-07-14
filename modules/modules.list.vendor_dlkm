@@ -14,9 +14,7 @@ cnss_nl.ko
 cnss_plat_ipc_qmi_svc.ko
 cnss_prealloc.ko
 cnss_utils.ko
-focaltech_fts.ko
 frpc-adsprpc.ko
-goodix_ts.ko
 gsim.ko
 hdmi_dlkm.ko
 icnss2.ko
@@ -43,7 +41,6 @@ qce50_dlkm.ko
 qcedev-mod_dlkm.ko
 qcrypto-msm_dlkm.ko
 qrng_dlkm.ko
-qts.ko
 radio-i2c-rtc6226-qca.ko
 rmnet_aps.ko
 rmnet_core.ko
