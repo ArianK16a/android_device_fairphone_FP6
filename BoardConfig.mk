@@ -132,7 +132,6 @@ TARGET_KERNEL_EXT_MODULES += \
     qcom/opensource/datarmnet-ext/sch \
     qcom/opensource/datarmnet-ext/wlan \
     qcom/opensource/display-drivers/msm \
-    qcom/opensource/eva-kernel \
     qcom/opensource/graphics-kernel \
     qcom/opensource/mm-sys-kernel/ubwcp \
     qcom/opensource/spu-kernel \
