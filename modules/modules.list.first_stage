@@ -35,7 +35,6 @@ hwkm.ko
 icc-bcm-voter.ko
 icc-debug.ko
 icc-rpmh.ko
-icc-test.ko
 iommu-logger.ko
 mdt_loader.ko
 mem_buf.ko
