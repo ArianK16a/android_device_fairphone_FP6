@@ -15,7 +15,6 @@ coresight-csr.ko
 coresight-cti.ko
 coresight-dummy.ko
 coresight-funnel.ko
-coresight-hwevent.ko
 coresight-remote-etm.ko
 coresight-replicator.ko
 coresight-stm.ko
