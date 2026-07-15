@@ -1,6 +1,7 @@
 arm_smmu.ko
 bcl_pmic5.ko
 camcc-pineapple.ko
+camcc-volcano.ko
 clk-dummy.ko
 clk-qcom.ko
 clk-rpmh.ko
@@ -26,6 +27,7 @@ gh_rm_drv.ko
 gh_virt_wdt.ko
 gic_intr_routing.ko
 gpucc-pineapple.ko
+gpucc-volcano.ko
 gunyah_loader.ko
 hall_det.ko
 haptic.ko
@@ -34,6 +36,7 @@ icc-bcm-voter.ko
 icc-debug.ko
 icc-rpmh.ko
 iommu-logger.ko
+llcc-qcom.ko
 mdt_loader.ko
 mem_buf.ko
 mem_buf_dev.ko
@@ -98,3 +101,4 @@ tmecom-intf.ko
 ufs-qcom.ko
 ufshcd-crypto-qti.ko
 videocc-pineapple.ko
+videocc-volcano.ko

@@ -6,7 +6,6 @@ bcl_soc.ko
 boot_stats.ko
 bwmon.ko
 c1dcvs_scmi_v2.ko
-camcc-volcano.ko
 cdsprm.ko
 charger-ulog-glink.ko
 core_hang_detect.ko
@@ -51,7 +50,6 @@ governor_gpubw_mon.ko
 governor_msm_adreno_tz.ko
 gpr_dlkm.ko
 gpu_dump_skip_cdev.ko
-gpucc-volcano.ko
 hdcp_qseecom_dlkm.ko
 health_monitor.ko
 heap_mem_ext_v01.ko
@@ -63,7 +61,6 @@ i3c-master-msm-geni.ko
 leds-qcom-lpg.ko
 leds-qti-flash.ko
 leds-qti-tri-led.ko
-llcc-qcom.ko
 llcc_perfmon.ko
 lt9611uxc.ko
 max31760_fan.ko
@@ -179,6 +176,5 @@ usb_f_ccid.ko
 usb_f_cdev.ko
 usb_f_gsi.ko
 usb_f_qdss.ko
-videocc-volcano.ko
 wcd_usbss_i2c.ko
 xhci-sideband.ko
