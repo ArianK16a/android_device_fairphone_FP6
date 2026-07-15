@@ -71,6 +71,7 @@ mhi_dev_satellite.ko
 mhi_dev_uci.ko
 mpam.ko
 msm-mmrm.ko
+msm_drm.ko
 msm_ext_display.ko
 msm_geni_serial.ko
 msm_gpi.ko
