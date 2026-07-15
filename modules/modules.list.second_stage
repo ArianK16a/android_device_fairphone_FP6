@@ -37,6 +37,14 @@ eswin_ts.ko
 eud.ko
 focaltech_fp.ko
 fsa4480-i2c.ko
+gh_arm_drv.ko
+gh_ctrl.ko
+gh_dbl.ko
+gh_irq_lend.ko
+gh_mem_notifier.ko
+gh_msgq.ko
+gh_rm_drv.ko
+gh_virt_wdt.ko
 glink_pkt.ko
 glink_probe.ko
 governor_gpubw_mon.ko
@@ -48,6 +56,7 @@ hdcp_qseecom_dlkm.ko
 health_monitor.ko
 heap_mem_ext_v01.ko
 hung_task_enh.ko
+hvc_gunyah.ko
 hwmon.ko
 i2c-msm-geni.ko
 i3c-master-msm-geni.ko

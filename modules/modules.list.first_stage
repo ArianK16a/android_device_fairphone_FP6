@@ -26,6 +26,7 @@ gh_rm_drv.ko
 gh_virt_wdt.ko
 gic_intr_routing.ko
 gpucc-pineapple.ko
+gunyah_loader.ko
 hall_det.ko
 haptic.ko
 hwkm.ko
