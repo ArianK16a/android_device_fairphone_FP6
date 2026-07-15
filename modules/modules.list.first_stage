@@ -32,7 +32,6 @@ gpucc-volcano.ko
 gunyah_loader.ko
 hall_det.ko
 haptic.ko
-hwkm.ko
 icc-bcm-voter.ko
 icc-debug.ko
 icc-rpmh.ko
