@@ -5,6 +5,7 @@ camcc-volcano.ko
 clk-dummy.ko
 clk-qcom.ko
 clk-rpmh.ko
+clk-scmi.ko
 cmd-db.ko
 cpu_hotplug.ko
 cqhci.ko
