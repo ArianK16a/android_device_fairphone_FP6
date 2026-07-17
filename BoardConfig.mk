@@ -85,8 +85,7 @@ BOARD_BOOTCONFIG := \
     androidboot.memcg=1 \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.load_modules_parallel=true \
-    androidboot.console=0 \
-    androidboot.selinux=permissive
+    androidboot.console=0
 
 # Kernel modules
 BOARD_SYSTEM_KERNEL_MODULES_BLOCKLIST_FILE := $(TARGET_KERNEL_SOURCE)/modules.systemdlkm_blocklist.msm.pineapple
