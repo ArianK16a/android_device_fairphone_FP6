@@ -15,6 +15,7 @@ can-dev.ko
 can-gw.ko
 can-raw.ko
 can.ko
+cctrng.ko
 cdc-acm.ko
 cdc_eem.ko
 cdc_ether.ko
@@ -42,14 +43,15 @@ nhc_ipv6.ko
 nhc_mobility.ko
 nhc_routing.ko
 nhc_udp.ko
+open-dice.ko
 ppp_deflate.ko
 ppp_generic.ko
 ppp_mppe.ko
 pppox.ko
 pps_core.ko
 pptp.ko
-ptp_kvm.ko
 ptp.ko
+ptp_kvm.ko
 r8152.ko
 r8153_ecm.ko
 rfcomm.ko
@@ -66,9 +68,9 @@ vcpu_stall_detector.ko
 virtio_balloon.ko
 virtio_blk.ko
 virtio_console.ko
+virtio_pci.ko
 virtio_pci_legacy_dev.ko
 virtio_pci_modern_dev.ko
-virtio_pci.ko
 vmw_vsock_virtio_transport.ko
 wwan.ko
 zram.ko
