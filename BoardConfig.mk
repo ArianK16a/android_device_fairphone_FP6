@@ -79,7 +79,8 @@ TARGET_KERNEL_CONFIG := \
 
 BOARD_KERNEL_CMDLINE := \
     nosoftlockup \
-    sysctl.kernel.firmware_config.force_sysfs_fallback=1
+    sysctl.kernel.firmware_config.force_sysfs_fallback=1 \
+    firmware_class.path=/vendor/firmware,/vendor/firmware_mnt/image
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \

@@ -1557,6 +1557,23 @@ vendor/lib64/libtrustedapploader.so
 vendor/bin/cnss-daemon
 vendor/etc/init/init.vendor.wlan.rc
 
+# WiFi firmware - from FP6.QREL.15.176.0
+vendor/firmware/qca6750/wpss.b00|dcb833b4a39e8aee3bd9d3f55006feb8639a6831
+vendor/firmware/qca6750/wpss.b01|0e2dcc9035ea9b4a62b723e065a424844ae08f93
+vendor/firmware/qca6750/wpss.b02|8a747d12eb4a4d0e4806cc0f1e24addd03a6e375
+vendor/firmware/qca6750/wpss.b03|39341b25faac665e12f026579438cac7fb3e331d
+vendor/firmware/qca6750/wpss.b04|ab54c8c077f680ab9f4f63110290fe2323cf0e5c
+vendor/firmware/qca6750/wpss.b05|eea8bcb3da14ac0a28d5876770f6392ecee8732d
+vendor/firmware/qca6750/wpss.b06|d829fa6e494a99bc4e83d7a49c176d1ed17d5e1f
+vendor/firmware/qca6750/wpss.b07|dea5caf9066df1b93bc835414758935ad51c8047
+vendor/firmware/qca6750/wpss.b08|4e0e9f26ed70bfc60f090325b9a16e4da1bcc1dd
+vendor/firmware/qca6750/wpss.b09|e16a4a6d3a934b456c7f4420e134fe99a87e3f2b
+vendor/firmware/qca6750/wpss.b10|958fe461cb18d9a5f2abaad540ee27efe04f043a
+vendor/firmware/qca6750/wpss.b12|cee7781b6b075adf19b4b1f642594352cf64ac3a
+vendor/firmware/qca6750/wpss.mdt|76c0bb928942c56781560cd43b5bbc163a4d720a
+vendor/firmware/qca6750/bdwlan.elf|27a109968a47a3595960072c85191222d00e44b1
+vendor/firmware/qca6750/regdb.bin|312933c421eddc131be62c3d1bbe9de20e888607
+
 # WiFi mac address
 vendor/bin/setwlanmac.sh
 vendor/bin/tctd
